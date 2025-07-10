@@ -21,9 +21,9 @@ export default function Home() {
       >
         <Hero />
         <About />
+        <Partners />
         <HowItWorks />
         <KioskSolutions />
-        <Partners />
         <Advertising />
         <Contact />
         <CallToAction />
