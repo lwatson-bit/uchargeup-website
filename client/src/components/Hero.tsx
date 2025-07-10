@@ -75,7 +75,11 @@ export default function Hero() {
               <img 
                 src={kioskImage} 
                 alt="U Charge Up battery rental kiosk" 
-                className="w-full max-w-md rounded-lg"
+                className="w-full max-w-md rounded-lg shadow-xl bg-transparent"
+                style={{
+                  filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1))',
+                  background: 'transparent'
+                }}
               />
             </div>
           </motion.div>
