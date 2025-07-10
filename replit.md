@@ -72,7 +72,14 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 
 ## Data Flow
 
-1. **Contact Form Submission (Updated July 10, 2025)**:
+1. **Marketing & Advertising Section (Updated July 10, 2025)**:
+   - Added comprehensive advertising section for digital kiosk advertising
+   - Features 6 key benefits: Digital screens, captive audience, strategic locations, analytics, targeting, visibility
+   - Integrated into navigation menu (desktop and mobile)
+   - Uses consistent brand blue color scheme
+   - Clean, professional layout highlighting advertising opportunities
+
+2. **Contact Form Submission (Updated July 10, 2025)**:
    - User fills out contact form
    - Client-side validation with Zod schema
    - Form data sent to `/api/contact` endpoint
@@ -80,7 +87,7 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
    - Email notification sent via SendGrid to support@uchargeup.com
    - Success/error feedback to user
 
-2. **Smart App Download (Updated July 10, 2025)**:
+3. **Smart App Download (Updated July 10, 2025)**:
    - Download buttons automatically detect user's device OS
    - iOS devices redirect to App Store (https://apps.apple.com/us/app/u-charge-up/id6504678459)
    - Android devices redirect to Google Play Store (https://play.google.com/store/apps/details?id=com.uchargeup.charge&pcampaignid=web_share)
