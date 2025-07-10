@@ -5,6 +5,7 @@ import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import KioskSolutions from "@/components/KioskSolutions";
 import Partners from "@/components/Partners";
+import Advertising from "@/components/Advertising";
 import Contact from "@/components/Contact";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <HowItWorks />
         <KioskSolutions />
         <Partners />
+        <Advertising />
         <Contact />
         <CallToAction />
       </motion.main>

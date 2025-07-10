@@ -50,6 +50,12 @@ export default function Header() {
               Partners
             </button>
             <button
+              onClick={() => scrollToSection("advertising")}
+              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
+            >
+              Advertising
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
             >
@@ -101,6 +107,12 @@ export default function Header() {
               className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
             >
               Partners
+            </button>
+            <button
+              onClick={() => scrollToSection("advertising")}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+            >
+              Advertising
             </button>
             <button
               onClick={() => scrollToSection("contact")}
