@@ -21,9 +21,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
-              Stay Connected, Stay In The Moment
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">Stay Connected. Stay In The Moment.</h1>
             <p className="text-xl mb-8 text-gray-600 leading-relaxed">
               Rent portable batteries at any of our partner locations. Return them anywhere in our network. Never worry about running out of power again.
             </p>
