@@ -20,8 +20,8 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <Hero />
-        <About />
         <Partners />
+        <About />
         <HowItWorks />
         <KioskSolutions />
         <Advertising />
