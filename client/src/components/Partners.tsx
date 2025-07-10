@@ -43,18 +43,36 @@ export default function Partners() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {partnerLogos.map((partner, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center p-4 bg-white rounded-lg border-0 h-20"
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-white to-gray-50 p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="text-gray-400 text-sm text-center font-medium">
-                {partner.name}
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    {partner.name}
+                  </h3>
+                  <p className="text-sm text-gray-500">Partner Location</p>
+                </div>
+                <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                    <div className="w-3 h-3 bg-brand-blue rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <div className="flex items-center text-xs text-gray-400">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Available Now
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
