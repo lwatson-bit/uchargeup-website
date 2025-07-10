@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Smartphone, MapPin, Clock } from "lucide-react";
+import { handleAppDownload } from "@/utils/appDownload";
 
 export default function CallToAction() {
   const scrollToSection = (sectionId: string) => {
@@ -31,6 +32,7 @@ export default function CallToAction() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent shadow-none"
+              onClick={handleAppDownload}
             >
               Download Our App
             </Button>

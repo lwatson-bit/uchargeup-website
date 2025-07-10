@@ -80,12 +80,19 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
    - Email notification sent via SendGrid to support@uchargeup.com
    - Success/error feedback to user
 
-2. **Asset Management**:
+2. **Smart App Download (Updated July 10, 2025)**:
+   - Download buttons automatically detect user's device OS
+   - iOS devices redirect to App Store (https://apps.apple.com/us/app/u-charge-up/id6504678459)
+   - Android devices redirect to Google Play Store (https://play.google.com/store/apps/details?id=com.uchargeup.charge&pcampaignid=web_share)
+   - Desktop users default to App Store link
+   - Implemented in Hero and CallToAction components
+
+3. **Asset Management**:
    - Static assets served from `attached_assets` directory
    - Images optimized for web delivery
    - Logo and kiosk images referenced throughout application
 
-3. **Development Flow**:
+4. **Development Flow**:
    - Vite dev server for frontend with HMR
    - Express server for API endpoints
    - Shared schema types between client and server

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Battery, Zap, MapPin, Leaf } from "lucide-react";
 import kioskImage from "@assets/Large 24 UCU_1752157170473.jpg";
+import { handleAppDownload } from "@/utils/appDownload";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -29,7 +30,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
-                onClick={() => scrollToSection("how-it-works")}
+                onClick={handleAppDownload}
               >
                 Download App
               </Button>
