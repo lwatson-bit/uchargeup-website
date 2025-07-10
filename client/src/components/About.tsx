@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import eightUnitImage from "@assets/8 Unit UCU_1752157185780.png";
-import mbeLogo from "@assets/mbe_1752170626183.webp";
 
 export default function About() {
   return (
@@ -22,21 +21,6 @@ export default function About() {
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               U Charge Up was founded with a simple mission: ensure no one ever has to worry about their device running out of battery while on the move. Our network of rental kiosks makes it easy to grab a portable battery when you need one and return it when you're done.
             </p>
-            
-            {/* MBE Certification Badge */}
-            <div className="flex items-center gap-4 mb-8">
-              <div className="flex items-center gap-3">
-                <img 
-                  src={mbeLogo} 
-                  alt="MBE Certified - Minority Business Enterprise" 
-                  className="w-16 h-16 object-contain"
-                />
-                <div>
-                  <div className="text-sm font-semibold text-gray-900">MBE Certified</div>
-                  <div className="text-sm text-gray-600">Minority Business Enterprise</div>
-                </div>
-              </div>
-            </div>
           </motion.div>
           
           <motion.div
