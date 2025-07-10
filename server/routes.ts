@@ -43,19 +43,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Admin endpoint to view all contacts
-  app.get("/api/contacts", async (req, res) => {
-    try {
-      const contacts = await storage.getContacts();
-      res.json(contacts);
-    } catch (error) {
-      console.error("Failed to fetch contacts:", error);
-      res.status(500).json({ 
-        success: false, 
-        message: "Failed to fetch contacts" 
-      });
-    }
-  });
+
 
   const httpServer = createServer(app);
   return httpServer;

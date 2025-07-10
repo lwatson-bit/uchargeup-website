@@ -8,17 +8,12 @@ export const db = drizzle(client);
 
 export interface IStorage {
   createContact(contact: ContactForm): Promise<Contact>;
-  getContacts(): Promise<Contact[]>;
 }
 
 export class DBStorage implements IStorage {
   async createContact(contact: ContactForm): Promise<Contact> {
     const [result] = await db.insert(contacts).values(contact).returning();
     return result;
-  }
-
-  async getContacts(): Promise<Contact[]> {
-    return await db.select().from(contacts).orderBy(contacts.createdAt);
   }
 }
 
@@ -34,9 +29,5 @@ export class MemStorage implements IStorage {
     };
     this.contacts.push(newContact);
     return newContact;
-  }
-
-  async getContacts(): Promise<Contact[]> {
-    return this.contacts.slice().reverse(); // Most recent first
   }
 }

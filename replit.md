@@ -72,11 +72,12 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 
 ## Data Flow
 
-1. **Contact Form Submission**:
+1. **Contact Form Submission (Updated July 10, 2025)**:
    - User fills out contact form
    - Client-side validation with Zod schema
    - Form data sent to `/api/contact` endpoint
    - Server validates and stores in database
+   - Email notification sent via SendGrid to support@uchargeup.com
    - Success/error feedback to user
 
 2. **Asset Management**:
