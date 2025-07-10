@@ -2,11 +2,12 @@
 
 ## Overview
 
-U Charge Up is a full-stack web application for a portable battery bank rental service that provides smart kiosks for charging devices. The application serves as a business website showcasing services, kiosk solutions, and includes a contact management system. The platform targets businesses and consumers with convenient, reliable portable battery bank rental solutions.
+U Charge Up is a full-stack web application for a portable battery bank rental service that provides smart kiosks for charging devices. The application serves as a modern, professional business website matching the Vercel reference design (v0-u-charge-up.vercel.app). The platform targets businesses and consumers with convenient, reliable portable battery bank rental solutions featuring the exact brand blue color from their logo.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), replacing the previous orange color scheme.
 
 ## System Architecture
 

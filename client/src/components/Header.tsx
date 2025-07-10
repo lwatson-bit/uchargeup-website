@@ -26,36 +26,46 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button
-              onClick={() => scrollToSection("home")}
-              className="text-brand-text hover:text-brand-blue transition-colors duration-200"
+              onClick={() => scrollToSection("about")}
+              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
             >
-              Home
+              About
             </button>
             <button
-              onClick={() => scrollToSection("services")}
-              className="text-brand-text hover:text-brand-blue transition-colors duration-200"
+              onClick={() => scrollToSection("how-it-works")}
+              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
             >
-              Services
+              How It Works
+            </button>
+            <button
+              onClick={() => scrollToSection("our-kiosks")}
+              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
+            >
+              Our Kiosks
             </button>
             <button
               onClick={() => scrollToSection("partners")}
-              className="text-brand-text hover:text-brand-blue transition-colors duration-200"
+              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
             >
               Partners
             </button>
             <button
-              onClick={() => scrollToSection("gallery")}
-              className="text-brand-text hover:text-brand-blue transition-colors duration-200"
-            >
-              Gallery
-            </button>
-            <button
               onClick={() => scrollToSection("contact")}
-              className="text-brand-text hover:text-brand-blue transition-colors duration-200"
+              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
             >
               Contact
             </button>
           </nav>
+          
+          {/* Right side buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="ghost" className="text-gray-700 hover:text-brand-blue">
+              Login
+            </Button>
+            <Button className="bg-brand-blue hover:bg-brand-dark-blue text-white">
+              Download App
+            </Button>
+          </div>
           
           {/* Mobile Menu Button */}
           <Button
@@ -77,32 +87,32 @@ export default function Header() {
             className="md:hidden bg-white border-t border-gray-200 px-4 py-2 space-y-1"
           >
             <button
-              onClick={() => scrollToSection("home")}
-              className="block w-full text-left px-3 py-2 text-brand-text hover:bg-gray-50 rounded-lg transition-colors duration-200"
+              onClick={() => scrollToSection("about")}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
             >
-              Home
+              About
             </button>
             <button
-              onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-3 py-2 text-brand-text hover:bg-gray-50 rounded-lg transition-colors duration-200"
+              onClick={() => scrollToSection("how-it-works")}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
             >
-              Services
+              How It Works
+            </button>
+            <button
+              onClick={() => scrollToSection("our-kiosks")}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+            >
+              Our Kiosks
             </button>
             <button
               onClick={() => scrollToSection("partners")}
-              className="block w-full text-left px-3 py-2 text-brand-text hover:bg-gray-50 rounded-lg transition-colors duration-200"
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
             >
               Partners
             </button>
             <button
-              onClick={() => scrollToSection("gallery")}
-              className="block w-full text-left px-3 py-2 text-brand-text hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              Gallery
-            </button>
-            <button
               onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-3 py-2 text-brand-text hover:bg-gray-50 rounded-lg transition-colors duration-200"
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
             >
               Contact
             </button>

@@ -3,39 +3,50 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { insertContactSchema, type InsertContact } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
+import { z } from "zod";
+
+// Extended schema with subject field
+const extendedContactSchema = insertContactSchema.extend({
+  subject: z.string().min(1, "Subject is required")
+});
+
+type ExtendedContact = z.infer<typeof extendedContactSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useForm<InsertContact>({
-    resolver: zodResolver(insertContactSchema),
+  const form = useForm<ExtendedContact>({
+    resolver: zodResolver(extendedContactSchema),
     defaultValues: {
       name: "",
       email: "",
       company: "",
-      message: ""
+      message: "",
+      subject: ""
     }
   });
 
   const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+    mutationFn: async (data: ExtendedContact) => {
+      // Remove subject before sending to backend since it's not in the schema
+      const { subject, ...contactData } = data;
+      const response = await apiRequest("POST", "/api/contact", contactData);
       return response.json();
     },
     onSuccess: () => {
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours."
+        description: "We'll get back to you as soon as possible."
       });
       form.reset();
     },
@@ -48,7 +59,7 @@ export default function Contact() {
     }
   });
 
-  const onSubmit = async (data: InsertContact) => {
+  const onSubmit = async (data: ExtendedContact) => {
     setIsSubmitting(true);
     await contactMutation.mutateAsync(data);
     setIsSubmitting(false);
@@ -64,149 +75,126 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-text">Get In Touch</h2>
+          <div className="mb-4">
+            <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Get In Touch</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Contact Us</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to bring U Charge Up to your location? Contact us today.
+            Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
           </p>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <Card className="bg-brand-light">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-6 text-brand-text">Send us a message</h3>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-brand-text">Name</Label>
-                    <Input
-                      id="name"
-                      placeholder="Your name"
-                      {...form.register("name")}
-                      className="mt-2"
-                    />
-                    {form.formState.errors.name && (
-                      <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
-                    )}
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="email" className="text-brand-text">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      {...form.register("email")}
-                      className="mt-2"
-                    />
-                    {form.formState.errors.email && (
-                      <p className="text-red-500 text-sm mt-1">{form.formState.errors.email.message}</p>
-                    )}
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="company" className="text-brand-text">Company</Label>
-                    <Input
-                      id="company"
-                      placeholder="Your company (optional)"
-                      {...form.register("company")}
-                      className="mt-2"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="message" className="text-brand-text">Message</Label>
-                    <Textarea
-                      id="message"
-                      rows={4}
-                      placeholder="Tell us about your location and requirements..."
-                      {...form.register("message")}
-                      className="mt-2"
-                    />
-                    {form.formState.errors.message && (
-                      <p className="text-red-500 text-sm mt-1">{form.formState.errors.message.message}</p>
-                    )}
-                  </div>
-                  
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
-          
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-brand-text">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Mail className="text-brand-blue w-6 h-6 mr-4" />
-                  <span className="text-gray-600">info@uchargeup.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="text-brand-blue w-6 h-6 mr-4" />
-                  <span className="text-gray-600">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="text-brand-blue w-6 h-6 mr-4" />
-                  <span className="text-gray-600">123 Tech Street, San Francisco, CA 94105</span>
-                </div>
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">Phone</h3>
+              <div className="flex items-center">
+                <Phone className="text-brand-blue w-5 h-5 mr-3" />
+                <a href="tel:+15551234567" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                  +1 (555) 123-4567
+                </a>
               </div>
             </div>
             
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-brand-text">Business Hours</h4>
-              <div className="space-y-2 text-gray-600">
-                <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>Closed</span>
-                </div>
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">Email</h3>
+              <div className="flex items-center">
+                <Mail className="text-brand-blue w-5 h-5 mr-3" />
+                <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                  support@uchargeup.com
+                </a>
               </div>
+              <p className="text-sm text-gray-500 mt-2">We'll respond as quickly as possible</p>
             </div>
             
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-brand-text">Follow Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
-                  <Facebook className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
-                  <Twitter className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
-                  <Linkedin className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
-                  <Instagram className="h-6 w-6" />
-                </a>
-              </div>
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">Connect With Us</h3>
+              <p className="text-gray-600">Follow us on social media for updates and news.</p>
             </div>
+          </motion.div>
+          
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <div>
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  placeholder="Your name"
+                  {...form.register("name")}
+                  className="mt-2"
+                />
+                {form.formState.errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
+                )}
+              </div>
+              
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  {...form.register("email")}
+                  className="mt-2"
+                />
+                {form.formState.errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.email.message}</p>
+                )}
+              </div>
+              
+              <div>
+                <Label htmlFor="subject">Subject</Label>
+                <Select onValueChange={(value) => form.setValue("subject", value)}>
+                  <SelectTrigger className="mt-2">
+                    <SelectValue placeholder="Select a subject" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="general">General Inquiry</SelectItem>
+                    <SelectItem value="partnership">Partnership Opportunity</SelectItem>
+                    <SelectItem value="support">Customer Support</SelectItem>
+                  </SelectContent>
+                </Select>
+                {form.formState.errors.subject && (
+                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.subject.message}</p>
+                )}
+              </div>
+              
+              <div>
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  rows={6}
+                  placeholder="Your message"
+                  {...form.register("message")}
+                  className="mt-2"
+                />
+                {form.formState.errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.message.message}</p>
+                )}
+              </div>
+              
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
           </motion.div>
         </div>
       </div>
