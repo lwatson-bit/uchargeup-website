@@ -70,19 +70,19 @@ export default function Gallery() {
             >
               <Dialog>
                 <DialogTrigger asChild>
-                  <Card className="cursor-pointer hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                    <CardContent className="p-0">
+                  <div className="cursor-pointer hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg border-0 bg-transparent">
+                    <div className="p-0">
                       <img 
                         src={image.src} 
                         alt={image.title} 
-                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300 rounded-t-lg"
                       />
-                      <div className="p-4">
+                      <div className="p-4 bg-white rounded-b-lg">
                         <h3 className="font-semibold text-brand-text">{image.title}</h3>
                         <p className="text-gray-600 text-sm mt-1">{image.description}</p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl p-0">
                   <div className="relative">

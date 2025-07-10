@@ -10,23 +10,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { insertContactSchema, type InsertContact } from "@shared/schema";
+import { contactSchema, type ContactForm } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
-import { z } from "zod";
-
-// Extended schema with subject field
-const extendedContactSchema = insertContactSchema.extend({
-  subject: z.string().min(1, "Subject is required")
-});
-
-type ExtendedContact = z.infer<typeof extendedContactSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useForm<ExtendedContact>({
-    resolver: zodResolver(extendedContactSchema),
+  const form = useForm<ContactForm>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -37,10 +29,8 @@ export default function Contact() {
   });
 
   const contactMutation = useMutation({
-    mutationFn: async (data: ExtendedContact) => {
-      // Remove subject before sending to backend since it's not in the schema
-      const { subject, ...contactData } = data;
-      const response = await apiRequest("POST", "/api/contact", contactData);
+    mutationFn: async (data: ContactForm) => {
+      const response = await apiRequest("POST", "/api/contact", data);
       return response.json();
     },
     onSuccess: () => {
@@ -59,7 +49,7 @@ export default function Contact() {
     }
   });
 
-  const onSubmit = async (data: ExtendedContact) => {
+  const onSubmit = async (data: ContactForm) => {
     setIsSubmitting(true);
     await contactMutation.mutateAsync(data);
     setIsSubmitting(false);

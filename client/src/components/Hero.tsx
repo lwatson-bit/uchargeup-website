@@ -77,7 +77,7 @@ export default function Hero() {
               <img 
                 src={kioskImage} 
                 alt="U Charge Up battery rental kiosk" 
-                className="w-full max-w-md rounded-lg shadow-2xl"
+                className="w-full max-w-md rounded-lg"
               />
             </div>
           </motion.div>

@@ -51,7 +51,7 @@ export default function Partners() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 h-20"
+              className="flex items-center justify-center p-4 bg-white rounded-lg border-0 h-20"
             >
               <div className="text-gray-400 text-sm text-center font-medium">
                 {partner.name}

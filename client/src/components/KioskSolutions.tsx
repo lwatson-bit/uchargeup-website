@@ -52,7 +52,7 @@ export default function KioskSolutions() {
             <img 
               src={twentyFourUnitImage} 
               alt="U Charge Up modular charging station with multiple battery compartments" 
-              className="w-full max-w-md rounded-lg shadow-xl"
+              className="w-full max-w-md rounded-lg"
             />
           </motion.div>
         </div>
