@@ -2,118 +2,19 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export default function Partners() {
-  // Partner logos with SVG representations of real companies
+  // Partner companies with actual uploaded logos
   const partnerLogos = [
-    { 
-      name: "Basement Burger Bar", 
-      alt: "Basement Burger Bar",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="10" y="15" width="100" height="10" fill="#8B4513" rx="2"/>
-          <text x="60" y="25" textAnchor="middle" className="text-xs font-bold fill-white">BASEMENT BURGER</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Ford Field", 
-      alt: "Ford Field",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <ellipse cx="60" cy="20" rx="50" ry="15" fill="#002F6C"/>
-          <text x="60" y="25" textAnchor="middle" className="text-sm font-bold fill-white">FORD FIELD</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Meijer", 
-      alt: "Meijer",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="10" y="10" width="100" height="20" fill="#FF6B35" rx="4"/>
-          <text x="60" y="25" textAnchor="middle" className="text-lg font-bold fill-white">meijer</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Four Winds Casinos", 
-      alt: "Four Winds Casinos",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <circle cx="30" cy="20" r="8" fill="#DAA520"/>
-          <circle cx="50" cy="20" r="8" fill="#DAA520"/>
-          <circle cx="70" cy="20" r="8" fill="#DAA520"/>
-          <circle cx="90" cy="20" r="8" fill="#DAA520"/>
-          <text x="60" y="35" textAnchor="middle" className="text-xs font-bold fill-gray-700">FOUR WINDS</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Brass Rail", 
-      alt: "Brass Rail",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="20" y="18" width="80" height="4" fill="#B8860B"/>
-          <text x="60" y="15" textAnchor="middle" className="text-sm font-bold fill-gray-800">BRASS</text>
-          <text x="60" y="32" textAnchor="middle" className="text-sm font-bold fill-gray-800">RAIL</text>
-        </svg>
-      )
-    },
-    { 
-      name: "The Hudson Cafe", 
-      alt: "The Hudson Cafe",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="15" y="12" width="90" height="16" fill="#654321" rx="3"/>
-          <text x="60" y="22" textAnchor="middle" className="text-xs font-bold fill-white">THE HUDSON</text>
-          <text x="60" y="32" textAnchor="middle" className="text-xs font-bold fill-gray-700">CAFE</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Love & Tequila", 
-      alt: "Love & Tequila",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <heart cx="40" cy="20" r="6" fill="#E91E63"/>
-          <text x="60" y="18" textAnchor="middle" className="text-xs font-bold fill-gray-800">LOVE &</text>
-          <text x="60" y="28" textAnchor="middle" className="text-xs font-bold fill-gray-800">TEQUILA</text>
-        </svg>
-      )
-    },
-    { 
-      name: "The Licking", 
-      alt: "The Licking",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="10" y="15" width="100" height="10" fill="#FF4500" rx="5"/>
-          <text x="60" y="25" textAnchor="middle" className="text-sm font-bold fill-white">THE LICKING</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Empire Kitchen", 
-      alt: "Empire Kitchen & Cocktails",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="15" y="10" width="90" height="20" fill="#2C3E50" rx="2"/>
-          <text x="60" y="18" textAnchor="middle" className="text-xs font-bold fill-white">EMPIRE</text>
-          <text x="60" y="28" textAnchor="middle" className="text-xs font-bold fill-white">KITCHEN</text>
-        </svg>
-      )
-    },
-    { 
-      name: "Checkmate Detroit", 
-      alt: "Checkmate Detroit",
-      logo: (
-        <svg viewBox="0 0 120 40" className="w-full h-full">
-          <rect x="20" y="15" width="8" height="8" fill="#000"/>
-          <rect x="32" y="15" width="8" height="8" fill="#FFF" stroke="#000"/>
-          <rect x="44" y="15" width="8" height="8" fill="#000"/>
-          <rect x="56" y="15" width="8" height="8" fill="#FFF" stroke="#000"/>
-          <text x="60" y="32" textAnchor="middle" className="text-xs font-bold fill-gray-800">CHECKMATE</text>
-        </svg>
-      )
-    }
+    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: "BBB-LOGO_1752165222960.jpg" },
+    { name: "Ford Field", alt: "Ford Field", logoPath: "Ford_field_stadium_logo_1752165222960.png" },
+    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: "Four-winds_1752165222960.png" },
+    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: "Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png" },
+    { name: "Fixins", alt: "Fixins", logoPath: "Fixins Logo_1752165204990.png" },
+    // Duplicating some logos to fill the carousel for smooth scrolling
+    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: "BBB-LOGO_1752165222960.jpg" },
+    { name: "Ford Field", alt: "Ford Field", logoPath: "Ford_field_stadium_logo_1752165222960.png" },
+    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: "Four-winds_1752165222960.png" },
+    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: "Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png" },
+    { name: "Fixins", alt: "Fixins", logoPath: "Fixins Logo_1752165204990.png" }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -156,8 +57,23 @@ export default function Partners() {
                 className="flex-shrink-0 mx-8 group"
               >
                 <div className="w-40 h-24 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
-                  <div className="w-32 h-16 flex items-center justify-center">
-                    {partner.logo}
+                  <img 
+                    src={`/attached_assets/${partner.logoPath}`}
+                    alt={partner.alt}
+                    className="max-w-32 max-h-16 object-contain"
+                    onError={(e) => {
+                      // Fallback to text if logo not found
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'block';
+                    }}
+                  />
+                  <div className="text-center hidden">
+                    <div className="text-sm font-medium text-gray-700 mb-1">
+                      {partner.name}
+                    </div>
+                    <div className="w-8 h-1 bg-brand-blue rounded-full mx-auto opacity-60"></div>
                   </div>
                 </div>
               </motion.div>
@@ -169,8 +85,23 @@ export default function Partners() {
                 className="flex-shrink-0 mx-8 group"
               >
                 <div className="w-40 h-24 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
-                  <div className="w-32 h-16 flex items-center justify-center">
-                    {partner.logo}
+                  <img 
+                    src={`/attached_assets/${partner.logoPath}`}
+                    alt={partner.alt}
+                    className="max-w-32 max-h-16 object-contain"
+                    onError={(e) => {
+                      // Fallback to text if logo not found
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'block';
+                    }}
+                  />
+                  <div className="text-center hidden">
+                    <div className="text-sm font-medium text-gray-700 mb-1">
+                      {partner.name}
+                    </div>
+                    <div className="w-8 h-1 bg-brand-blue rounded-full mx-auto opacity-60"></div>
                   </div>
                 </div>
               </div>
