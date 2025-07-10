@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { Phone, Mail } from "lucide-react";
+import { Mail, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -84,16 +84,6 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-semibold mb-6 text-gray-900">Phone</h3>
-              <div className="flex items-center">
-                <Phone className="text-brand-blue w-5 h-5 mr-3" />
-                <a href="tel:+15551234567" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
-                  +1 (555) 123-4567
-                </a>
-              </div>
-            </div>
-            
-            <div>
               <h3 className="text-xl font-semibold mb-6 text-gray-900">Email</h3>
               <div className="flex items-center">
                 <Mail className="text-brand-blue w-5 h-5 mr-3" />
@@ -105,8 +95,22 @@ export default function Contact() {
             </div>
             
             <div>
-              <h3 className="text-xl font-semibold mb-6 text-gray-900">Connect With Us</h3>
-              <p className="text-gray-600">Follow us on social media for updates and news.</p>
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">Follow Us</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <Instagram className="text-brand-blue w-5 h-5 mr-3" />
+                  <a href="https://instagram.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                    @uchargeup
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <Twitter className="text-brand-blue w-5 h-5 mr-3" />
+                  <a href="https://x.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                    @uchargeup
+                  </a>
+                </div>
+              </div>
+              <p className="text-gray-600 mt-4">Follow us for updates and news about new locations.</p>
             </div>
           </motion.div>
           
