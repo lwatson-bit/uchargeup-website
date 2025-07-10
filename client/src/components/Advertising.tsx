@@ -4,32 +4,32 @@ import { Monitor, Users, MapPin, TrendingUp, Target, Eye } from "lucide-react";
 export default function Advertising() {
   const features = [
     {
-      icon: <Monitor className="w-8 h-8 text-brand-blue" />,
+      icon: <Monitor className="w-8 h-8 brand-blue" />,
       title: "Digital Screen Advertising",
       description: "High-resolution displays on every kiosk for maximum visibility and engagement"
     },
     {
-      icon: <Users className="w-8 h-8 text-brand-blue" />,
+      icon: <Users className="w-8 h-8 brand-blue" />,
       title: "Captive Audience",
       description: "Reach customers during their charging session when they're most attentive"
     },
     {
-      icon: <MapPin className="w-8 h-8 text-brand-blue" />,
+      icon: <MapPin className="w-8 h-8 brand-blue" />,
       title: "Strategic Locations",
       description: "Premium placement in high-traffic areas like airports, hotels, and events"
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-brand-blue" />,
+      icon: <TrendingUp className="w-8 h-8 brand-blue" />,
       title: "Real-Time Analytics",
       description: "Track impressions, engagement, and campaign performance in real-time"
     },
     {
-      icon: <Target className="w-8 h-8 text-brand-blue" />,
+      icon: <Target className="w-8 h-8 brand-blue" />,
       title: "Targeted Campaigns",
       description: "Location-based targeting to reach your ideal customers at the right time"
     },
     {
-      icon: <Eye className="w-8 h-8 text-brand-blue" />,
+      icon: <Eye className="w-8 h-8 brand-blue" />,
       title: "High Visibility",
       description: "Eye-level placement ensures your message gets noticed by every user"
     }
@@ -47,7 +47,7 @@ export default function Advertising() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Advertise on Our
-            <span className="text-brand-blue"> Digital Kiosks</span>
+            <span className="brand-blue"> Digital Kiosks</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transform your marketing strategy with premium digital advertising on our charging kiosks. 
