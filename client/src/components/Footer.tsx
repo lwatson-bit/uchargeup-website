@@ -3,7 +3,7 @@ import mbeLogo from "@assets/mbe_1752170626183.webp";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* MBE Certification in Footer */}
@@ -11,7 +11,11 @@ export default function Footer() {
             <img 
               src={mbeLogo} 
               alt="MBE Certified - Minority Business Enterprise" 
-              className="w-12 h-12 object-contain"
+              className="w-12 h-12 object-contain bg-white rounded p-1"
+              onError={(e) => {
+                console.log('MBE logo failed to load');
+                e.currentTarget.style.display = 'none';
+              }}
             />
             <div className="text-left">
               <div className="text-sm font-semibold text-white">MBE Certified</div>
