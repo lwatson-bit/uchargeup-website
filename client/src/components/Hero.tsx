@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Battery, Zap, MapPin, Leaf } from "lucide-react";
+import { Battery, Zap, MapPin, Leaf, Award } from "lucide-react";
 import kioskImage from "@assets/Large 24 UCU_1752157170473.jpg";
 import { handleAppDownload } from "@/utils/appDownload";
 
@@ -57,6 +57,10 @@ export default function Hero() {
               <div className="flex items-center">
                 <Leaf className="w-4 h-4 mr-2 text-brand-blue" />
                 Eco-friendly
+              </div>
+              <div className="flex items-center">
+                <Award className="w-4 h-4 mr-2 text-brand-blue" />
+                MBE Certified
               </div>
             </div>
           </motion.div>
