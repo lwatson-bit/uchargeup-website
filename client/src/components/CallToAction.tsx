@@ -29,7 +29,8 @@ export default function CallToAction() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              className="bg-white text-brand-blue hover:bg-gray-100 font-semibold shadow-none border-0"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent shadow-none"
             >
               Download Our App
             </Button>
