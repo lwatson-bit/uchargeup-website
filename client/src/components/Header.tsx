@@ -57,15 +57,7 @@ export default function Header() {
             </button>
           </nav>
           
-          {/* Right side buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-gray-700 hover:text-brand-blue">
-              Login
-            </Button>
-            <Button className="bg-brand-blue hover:bg-brand-dark-blue text-white">
-              Download App
-            </Button>
-          </div>
+          
           
           {/* Mobile Menu Button */}
           <Button
