@@ -78,66 +78,9 @@ export default function Advertising() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 text-white text-center"
-        >
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Advertise with Us?
-          </h3>
-          <p className="text-xl mb-8 opacity-90">
-            Join leading brands who trust U Charge Up for their digital advertising needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Advertising Info
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-            >
-              View Our Locations
-            </motion.button>
-          </div>
-        </motion.div>
+        
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">
-            Why Choose U Charge Up for Digital Advertising?
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-500 mb-2">24/7</div>
-              <p className="text-gray-600">Always-on visibility</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-500 mb-2">100+</div>
-              <p className="text-gray-600">Premium locations</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-500 mb-2">1M+</div>
-              <p className="text-gray-600">Monthly impressions</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-500 mb-2">95%</div>
-              <p className="text-gray-600">User engagement rate</p>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   );
