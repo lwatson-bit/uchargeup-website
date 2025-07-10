@@ -33,7 +33,7 @@ export default function About() {
             <img 
               src={eightUnitImage} 
               alt="U Charge Up compact battery rental kiosk" 
-              className="w-full max-w-md rounded-lg shadow-xl"
+              className="w-full max-w-md rounded-lg"
             />
           </motion.div>
         </div>
