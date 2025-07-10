@@ -78,23 +78,7 @@ export default function Partners() {
           ))}
         </div>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center bg-brand-blue rounded-lg p-12 text-white"
-        >
-          <h3 className="text-2xl font-bold mb-4">Basement Burger Bar</h3>
-          <p className="text-xl mb-6 opacity-90">Only the best is powered by U Charge Up</p>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="bg-white text-brand-blue hover:bg-gray-100 font-semibold"
-          >
-            Download Our App
-          </Button>
-        </motion.div>
+        
       </div>
     </section>
   );
