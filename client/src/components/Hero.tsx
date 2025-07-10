@@ -20,12 +20,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                <Battery className="w-4 h-4 mr-1" />
-                Portable Power On Demand
-              </span>
-            </div>
+            
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
               Stay Connected, Stay In The Moment
             </h1>
