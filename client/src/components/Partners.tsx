@@ -43,40 +43,68 @@ export default function Partners() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {partnerLogos.map((partner, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-white to-gray-50 p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                    {partner.name}
-                  </h3>
-                  <p className="text-sm text-gray-500">Partner Location</p>
+        {/* Rotating Logo Carousel */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
+            {partnerLogos.map((partner, index) => (
+              <motion.div
+                key={`first-${index}`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex-shrink-0 mx-8 group"
+              >
+                <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-md group-hover:scale-105">
+                  <div className="text-center">
+                    <div className="text-sm font-medium text-gray-700 mb-1">
+                      {partner.name}
+                    </div>
+                    <div className="w-8 h-1 bg-brand-blue rounded-full mx-auto opacity-60"></div>
+                  </div>
                 </div>
-                <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-brand-blue rounded-full"></div>
+              </motion.div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {partnerLogos.map((partner, index) => (
+              <div
+                key={`second-${index}`}
+                className="flex-shrink-0 mx-8 group"
+              >
+                <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-md group-hover:scale-105">
+                  <div className="text-center">
+                    <div className="text-sm font-medium text-gray-700 mb-1">
+                      {partner.name}
+                    </div>
+                    <div className="w-8 h-1 bg-brand-blue rounded-full mx-auto opacity-60"></div>
                   </div>
                 </div>
               </div>
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <div className="flex items-center text-xs text-gray-400">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    Available Now
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
+        
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-blue text-white font-medium hover:bg-brand-dark-blue transition-colors duration-300 cursor-pointer">
+            <span className="mr-2">Ready to find a kiosk?</span>
+            <Button
+              size="sm"
+              variant="secondary"
+              className="bg-white text-brand-blue hover:bg-gray-100 font-semibold ml-2"
+              onClick={() => scrollToSection("contact")}
+            >
+              Get Started
+            </Button>
+          </div>
+        </motion.div>
         
         
       </div>
