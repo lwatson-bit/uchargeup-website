@@ -118,4 +118,13 @@
       transform: translateX(-50%);
     }
   }
+  
+  /* Remove any default shadows/borders that might create white boxes */
+  .shadow-none {
+    box-shadow: none !important;
+  }
+  
+  button, input, select, textarea {
+    box-shadow: none !important;
+  }
 }
