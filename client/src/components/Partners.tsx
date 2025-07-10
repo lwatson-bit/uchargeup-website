@@ -1,20 +1,25 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import bbbLogo from "@assets/BBB-LOGO_1752165222960.jpg";
+import fordFieldLogo from "@assets/Ford_field_stadium_logo_1752165222960.png";
+import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
+import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
+import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
 
 export default function Partners() {
   // Partner companies with actual uploaded logos
   const partnerLogos = [
-    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: "BBB-LOGO_1752165222960.jpg" },
-    { name: "Ford Field", alt: "Ford Field", logoPath: "Ford_field_stadium_logo_1752165222960.png" },
-    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: "Four-winds_1752165222960.png" },
-    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: "Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png" },
-    { name: "Fixins", alt: "Fixins", logoPath: "Fixins Logo_1752165204990.png" },
+    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
+    { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
+    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
+    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
+    { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
     // Duplicating some logos to fill the carousel for smooth scrolling
-    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: "BBB-LOGO_1752165222960.jpg" },
-    { name: "Ford Field", alt: "Ford Field", logoPath: "Ford_field_stadium_logo_1752165222960.png" },
-    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: "Four-winds_1752165222960.png" },
-    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: "Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png" },
-    { name: "Fixins", alt: "Fixins", logoPath: "Fixins Logo_1752165204990.png" }
+    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
+    { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
+    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
+    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
+    { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -58,7 +63,7 @@ export default function Partners() {
               >
                 <div className="w-40 h-24 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
                   <img 
-                    src={`/attached_assets/${partner.logoPath}`}
+                    src={partner.logoPath}
                     alt={partner.alt}
                     className="max-w-32 max-h-16 object-contain"
                     onError={(e) => {
@@ -86,7 +91,7 @@ export default function Partners() {
               >
                 <div className="w-40 h-24 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
                   <img 
-                    src={`/attached_assets/${partner.logoPath}`}
+                    src={partner.logoPath}
                     alt={partner.alt}
                     className="max-w-32 max-h-16 object-contain"
                     onError={(e) => {
