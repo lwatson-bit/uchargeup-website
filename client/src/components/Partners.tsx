@@ -85,26 +85,7 @@ export default function Partners() {
           </div>
         </div>
         
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-blue text-white font-medium hover:bg-brand-dark-blue transition-colors duration-300 cursor-pointer">
-            <span className="mr-2">Ready to find a kiosk?</span>
-            <Button
-              size="sm"
-              variant="secondary"
-              className="bg-white text-brand-blue hover:bg-gray-100 font-semibold ml-2"
-              onClick={() => scrollToSection("contact")}
-            >
-              Get Started
-            </Button>
-          </div>
-        </motion.div>
+        
         
         
       </div>
