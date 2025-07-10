@@ -3,11 +3,12 @@ import { createServer, type Server } from "http";
 import { contactSchema } from "@shared/schema";
 import { z } from "zod";
 import { MemStorage } from "./storage";
+import { sendNotificationEmail } from "./email";
 
 const storage = new MemStorage();
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Contact form submission - save to database
+  // Contact form submission - save to database and send email notification
   app.post("/api/contact", async (req, res) => {
     try {
       const contactData = contactSchema.parse(req.body);
@@ -15,6 +16,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Save contact to storage
       const savedContact = await storage.createContact(contactData);
       console.log("Contact form submission saved:", savedContact);
+      
+      // Send email notification (non-blocking)
+      sendNotificationEmail(contactData).catch(error => {
+        console.error("Email notification failed:", error);
+      });
       
       res.json({ 
         success: true, 
