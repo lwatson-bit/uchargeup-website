@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
-import { Bell, BellOff, Refresh } from "lucide-react";
+import { Bell, BellOff, RotateCcw } from "lucide-react";
 import { useState, useEffect } from "react";
 import type { Contact } from "@shared/schema";
 
@@ -89,7 +89,7 @@ export default function AdminLive() {
               onClick={handleRefresh}
               className="flex items-center gap-2"
             >
-              <Refresh className="h-4 w-4" />
+              <RotateCcw className="h-4 w-4" />
               Refresh
             </Button>
             
