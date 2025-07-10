@@ -29,15 +29,14 @@ export default function CallToAction() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              variant="secondary"
-              className="bg-white text-brand-blue hover:bg-gray-100 font-semibold"
+              className="bg-white text-brand-blue hover:bg-gray-100 font-semibold shadow-none border-0"
             >
               Download Our App
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent"
               onClick={() => scrollToSection("contact")}
             >
               Become a Partner
