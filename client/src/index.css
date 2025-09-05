@@ -107,7 +107,7 @@
   }
   
   .animate-scroll {
-    animation: scroll 15s linear infinite;
+    animation: scroll 18s linear infinite;
   }
   
   @keyframes scroll {
@@ -115,7 +115,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-25%);
+      transform: translateX(-50%);
     }
   }
   
