@@ -16,20 +16,19 @@ export default function Events() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-brand-blue to-brand-dark-blue pt-16 flex items-center">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <section className="relative min-h-screen bg-white pt-16 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
               Portable Charging Stations
               <br />
-              <span className="text-3xl md:text-5xl">Events & Festivals</span>
+              <span className="text-3xl md:text-5xl text-brand-blue">Events & Festivals</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-600">
               U Charge Up is the nation's leading provider of innovative, self-service charging 
               solutions for events, festivals, trade shows, sporting events, and many more. 
               Our all-in-one portable charging stations keep guests and attendees connected 
@@ -40,14 +39,14 @@ export default function Events() {
               <Button
                 onClick={() => scrollToSection("contact")}
                 size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
               >
                 BOOK YOUR NEXT EVENT
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
                 onClick={() => window.open('mailto:events@uchargeup.com', '_blank')}
               >
                 EVENTS@UCHARGEUP.COM
@@ -62,7 +61,7 @@ export default function Events() {
             initial={{ opacity: 0, x: 50, rotate: -15 }}
             animate={{ opacity: 0.8, x: 0, rotate: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="w-48 h-72 bg-gradient-to-b from-blue-400 to-blue-600 rounded-3xl shadow-2xl relative"
+            className="w-48 h-72 bg-gradient-to-b from-brand-blue to-brand-dark-blue rounded-3xl shadow-2xl relative"
           >
             {/* Battery bank design elements */}
             <div className="absolute top-8 left-1/2 transform -translate-x-1/2 text-white text-center">
@@ -227,7 +226,7 @@ export default function Events() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-brand-blue text-white">
+      <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -236,20 +235,20 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
               Ready to Power Your Next Event?
             </h2>
-            <p className="text-xl mb-12 max-w-3xl mx-auto">
+            <p className="text-xl mb-12 max-w-3xl mx-auto text-gray-600">
               Contact our events team today to discuss your charging needs and get a custom quote for your event.
             </p>
             
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-              <div className="flex items-center gap-3">
-                <Phone className="h-6 w-6" />
+              <div className="flex items-center gap-3 text-gray-700">
+                <Phone className="h-6 w-6 text-brand-blue" />
                 <span className="text-lg font-semibold">Call: (555) 123-4567</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-6 w-6" />
+              <div className="flex items-center gap-3 text-gray-700">
+                <Mail className="h-6 w-6 text-brand-blue" />
                 <span className="text-lg font-semibold">events@uchargeup.com</span>
               </div>
             </div>
@@ -257,7 +256,7 @@ export default function Events() {
             <div className="mt-8">
               <Button
                 size="lg"
-                className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+                className="bg-brand-blue text-white hover:bg-brand-dark-blue px-8 py-4 text-lg font-semibold"
                 onClick={() => window.open('mailto:events@uchargeup.com?subject=Event Inquiry', '_blank')}
               >
                 GET STARTED TODAY
