@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users } from "lucide-react";
+import eventImage1 from "@assets/IMG_1128_1757034121090.jpeg";
+import eventImage2 from "@assets/DC5363E4-2F69-42A5-9C85-D87A3C070281_1757034151691.jpeg";
+import eventImage3 from "@assets/IMG_0268_1757034173508.jpeg";
+import eventImage4 from "@assets/IMG_0205_1757034192238.jpeg";
+import eventImage5 from "@assets/IMG_1735_1757034259783.jpeg";
 
 export default function Events() {
   const scrollToSection = (sectionId: string) => {
@@ -13,27 +18,48 @@ export default function Events() {
   return (
     <section id="events" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <div className="mb-4">
-            <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Events & Festivals</span>
+        {/* Header with Hero Image */}
+        <div className="relative mb-16">
+          {/* Hero Image */}
+          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
+            <img 
+              src={eventImage1} 
+              alt="U Charge Up at event" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center text-white px-4"
+              >
+                <div className="mb-2">
+                  <span className="text-sm font-medium uppercase tracking-wide">Events & Festivals</span>
+                </div>
+                <h2 className="text-2xl md:text-4xl font-bold mb-3">
+                  Portable Charging Solutions for Events
+                </h2>
+              </motion.div>
+            </div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Portable Charging Solutions for Events
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Keep your event attendees connected with our innovative, self-service charging solutions. 
-            Perfect for festivals, trade shows, sporting events, and more.
-          </p>
-        </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Keep your event attendees connected with our innovative, self-service charging solutions. 
+              Perfect for festivals, trade shows, sporting events, and more.
+            </p>
+          </motion.div>
+        </div>
 
-        {/* Event Types */}
+        {/* Event Types with Images */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,8 +68,16 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
-              <Calendar className="h-8 w-8 text-white" />
+            <div className="relative h-48 rounded-lg overflow-hidden mb-4">
+              <img 
+                src={eventImage2} 
+                alt="Music festival charging station" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-brand-blue bg-opacity-20"></div>
+              <div className="absolute top-4 left-4 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
+                <Calendar className="h-6 w-6 text-white" />
+              </div>
             </div>
             <h3 className="text-xl font-semibold mb-3">Music Festivals</h3>
             <p className="text-gray-600">
@@ -58,8 +92,16 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="h-8 w-8 text-white" />
+            <div className="relative h-48 rounded-lg overflow-hidden mb-4">
+              <img 
+                src={eventImage3} 
+                alt="Corporate event charging station" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-brand-blue bg-opacity-20"></div>
+              <div className="absolute top-4 left-4 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
+                <Users className="h-6 w-6 text-white" />
+              </div>
             </div>
             <h3 className="text-xl font-semibold mb-3">Corporate Events</h3>
             <p className="text-gray-600">
@@ -74,8 +116,16 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
-              <MapPin className="h-8 w-8 text-white" />
+            <div className="relative h-48 rounded-lg overflow-hidden mb-4">
+              <img 
+                src={eventImage4} 
+                alt="Outdoor venue charging station" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-brand-blue bg-opacity-20"></div>
+              <div className="absolute top-4 left-4 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
+                <MapPin className="h-6 w-6 text-white" />
+              </div>
             </div>
             <h3 className="text-xl font-semibold mb-3">Outdoor Venues</h3>
             <p className="text-gray-600">
@@ -86,20 +136,37 @@ export default function Events() {
 
         {/* How Events Work */}
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-              Simple Event Setup
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We handle everything from delivery to pickup, making it easy to provide charging solutions at your event.
-            </p>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+                Simple Event Setup
+              </h3>
+              <p className="text-lg text-gray-600">
+                We handle everything from delivery to pickup, making it easy to provide charging solutions at your event.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src={eventImage5} 
+                  alt="Charging station setup at event" 
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <motion.div
