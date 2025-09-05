@@ -9,20 +9,21 @@ import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757
 
 export default function Partners() {
   // Partner companies with actual uploaded logos
-  const partnerLogos = [
-    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
-    { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
-    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
-    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
-    { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
-    { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo },
-    // Duplicating some logos to fill the carousel for smooth scrolling
+  const baseLogos = [
     { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
     { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
     { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
     { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
     { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
     { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo }
+  ];
+
+  // Create multiple sets for seamless scrolling (4 sets = 24 logos total)
+  const partnerLogos = [
+    ...baseLogos,
+    ...baseLogos,
+    ...baseLogos,
+    ...baseLogos
   ];
 
   const scrollToSection = (sectionId: string) => {
