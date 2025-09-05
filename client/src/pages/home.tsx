@@ -5,6 +5,7 @@ import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import KioskSolutions from "@/components/KioskSolutions";
 import Partners from "@/components/Partners";
+import Events from "@/components/Events";
 import Advertising from "@/components/Advertising";
 import Contact from "@/components/Contact";
 import CallToAction from "@/components/CallToAction";
@@ -24,6 +25,7 @@ export default function Home() {
         <About />
         <HowItWorks />
         <KioskSolutions />
+        <Events />
         <Advertising />
         <Contact />
         <CallToAction />
