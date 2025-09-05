@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import logoPath from "@assets/NEW  UCU LOGO_1752157158761.png";
 
 export default function Header() {
@@ -25,6 +26,16 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
+            <Link href="/">
+              <button className="text-gray-700 hover:text-brand-blue transition-colors duration-200">
+                Home
+              </button>
+            </Link>
+            <Link href="/events">
+              <button className="text-gray-700 hover:text-brand-blue transition-colors duration-200">
+                Events
+              </button>
+            </Link>
             <button
               onClick={() => scrollToSection("about")}
               className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
@@ -84,6 +95,22 @@ export default function Header() {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden bg-white border-t border-gray-200 px-4 py-2 space-y-1"
           >
+            <Link href="/">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+              >
+                Home
+              </button>
+            </Link>
+            <Link href="/events">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+              >
+                Events
+              </button>
+            </Link>
             <button
               onClick={() => scrollToSection("about")}
               className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"

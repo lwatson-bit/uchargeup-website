@@ -5,6 +5,7 @@ import fordFieldLogo from "@assets/Ford_field_stadium_logo_1752165222960.png";
 import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
 import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
 import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
+import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757032474149.webp";
 
 export default function Partners() {
   // Partner companies with actual uploaded logos
@@ -14,12 +15,14 @@ export default function Partners() {
     { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
     { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
     { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
+    { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo },
     // Duplicating some logos to fill the carousel for smooth scrolling
     { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
     { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
     { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
     { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
-    { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo }
+    { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
+    { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo }
   ];
 
   const scrollToSection = (sectionId: string) => {
