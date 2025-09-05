@@ -47,9 +47,9 @@ export default function Events() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
-                onClick={() => window.open('mailto:events@uchargeup.com', '_blank')}
+                onClick={() => window.location.href = '/#contact'}
               >
-                EVENTS@UCHARGEUP.COM
+                CONTACT US
               </Button>
             </div>
           </motion.div>
@@ -241,13 +241,6 @@ export default function Events() {
             <p className="text-xl mb-12 max-w-3xl mx-auto text-gray-600">
               Contact our events team today to discuss your charging needs and get a custom quote for your event.
             </p>
-            
-            <div className="flex justify-center items-center">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Mail className="h-6 w-6 text-brand-blue" />
-                <span className="text-lg font-semibold">events@uchargeup.com</span>
-              </div>
-            </div>
             
             <div className="mt-8">
               <Button
