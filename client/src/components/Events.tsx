@@ -18,68 +18,105 @@ export default function Events() {
   return (
     <section id="events" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with Hero Image */}
-        <div className="relative mb-16">
-          {/* Hero Image */}
-          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-            <img 
-              src={eventImage1} 
-              alt="U Charge Up at event" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center text-white px-4"
-              >
-                <div className="mb-2">
-                  <span className="text-sm font-medium uppercase tracking-wide">Events & Festivals</span>
-                </div>
-                <h2 className="text-2xl md:text-4xl font-bold mb-3">
-                  Portable Charging Solutions for Events
-                </h2>
-              </motion.div>
-            </div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="mb-4">
+            <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Events & Festivals</span>
           </div>
-          
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Portable Charging Solutions for Events
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Keep your event attendees connected with our innovative, self-service charging solutions. 
+            Perfect for festivals, trade shows, sporting events, and more.
+          </p>
+        </motion.div>
+
+        {/* Featured Event Images */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="relative group cursor-pointer"
+          >
+            <div className="aspect-[4/3] rounded-xl overflow-hidden">
+              <img 
+                src={eventImage1} 
+                alt="U Charge Up charging stations at event" 
+                className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="font-semibold text-lg">Live Event Setup</h3>
+              <p className="text-sm text-gray-200">Charging stations in action</p>
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="relative group cursor-pointer"
           >
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Keep your event attendees connected with our innovative, self-service charging solutions. 
-              Perfect for festivals, trade shows, sporting events, and more.
-            </p>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden">
+              <img 
+                src={eventImage2} 
+                alt="Event charging solution" 
+                className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="font-semibold text-lg">Festival Ready</h3>
+              <p className="text-sm text-gray-200">Multi-day event support</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="relative group cursor-pointer"
+          >
+            <div className="aspect-[4/3] rounded-xl overflow-hidden">
+              <img 
+                src={eventImage3} 
+                alt="Professional event setup" 
+                className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="font-semibold text-lg">Professional Setup</h3>
+              <p className="text-sm text-gray-200">Corporate events & conferences</p>
+            </div>
           </motion.div>
         </div>
 
-        {/* Event Types with Images */}
+        {/* Event Types */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="relative h-48 rounded-lg overflow-hidden mb-4">
-              <img 
-                src={eventImage2} 
-                alt="Music festival charging station" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-brand-blue bg-opacity-20"></div>
-              <div className="absolute top-4 left-4 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
-                <Calendar className="h-6 w-6 text-white" />
-              </div>
+            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <Calendar className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Music Festivals</h3>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">Music Festivals</h3>
             <p className="text-gray-600">
               Keep festival-goers connected throughout multi-day events with reliable charging solutions.
             </p>
@@ -90,20 +127,12 @@ export default function Events() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="relative h-48 rounded-lg overflow-hidden mb-4">
-              <img 
-                src={eventImage3} 
-                alt="Corporate event charging station" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-brand-blue bg-opacity-20"></div>
-              <div className="absolute top-4 left-4 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
-                <Users className="h-6 w-6 text-white" />
-              </div>
+            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Corporate Events</h3>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">Corporate Events</h3>
             <p className="text-gray-600">
               Professional charging solutions for conferences, trade shows, and corporate gatherings.
             </p>
@@ -114,20 +143,12 @@ export default function Events() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="relative h-48 rounded-lg overflow-hidden mb-4">
-              <img 
-                src={eventImage4} 
-                alt="Outdoor venue charging station" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-brand-blue bg-opacity-20"></div>
-              <div className="absolute top-4 left-4 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
-                <MapPin className="h-6 w-6 text-white" />
-              </div>
+            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Outdoor Venues</h3>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">Outdoor Venues</h3>
             <p className="text-gray-600">
               Perfect for sporting events, outdoor concerts, and any venue where power access is limited.
             </p>
@@ -136,7 +157,7 @@ export default function Events() {
 
         {/* How Events Work */}
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -146,9 +167,38 @@ export default function Events() {
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                 Simple Event Setup
               </h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 mb-6">
                 We handle everything from delivery to pickup, making it easy to provide charging solutions at your event.
               </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Book Your Event</h4>
+                    <p className="text-gray-600 text-sm">Get a custom quote and setup plan</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">We Setup & Deliver</h4>
+                    <p className="text-gray-600 text-sm">Professional installation before your event</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Guests Enjoy</h4>
+                    <p className="text-gray-600 text-sm">Attendees stay connected throughout your event</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
             
             <motion.div
@@ -158,63 +208,13 @@ export default function Events() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="rounded-lg overflow-hidden">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src={eventImage5} 
-                  alt="Charging station setup at event" 
-                  className="w-full h-64 object-cover"
+                  src={eventImage4} 
+                  alt="Professional charging station setup" 
+                  className="w-full h-80 object-center object-cover"
                 />
               </div>
-            </motion.div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                1
-              </div>
-              <h4 className="text-lg font-semibold mb-3">Book Your Event</h4>
-              <p className="text-gray-600">
-                Contact us with your event details and we'll provide a custom quote and setup plan.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                2
-              </div>
-              <h4 className="text-lg font-semibold mb-3">We Setup & Deliver</h4>
-              <p className="text-gray-600">
-                Our team delivers and sets up charging stations at your venue before the event starts.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                3
-              </div>
-              <h4 className="text-lg font-semibold mb-3">Guests Enjoy</h4>
-              <p className="text-gray-600">
-                Your attendees stay connected and engaged throughout your event with convenient charging access.
-              </p>
             </motion.div>
           </div>
 
