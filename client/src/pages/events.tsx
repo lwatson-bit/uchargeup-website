@@ -37,7 +37,7 @@ export default function Events() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => window.location.href = '/#contact'}
                 size="lg"
                 className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
               >
@@ -242,11 +242,7 @@ export default function Events() {
               Contact our events team today to discuss your charging needs and get a custom quote for your event.
             </p>
             
-            <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Phone className="h-6 w-6 text-brand-blue" />
-                <span className="text-lg font-semibold">Call: (555) 123-4567</span>
-              </div>
+            <div className="flex justify-center items-center">
               <div className="flex items-center gap-3 text-gray-700">
                 <Mail className="h-6 w-6 text-brand-blue" />
                 <span className="text-lg font-semibold">events@uchargeup.com</span>
@@ -257,7 +253,7 @@ export default function Events() {
               <Button
                 size="lg"
                 className="bg-brand-blue text-white hover:bg-brand-dark-blue px-8 py-4 text-lg font-semibold"
-                onClick={() => window.open('mailto:events@uchargeup.com?subject=Event Inquiry', '_blank')}
+                onClick={() => window.location.href = '/#contact'}
               >
                 GET STARTED TODAY
               </Button>
