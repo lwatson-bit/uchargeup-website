@@ -42,11 +42,6 @@ export default function Header() {
                 Events
               </span>
             </Link>
-            <Link href="/#partners">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
-                Partners
-              </span>
-            </Link>
             <Link href="/contact">
               <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
                 Contact
@@ -105,14 +100,6 @@ export default function Header() {
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
               >
                 Events
-              </span>
-            </Link>
-            <Link href="/#partners">
-              <span 
-                onClick={closeMenu}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
-              >
-                Partners
               </span>
             </Link>
             <Link href="/contact">

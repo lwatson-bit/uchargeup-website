@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Battery, Zap, MapPin, Leaf, Award } from "lucide-react";
 import kioskImage from "@assets/Large 24 UCU_1752157170473.jpg";
 import { handleAppDownload } from "@/utils/appDownload";
+import bbbLogo from "@assets/BBB-LOGO_1752165222960.jpg";
+import fordFieldLogo from "@assets/Ford_field_stadium_logo_1752165222960.png";
+import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
+import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
+import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
+import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757032474149.webp";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -11,6 +17,16 @@ export default function Hero() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Partner logos for hero section
+  const partnerLogos = [
+    { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
+    { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
+    { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
+    { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
+    { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
+    { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo }
+  ];
 
   return (
     <section id="home" className="pt-16 bg-gradient-to-br from-gray-50 to-white">
@@ -85,6 +101,37 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
+        
+        {/* Partner logos - shown prominently in hero */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 pt-8 border-t border-gray-200"
+        >
+          <div className="text-center mb-8">
+            <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Trusted by</span>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {partnerLogos.map((partner, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                className="group"
+              >
+                <div className="w-24 h-16 md:w-32 md:h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
+                  <img 
+                    src={partner.logoPath}
+                    alt={partner.alt}
+                    className="max-w-20 max-h-12 md:max-w-24 md:max-h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
