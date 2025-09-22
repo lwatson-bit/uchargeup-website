@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users, Phone, Mail } from "lucide-react";
+import { Link } from "wouter";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Events() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-white pt-16 flex items-center">
@@ -36,21 +37,23 @@ export default function Events() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                onClick={() => window.location.href = '/#contact'}
-                size="lg"
-                className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
-              >
-                BOOK YOUR NEXT EVENT
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
-                onClick={() => window.location.href = '/#contact'}
-              >
-                CONTACT US
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                >
+                  BOOK YOUR NEXT EVENT
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                >
+                  CONTACT US
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -243,17 +246,20 @@ export default function Events() {
             </p>
             
             <div className="mt-8">
-              <Button
-                size="lg"
-                className="bg-brand-blue text-white hover:bg-brand-dark-blue px-8 py-4 text-lg font-semibold"
-                onClick={() => window.location.href = '/#contact'}
-              >
-                GET STARTED TODAY
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-brand-blue text-white hover:bg-brand-dark-blue px-8 py-4 text-lg font-semibold"
+                >
+                  GET STARTED TODAY
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
+      </motion.main>
+      <Footer />
     </div>
   );
 }

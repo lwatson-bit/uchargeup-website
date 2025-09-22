@@ -8,11 +8,7 @@ import logoPath from "@assets/NEW  UCU LOGO_1752157158761.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
@@ -26,36 +22,36 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("how-it-works")}
-              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
-            >
-              How It Works
-            </button>
-            <button
-              onClick={() => scrollToSection("our-kiosks")}
-              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
-            >
-              Our Kiosks
-            </button>
-            <button
-              onClick={() => scrollToSection("events")}
-              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
-            >
-              Events
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-gray-700 hover:text-brand-blue transition-colors duration-200"
-            >
-              Contact
-            </button>
+            <Link href="/">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Home
+              </span>
+            </Link>
+            <Link href="/how-it-works">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                How It Works
+              </span>
+            </Link>
+            <Link href="/kiosks">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Our Kiosks
+              </span>
+            </Link>
+            <Link href="/events">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Events
+              </span>
+            </Link>
+            <Link href="/partners">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Partners
+              </span>
+            </Link>
+            <Link href="/contact">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Contact
+              </span>
+            </Link>
           </nav>
           
           
@@ -79,36 +75,54 @@ export default function Header() {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden bg-white border-t border-gray-200 px-4 py-2 space-y-1"
           >
-            <button
-              onClick={() => scrollToSection("about")}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("how-it-works")}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              How It Works
-            </button>
-            <button
-              onClick={() => scrollToSection("our-kiosks")}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              Our Kiosks
-            </button>
-            <button
-              onClick={() => scrollToSection("events")}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              Events
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              Contact
-            </button>
+            <Link href="/">
+              <span 
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                Home
+              </span>
+            </Link>
+            <Link href="/how-it-works">
+              <span 
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                How It Works
+              </span>
+            </Link>
+            <Link href="/kiosks">
+              <span 
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                Our Kiosks
+              </span>
+            </Link>
+            <Link href="/events">
+              <span 
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                Events
+              </span>
+            </Link>
+            <Link href="/partners">
+              <span 
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                Partners
+              </span>
+            </Link>
+            <Link href="/contact">
+              <span 
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                Contact
+              </span>
+            </Link>
           </motion.nav>
         )}
       </div>

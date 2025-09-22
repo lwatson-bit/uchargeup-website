@@ -21,13 +21,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <Hero />
-        <Partners />
         <About />
-        <HowItWorks />
-        <KioskSolutions />
-        <Events />
-        <Advertising />
-        <Contact />
         <CallToAction />
       </motion.main>
       <Footer />
