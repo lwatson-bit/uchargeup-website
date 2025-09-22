@@ -62,35 +62,6 @@ export default function Events() {
             </div>
           </motion.div>
         </div>
-        
-        {/* Floating battery bank visual */}
-        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 hidden lg:block">
-          <motion.div
-            initial={{ opacity: 0, x: 50, rotate: -15 }}
-            animate={{ opacity: 0.8, x: 0, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="w-48 h-72 bg-gradient-to-b from-brand-blue to-brand-dark-blue rounded-3xl shadow-2xl relative"
-          >
-            {/* Battery bank design elements */}
-            <div className="absolute top-8 left-1/2 transform -translate-x-1/2 text-white text-center">
-              <div className="text-2xl font-bold mb-2">Rent</div>
-              <div className="text-xl mb-2">Charge</div>
-              <div className="text-xl">Return</div>
-            </div>
-            
-            {/* QR Code placeholder */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-              <div className="grid grid-cols-8 gap-0.5">
-                {Array.from({ length: 64 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`w-1 h-1 ${Math.random() > 0.5 ? 'bg-black' : 'bg-white'}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
       </section>
 
       {/* Features Section */}
