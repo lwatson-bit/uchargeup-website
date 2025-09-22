@@ -133,7 +133,7 @@ export default function Hero() {
                     <img 
                       src={partner.logoPath}
                       alt={partner.alt}
-                      className="max-w-24 max-h-14 object-contain"
+                      className="max-w-24 max-h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function Hero() {
                     <img 
                       src={partner.logoPath}
                       alt={partner.alt}
-                      className="max-w-24 max-h-14 object-contain"
+                      className="max-w-24 max-h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
                 </div>
