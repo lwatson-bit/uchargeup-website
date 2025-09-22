@@ -24,7 +24,10 @@ export default function Footer() {
           </div>
           
           <p className="text-gray-400">
-            &copy; 2024 U Charge Up. All rights reserved.
+            &copy; 2024 U Charge Up®. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-500 mt-2">
+            U Charge Up® is a registered trademark.
           </p>
         </div>
       </div>
