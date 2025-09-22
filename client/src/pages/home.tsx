@@ -21,6 +21,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <Hero />
+        <Partners />
         <About />
         <CallToAction />
       </motion.main>
