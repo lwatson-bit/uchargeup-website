@@ -18,14 +18,21 @@ export default function Hero() {
     }
   };
 
-  // Partner logos for hero section
-  const partnerLogos = [
+  // Partner logos for hero section with scrolling
+  const baseLogos = [
     { name: "Basement Burger Bar", alt: "Basement Burger Bar", logoPath: bbbLogo },
     { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
     { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
     { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
     { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
     { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo }
+  ];
+
+  // Create enough duplicates for seamless infinite scroll
+  const partnerLogos = [
+    ...baseLogos,
+    ...baseLogos,
+    ...baseLogos
   ];
 
   return (
@@ -102,7 +109,7 @@ export default function Hero() {
           </motion.div>
         </div>
         
-        {/* Partner logos - shown prominently in hero */}
+        {/* Partner logos - scrolling carousel in hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,24 +119,41 @@ export default function Hero() {
           <div className="text-center mb-8">
             <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Trusted by</span>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {partnerLogos.map((partner, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="group"
-              >
-                <div className="w-24 h-16 md:w-32 md:h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
-                  <img 
-                    src={partner.logoPath}
-                    alt={partner.alt}
-                    className="max-w-20 max-h-12 md:max-w-24 md:max-h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                  />
+          
+          {/* Scrolling Logo Carousel */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set */}
+              {partnerLogos.map((partner, index) => (
+                <div
+                  key={`set1-${index}`}
+                  className="flex-shrink-0 mx-8 group"
+                >
+                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
+                    <img 
+                      src={partner.logoPath}
+                      alt={partner.alt}
+                      className="max-w-24 max-h-14 object-contain"
+                    />
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+              ))}
+              {/* Second set for seamless loop */}
+              {partnerLogos.map((partner, index) => (
+                <div
+                  key={`set2-${index}`}
+                  className="flex-shrink-0 mx-8 group"
+                >
+                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
+                    <img 
+                      src={partner.logoPath}
+                      alt={partner.alt}
+                      className="max-w-24 max-h-14 object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
