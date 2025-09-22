@@ -17,7 +17,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src={logoPath} alt="U Charge Up®" className="h-16 w-auto" />
+            <Link href="/">
+              <img 
+                src={logoPath} 
+                alt="U Charge Up®" 
+                className="h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-200" 
+                data-testid="logo-home-link"
+              />
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
