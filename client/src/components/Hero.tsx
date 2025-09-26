@@ -58,11 +58,11 @@ export default function Hero() {
               >
                 Download App
               </Button>
-              <Link href="/how-it-works">
+              <Link href="/how-it-works" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold"
+                  className="w-full border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold"
                   data-testid="how-it-works-button"
                 >
                   How It Works
