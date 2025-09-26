@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Smartphone, MapPin, Clock } from "lucide-react";
 import { handleAppDownload } from "@/utils/appDownload";
+import { Link } from "wouter";
 
 export default function CallToAction() {
   const scrollToSection = (sectionId: string) => {
@@ -36,14 +37,16 @@ export default function CallToAction() {
             >
               Download Our App
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent"
-              onClick={() => scrollToSection("contact")}
-            >
-              Become a Partner
-            </Button>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent"
+                data-testid="become-partner-button"
+              >
+                Become a Partner
+              </Button>
+            </Link>
           </div>
           
           {/* Features */}

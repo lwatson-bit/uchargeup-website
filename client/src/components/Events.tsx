@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users } from "lucide-react";
+import { Link } from "wouter";
 import eventImage1 from "@assets/IMG_1128_1757034121090.jpeg";
 import eventImage2 from "@assets/DC5363E4-2F69-42A5-9C85-D87A3C070281_1757034151691.jpeg";
 import eventImage3 from "@assets/IMG_0268_1757034173508.jpeg";
@@ -225,13 +226,15 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <Button
-              onClick={() => scrollToSection("contact")}
-              size="lg"
-              className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
-            >
-              Book Your Event Today
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                data-testid="book-event-button"
+              >
+                Book Your Event Today
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
