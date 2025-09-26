@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Battery, Zap, MapPin, Leaf, Award } from "lucide-react";
+import { Link } from "wouter";
 import kioskImage from "@assets/Large 24 UCU_1752157170473.jpg";
 import { handleAppDownload } from "@/utils/appDownload";
 import bbbLogo from "@assets/BBB-LOGO_1752165222960.jpg";
@@ -57,14 +58,16 @@ export default function Hero() {
               >
                 Download App
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold"
-                onClick={() => scrollToSection("how-it-works")}
-              >
-                How It Works
-              </Button>
+              <Link href="/how-it-works">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold"
+                  data-testid="how-it-works-button"
+                >
+                  How It Works
+                </Button>
+              </Link>
             </div>
             
             {/* Features */}
