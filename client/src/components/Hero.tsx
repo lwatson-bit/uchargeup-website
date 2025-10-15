@@ -132,7 +132,7 @@ export default function Hero() {
                   key={`set1-${index}`}
                   className="flex-shrink-0 mx-8 group"
                 >
-                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
+                  <div className="w-32 h-20 bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-105">
                     <img 
                       src={partner.logoPath}
                       alt={partner.alt}
@@ -147,7 +147,7 @@ export default function Hero() {
                   key={`set2-${index}`}
                   className="flex-shrink-0 mx-8 group"
                 >
-                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 border border-gray-100">
+                  <div className="w-32 h-20 bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-105">
                     <img 
                       src={partner.logoPath}
                       alt={partner.alt}
