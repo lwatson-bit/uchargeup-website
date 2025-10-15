@@ -101,10 +101,10 @@ export default function Hero() {
               <img 
                 src={kioskImage} 
                 alt="U Charge Up battery rental kiosk" 
-                className="w-full max-w-md"
+                className="w-full max-w-md border-0 shadow-none"
                 style={{
-                  background: 'transparent',
-                  border: 'none',
+                  border: 'none !important',
+                  outline: 'none',
                   boxShadow: 'none'
                 }}
               />
