@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import mbeLogo from "@assets/mbe_1752170626183.webp";
 
 export default function Footer() {
@@ -26,6 +27,13 @@ export default function Footer() {
           <p className="text-gray-400">
             &copy; 2024 U Charge Up®. All rights reserved.
           </p>
+          <div className="mt-4">
+            <Link href="/privacy-policy">
+              <span className="text-sm text-gray-400 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Privacy Policy
+              </span>
+            </Link>
+          </div>
           <p className="text-xs text-gray-500 mt-2">
             U Charge Up® is a registered trademark.
           </p>

@@ -1,0 +1,121 @@
+U Charge Up Privacy Policy
+
+Last Updated: December 11, 2025
+
+U Charge Up, Inc. (“U Charge Up,” “we,” “our,” or “us”) provides mobile applications and charging kiosk services that allow users to rent portable power banks and manage their rentals. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile app, website, and kiosks (collectively, the “Services”).
+
+By using the Services, you agree to the practices described in this Privacy Policy.
+
+⸻
+
+1. Information We Collect
+
+A. Information You Provide
+	•	Account Information: Phone number, email address (if provided), and profile details.
+	•	Payment Information: Processed securely by our third-party payment provider (Stripe). We do not store full credit card numbers on our servers.
+	•	Support Requests: Any information you submit when contacting customer support.
+
+B. Information Collected Automatically
+	•	Device Information: Device model, operating system, browser type, and app version.
+	•	Usage Information: How you interact with the app and kiosks, including rental history and return location.
+	•	Location Information:
+	•	Precise location when you grant permission — used solely to help you find nearby U Charge Up kiosks.
+	•	You may disable location services at any time in your device settings.
+
+C. Information From Third Parties
+	•	Payment Processor Data (Stripe): For payment status, refunds, and fraud prevention.
+	•	Analytics Providers: Aggregated usage data to help improve app performance and reliability.
+
+⸻
+
+2. How We Use Your Information
+
+We use the information we collect to:
+	•	Provide and operate the U Charge Up Services
+	•	Process rentals, returns, deposits, and payments
+	•	Improve app performance, kiosk functionality, and user experience
+	•	Detect and prevent fraud or misuse
+	•	Communicate with you regarding your account, rentals, updates, or support inquiries
+	•	Comply with legal obligations
+
+We do not sell your personal data.
+
+⸻
+
+3. How We Share Your Information
+
+We may share information only with:
+	•	Service Providers: Payment processing (Stripe), backend hosting, analytics, customer support tools.
+	•	Business Partners: Only when necessary to operate kiosks within locations that host U Charge Up equipment (e.g., confirming device return or resolving disputes).
+	•	Law Enforcement: If required by applicable law, legal process, or to protect our rights.
+
+We do not share personal information for advertising networks or data brokers.
+
+⸻
+
+4. Cookies & Tracking Technologies
+
+Our website may use cookies and similar technologies to:
+	•	Maintain your session
+	•	Analyze website performance
+	•	Improve user experience
+
+Our mobile app uses analytics tools that collect anonymized usage data. We do not use cross-app tracking for advertising.
+
+⸻
+
+5. Data Retention
+
+We retain information only as long as necessary to:
+	•	Operate your account
+	•	Provide rental history
+	•	Meet legal, tax, and operational requirements
+
+When data is no longer needed, we securely delete or anonymize it.
+
+⸻
+
+6. Data Security
+
+We take reasonable technical and organizational measures to protect your information, including encryption, secure payment processing, and restricted access.
+While we work hard to safeguard your data, no method of transmission is 100% secure.
+
+⸻
+
+7. Your Choices
+
+You may:
+	•	Disable location access
+	•	Request deletion of your account
+	•	Update your contact information
+	•	Opt out of marketing communications (if applicable)
+
+To request changes, contact us at support@uchargeup.com.
+
+⸻
+
+8. Children’s Privacy
+
+Our Services are not intended for children under 13. We do not knowingly collect data from children under 13. If we learn that such data was collected, we will delete it promptly.
+
+⸻
+
+9. International Users
+
+The Services are operated in the United States. If you access the app from outside the U.S., you consent to the transfer of your information to the United States.
+
+⸻
+
+10. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. The updated version will be posted on our website with the “Last Updated” date.
+
+⸻
+
+11. Contact Us
+
+If you have questions or requests regarding this Privacy Policy, please contact us:
+
+U Charge Up, Inc.
+Email: support@uchargeup.com
+Website: https://www.uchargeup.com

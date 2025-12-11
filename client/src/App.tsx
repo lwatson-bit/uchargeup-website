@@ -8,6 +8,7 @@ import HowItWorksPage from "@/pages/how-it-works";
 import KiosksPage from "@/pages/kiosks";
 import Events from "@/pages/events";
 import ContactPage from "@/pages/contact";
+import PrivacyPolicyPage from "@/pages/privacy-policy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/kiosks" component={KiosksPage} />
       <Route path="/events" component={Events} />
       <Route path="/contact" component={ContactPage} />
+      <Route path="/privacy-policy" component={PrivacyPolicyPage} />
       <Route component={NotFound} />
     </Switch>
   );
