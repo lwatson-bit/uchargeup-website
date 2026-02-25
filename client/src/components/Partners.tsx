@@ -6,6 +6,7 @@ import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
 import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
 import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
 import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757032474149.webp";
+import virginHotelsLogo from "@assets/Virgin-logo_1772042074981.png";
 
 export default function Partners() {
   // Partner companies with actual uploaded logos
@@ -15,7 +16,8 @@ export default function Partners() {
     { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
     { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
     { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
-    { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo }
+    { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo },
+    { name: "Virgin Hotels Nashville", alt: "Virgin Hotels Nashville", logoPath: virginHotelsLogo }
   ];
 
   // Create enough duplicates for seamless infinite scroll
