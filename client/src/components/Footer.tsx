@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
           
           <p className="text-gray-400">
-            &copy; 2024 U Charge Up®. All rights reserved.
+            &copy; 2026 U Charge Up®. All rights reserved.
           </p>
           <div className="mt-4">
             <Link href="/privacy-policy">
