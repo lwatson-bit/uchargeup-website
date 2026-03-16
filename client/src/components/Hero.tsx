@@ -97,14 +97,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative">
+            <div className="relative bg-white rounded-xl">
               <img 
                 src={kioskImage} 
                 alt="U Charge Up battery rental kiosk" 
                 className="w-full max-w-md"
                 style={{
                   mixBlendMode: 'multiply',
-                  filter: 'contrast(1.1) brightness(1.05)',
                   border: 'none',
                   outline: 'none',
                   boxShadow: 'none'
