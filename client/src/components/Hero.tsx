@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Battery, Zap, MapPin, Leaf, Award } from "lucide-react";
 import { Link } from "wouter";
-import kioskImage from "@assets/Large 24 UCU_1752157170473.jpg";
+import kioskImage from "@assets/IMG_3172_1775147417498.jpeg";
 import { handleAppDownload } from "@/utils/appDownload";
 import bbbLogo from "@assets/BBB-LOGO_1752165222960.jpg";
 import fordFieldLogo from "@assets/Ford_field_stadium_logo_1752165222960.png";
@@ -97,17 +97,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative bg-white rounded-xl">
+            <div className="relative">
               <img 
                 src={kioskImage} 
-                alt="U Charge Up battery rental kiosk" 
-                className="w-full max-w-md"
-                style={{
-                  mixBlendMode: 'multiply',
-                  border: 'none',
-                  outline: 'none',
-                  boxShadow: 'none'
-                }}
+                alt="U Charge Up kiosk at the Detroit Auto Show" 
+                className="w-full max-w-md rounded-xl shadow-lg object-cover"
               />
             </div>
           </motion.div>
