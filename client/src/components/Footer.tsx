@@ -27,10 +27,15 @@ export default function Footer() {
           <p className="text-gray-400">
             &copy; 2026 U Charge Up®. All rights reserved.
           </p>
-          <div className="mt-4">
+          <div className="mt-4 flex justify-center gap-6">
             <Link href="/privacy-policy">
               <span className="text-sm text-gray-400 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
                 Privacy Policy
+              </span>
+            </Link>
+            <Link href="/terms-of-service">
+              <span className="text-sm text-gray-400 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Terms of Service
               </span>
             </Link>
           </div>
