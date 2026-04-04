@@ -69,6 +69,13 @@ export default function Hero() {
                 </Button>
               </Link>
             </div>
+
+            <p className="text-xs text-gray-400 -mt-4 mb-6">
+              By using U Charge Up, you agree to our{" "}
+              <Link href="/terms-of-service" className="underline hover:text-brand-blue transition-colors duration-200">
+                Terms of Service
+              </Link>.
+            </p>
             
             {/* Features */}
             <div className="flex flex-wrap gap-6 text-sm text-gray-600">
