@@ -36,6 +36,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // so log the full payload for recovery from Vercel function logs.
     console.log("Contact form submission:", JSON.stringify(contact));
 
+    // shape only, never the value: a real key is ~69 chars and starts "SG."
+    console.log(
+      `SendGrid key check: length=${SENDGRID_API_KEY.length}, startsWithSG=${SENDGRID_API_KEY.startsWith("SG.")}`,
+    );
     if (!SENDGRID_API_KEY) {
       console.log("No SendGrid API key provided - skipping email notification");
     } else {
