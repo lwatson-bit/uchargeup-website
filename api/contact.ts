@@ -5,7 +5,17 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import sgMail from "@sendgrid/mail";
 import { z } from "zod";
-import { contactSchema } from "../shared/schema";
+
+// Self-contained mirror of contactSchema in shared/schema.ts — a relative
+// import here crashes at runtime (ESM extensionless-import limitation in
+// Vercel's function packaging). Keep the two in sync.
+const contactSchema = z.object({
+  name: z.string(),
+  email: z.string(),
+  company: z.string().nullable().optional(),
+  subject: z.string(),
+  message: z.string(),
+});
 
 if (process.env.SENDGRID_API_KEY) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
