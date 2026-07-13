@@ -3,8 +3,10 @@
 // unlike there, the email send is awaited here because a serverless function
 // may be frozen as soon as the response is sent.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import sgMail from "@sendgrid/mail";
 import { z } from "zod";
+
+// trim() guards against stray whitespace/newlines from pasting the key
+const RESEND_API_KEY = (process.env.RESEND_API_KEY || "").trim();
 
 // Self-contained mirror of contactSchema in shared/schema.ts — a relative
 // import here crashes at runtime (ESM extensionless-import limitation in
@@ -16,12 +18,6 @@ const contactSchema = z.object({
   subject: z.string(),
   message: z.string(),
 });
-
-// trim() guards against stray whitespace/newlines from pasting the key
-const SENDGRID_API_KEY = (process.env.SENDGRID_API_KEY || "").trim();
-if (SENDGRID_API_KEY) {
-  sgMail.setApiKey(SENDGRID_API_KEY);
-}
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
@@ -36,40 +32,48 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // so log the full payload for recovery from Vercel function logs.
     console.log("Contact form submission:", JSON.stringify(contact));
 
-    // shape only, never the value: a real key is ~69 chars and starts "SG."
-    console.log(
-      `SendGrid key check: length=${SENDGRID_API_KEY.length}, startsWithSG=${SENDGRID_API_KEY.startsWith("SG.")}`,
-    );
-    if (!SENDGRID_API_KEY) {
-      console.log("No SendGrid API key provided - skipping email notification");
+    if (!RESEND_API_KEY) {
+      console.log("No Resend API key provided - skipping email notification");
     } else {
-      await sgMail.send({
-        to: "support@uchargeup.com",
-        from: "support@uchargeup.com", // This must be verified in SendGrid
-        subject: `New Contact Form Submission: ${contact.subject}`,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #0066cc;">New Contact Form Submission</h2>
+      const resp = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "U Charge Up Website <support@uchargeup.com>",
+          to: ["support@uchargeup.com"],
+          reply_to: contact.email,
+          subject: `New Contact Form Submission: ${contact.subject}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #0066cc;">New Contact Form Submission</h2>
 
-            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <h3 style="margin-top: 0; color: #333;">Contact Details</h3>
-              <p><strong>Name:</strong> ${contact.name}</p>
-              <p><strong>Email:</strong> ${contact.email}</p>
-              ${contact.company ? `<p><strong>Company:</strong> ${contact.company}</p>` : ""}
-              <p><strong>Subject:</strong> ${contact.subject}</p>
-            </div>
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3 style="margin-top: 0; color: #333;">Contact Details</h3>
+                <p><strong>Name:</strong> ${contact.name}</p>
+                <p><strong>Email:</strong> ${contact.email}</p>
+                ${contact.company ? `<p><strong>Company:</strong> ${contact.company}</p>` : ""}
+                <p><strong>Subject:</strong> ${contact.subject}</p>
+              </div>
 
-            <div style="background-color: #fff; padding: 20px; border-left: 4px solid #0066cc; margin: 20px 0;">
-              <h3 style="margin-top: 0; color: #333;">Message</h3>
-              <p style="white-space: pre-wrap; line-height: 1.6;">${contact.message}</p>
-            </div>
+              <div style="background-color: #fff; padding: 20px; border-left: 4px solid #0066cc; margin: 20px 0;">
+                <h3 style="margin-top: 0; color: #333;">Message</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;">${contact.message}</p>
+              </div>
 
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 14px;">
-              <p>This email was sent from your U Charge Up contact form.</p>
+              <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 14px;">
+                <p>This email was sent from your U Charge Up contact form. Reply to respond directly to the sender.</p>
+              </div>
             </div>
-          </div>
-        `,
+          `,
+        }),
       });
+
+      if (!resp.ok) {
+        throw new Error(`Resend ${resp.status}: ${await resp.text()}`);
+      }
       console.log("Email notification sent successfully");
     }
 
