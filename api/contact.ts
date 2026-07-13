@@ -17,8 +17,10 @@ const contactSchema = z.object({
   message: z.string(),
 });
 
-if (process.env.SENDGRID_API_KEY) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// trim() guards against stray whitespace/newlines from pasting the key
+const SENDGRID_API_KEY = (process.env.SENDGRID_API_KEY || "").trim();
+if (SENDGRID_API_KEY) {
+  sgMail.setApiKey(SENDGRID_API_KEY);
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -34,7 +36,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // so log the full payload for recovery from Vercel function logs.
     console.log("Contact form submission:", JSON.stringify(contact));
 
-    if (!process.env.SENDGRID_API_KEY) {
+    if (!SENDGRID_API_KEY) {
       console.log("No SendGrid API key provided - skipping email notification");
     } else {
       await sgMail.send({
