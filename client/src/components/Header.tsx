@@ -44,6 +44,11 @@ export default function Header() {
                 Our Kiosks
               </span>
             </Link>
+            <Link href="/locations">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                Locations
+              </span>
+            </Link>
             <Link href="/events">
               <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
                 Events
@@ -101,8 +106,16 @@ export default function Header() {
                 Our Kiosks
               </span>
             </Link>
+            <Link href="/locations">
+              <span
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                Locations
+              </span>
+            </Link>
             <Link href="/events">
-              <span 
+              <span
                 onClick={closeMenu}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
               >

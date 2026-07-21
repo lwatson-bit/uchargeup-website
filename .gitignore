@@ -4,3 +4,7 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz.vercel
+
+# local env files (API keys live in Vercel project settings, not in git)
+.env
+.env.*
