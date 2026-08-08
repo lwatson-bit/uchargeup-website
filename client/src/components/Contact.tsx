@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,9 +12,28 @@ import { useToast } from "@/hooks/use-toast";
 import { contactSchema, type ContactForm } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 
+// apiRequest throws Error("<status>: <raw body>"). Show the API's own wording
+// for a validation failure, but never leak a raw JSON blob for a server error —
+// there is nothing the visitor can do about it except reach us another way.
+function friendlyError(error: unknown): string {
+  const raw = error instanceof Error ? error.message : "";
+  const separator = raw.indexOf(":");
+  const status = Number(raw.slice(0, separator));
+
+  if (status >= 400 && status < 500) {
+    try {
+      const parsed = JSON.parse(raw.slice(separator + 1).trim());
+      if (typeof parsed?.message === "string") return parsed.message;
+    } catch {
+      // body was not JSON - fall through to the generic message
+    }
+  }
+
+  return "Something went wrong on our end. Please email support@uchargeup.com and we'll get right back to you.";
+}
+
 export default function Contact() {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
@@ -40,19 +58,20 @@ export default function Contact() {
       });
       form.reset();
     },
-    onError: (error: any) => {
+    onError: (error: unknown) => {
       toast({
         title: "Error sending message",
-        description: error.message || "Please try again later.",
+        description: friendlyError(error),
         variant: "destructive"
       });
     }
   });
 
-  const onSubmit = async (data: ContactForm) => {
-    setIsSubmitting(true);
-    await contactMutation.mutateAsync(data);
-    setIsSubmitting(false);
+  // mutate() rather than mutateAsync(): a rejected mutateAsync promise escapes
+  // as an unhandled rejection and skips any state reset placed after the await,
+  // which is what used to leave the button stuck on "Sending..." forever.
+  const onSubmit = (data: ContactForm) => {
+    contactMutation.mutate(data);
   };
 
   return (
@@ -151,7 +170,10 @@ export default function Contact() {
               
               <div>
                 <Label htmlFor="subject">Subject</Label>
-                <Select onValueChange={(value) => form.setValue("subject", value)}>
+                <Select
+                  value={form.watch("subject")}
+                  onValueChange={(value) => form.setValue("subject", value, { shouldValidate: true })}
+                >
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder="Select a subject" />
                   </SelectTrigger>
@@ -184,9 +206,9 @@ export default function Contact() {
                 type="submit"
                 size="lg"
                 className="w-full bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold shadow-none border-0"
-                disabled={isSubmitting}
+                disabled={contactMutation.isPending}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {contactMutation.isPending ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </motion.div>
