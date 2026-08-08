@@ -126,6 +126,12 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 
 ## Deployment Strategy
 
+### Which remote actually deploys
+
+Production is Vercel project `uchargeup-website` (team `larry-watsons-projects`), serving uchargeup.com. It is connected to **`deploy` → github.com/lwatson-bit/uchargeup-website**, *not* to `origin` → github.com/UChargeUp-Web/U-Charge-Up. Pushing only to `origin` deploys nothing — push `main` to both remotes to ship and keep them in sync.
+
+This is not an oversight that can currently be fixed: the org repo is private, and Vercel's Hobby plan refuses private org-owned repos (`409 ... Upgrade to Pro to continue`). Re-pointing requires either a Pro upgrade or making the org repo public, which is why the personal-account repo is public today. Do not run `vercel git connect` against the org repo — it disconnects the working link *before* it fails, silently breaking auto-deploy until reconnected.
+
 ### Build Process
 1. **Client Build**: Vite builds React app to `dist/public`
 2. **Server Build**: ESBuild bundles Express server to `dist/index.js`
