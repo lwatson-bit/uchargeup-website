@@ -11,6 +11,8 @@ import Events from "@/pages/events";
 import ContactPage from "@/pages/contact";
 import PrivacyPolicyPage from "@/pages/privacy-policy";
 import TermsOfServicePage from "@/pages/terms-of-service";
+import PrivacyPolicyPageEs from "@/pages/es/privacy-policy";
+import TermsOfServicePageEs from "@/pages/es/terms-of-service";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +26,8 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
       <Route path="/terms-of-service" component={TermsOfServicePage} />
+      <Route path="/es/privacy-policy" component={PrivacyPolicyPageEs} />
+      <Route path="/es/terms-of-service" component={TermsOfServicePageEs} />
       <Route component={NotFound} />
     </Switch>
   );
