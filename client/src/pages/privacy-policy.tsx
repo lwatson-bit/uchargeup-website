@@ -21,7 +21,12 @@ export default function PrivacyPolicyPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                 Privacy Policy
               </h1>
-              <p className="text-gray-500 mb-12">Last Updated: December 11, 2025</p>
+              <p className="text-gray-500 mb-2">Last Updated: August 27, 2026</p>
+              <p className="text-gray-500 mb-12">
+                <a href="/es/privacy-policy" className="text-brand-blue hover:underline">
+                  Español
+                </a>
+              </p>
 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg leading-relaxed mb-8">
@@ -32,125 +37,139 @@ export default function PrivacyPolicyPage() {
                 </p>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Information We Collect</h2>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">A. Information You Provide</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Information we collect</h2>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">A. Information you provide</h3>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li><strong>Account Information:</strong> Phone number, email address (if provided), and profile details.</li>
-                    <li><strong>Payment Information:</strong> Processed securely by our third-party payment provider (Stripe). We do not store full credit card numbers on our servers.</li>
-                    <li><strong>Support Requests:</strong> Any information you submit when contacting customer support.</li>
+                    <li><strong>Account information:</strong> phone number and/or email address; name if you add it to your profile; profile photo if you upload one.</li>
+                    <li><strong>Sign-in providers:</strong> if you sign in with Apple, Google, or Facebook, we receive your name, email address (or Apple's private relay address), and an account identifier from that provider. We never receive your password.</li>
+                    <li><strong>Payment information:</strong> processed securely by our third-party payment provider (Stripe, and where offered, Apple Pay and Google Pay). Your full card number goes directly to the payment processor and is never stored on our servers; we keep only a tokenized reference, the card brand, and the last four digits so you can recognize your saved card.</li>
+                    <li><strong>Support requests:</strong> messages and any photos you choose to attach when contacting customer support.</li>
                   </ul>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">B. Information Collected Automatically</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">B. Information collected automatically</h3>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li><strong>Device Information:</strong> Device model, operating system, browser type, and app version.</li>
-                    <li><strong>Usage Information:</strong> How you interact with the app and kiosks, including rental history and return location.</li>
-                    <li><strong>Location Information:</strong>
-                      <ul className="list-disc pl-6 mt-2 space-y-1">
-                        <li>Precise location when you grant permission — used solely to help you find nearby U Charge Up kiosks.</li>
-                        <li>You may disable location services at any time in your device settings.</li>
-                      </ul>
-                    </li>
+                    <li><strong>Location:</strong> your device's precise location, with your permission and only while you are using the app, to show nearby U Charge Up kiosks. We do not collect location in the background. You may disable location services at any time in your device settings.</li>
+                    <li><strong>Rental activity:</strong> which kiosks you rent from and return to, rental times, and amounts charged.</li>
+                    <li><strong>Device information:</strong> device model, operating system, browser type, app version, language, and identifiers needed for push notifications.</li>
                   </ul>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">C. Information From Third Parties</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">C. Camera and photos</h3>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li><strong>Payment Processor Data (Stripe):</strong> For payment status, refunds, and fraud prevention.</li>
-                    <li><strong>Analytics Providers:</strong> Aggregated usage data to help improve app performance and reliability.</li>
+                    <li>The camera is used only to scan kiosk QR codes. Photo library access is used only when you choose to attach photos to a support request. Images are not collected for any other purpose.</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">D. Information from third parties</h3>
+                  <ul className="list-disc pl-6 mb-6 space-y-2">
+                    <li><strong>Payment processor data (Stripe):</strong> payment status, refunds, and fraud prevention signals.</li>
+                    <li><strong>Analytics providers:</strong> aggregated usage data to help improve app performance and reliability.</li>
                   </ul>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">2. How We Use Your Information</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">2. How we use your information</h2>
                   <p className="mb-4">We use the information we collect to:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li>Provide and operate the U Charge Up Services</li>
-                    <li>Process rentals, returns, deposits, and payments</li>
-                    <li>Improve app performance, kiosk functionality, and user experience</li>
-                    <li>Detect and prevent fraud or misuse</li>
-                    <li>Communicate with you regarding your account, rentals, updates, or support inquiries</li>
-                    <li>Comply with legal obligations</li>
+                    <li>provide and operate the Services: start and end rentals, dispense power banks, process payments, and manage deposits and passes;</li>
+                    <li>show you nearby kiosks and availability;</li>
+                    <li>communicate with you: verification codes, rental receipts, service notifications, and responses to support requests;</li>
+                    <li>detect and prevent fraud or misuse, enforce our Terms of Service, and collect amounts owed;</li>
+                    <li>improve app performance, kiosk functionality, and user experience;</li>
+                    <li>comply with legal obligations.</li>
                   </ul>
-                  <p className="font-semibold text-brand-blue">We do not sell your personal data.</p>
+                  <p className="font-semibold text-brand-blue">We do not sell your personal data, and we do not use your information for third-party advertising.</p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">3. How We Share Your Information</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">3. How we share your information</h2>
                   <p className="mb-4">We may share information only with:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li><strong>Service Providers:</strong> Payment processing (Stripe), backend hosting, analytics, customer support tools.</li>
-                    <li><strong>Business Partners:</strong> Only when necessary to operate kiosks within locations that host U Charge Up equipment (e.g., confirming device return or resolving disputes).</li>
-                    <li><strong>Law Enforcement:</strong> If required by applicable law, legal process, or to protect our rights.</li>
+                    <li><strong>Payment processors</strong> (Stripe; Apple Pay / Google Pay where used) — to process your payments.</li>
+                    <li><strong>Service providers</strong> that operate parts of the Services for us: cloud hosting, Google Maps (kiosk maps), Firebase (sign-in and push notifications), and customer-support tooling. These providers may process your information only to provide their services to us.</li>
+                    <li><strong>Venue partners:</strong> venues that host our kiosks receive aggregate usage statistics (for example, rentals per day at their venue) and operational information needed to confirm returns or resolve disputes. They do not receive your contact information.</li>
+                    <li><strong>Law enforcement:</strong> if required by applicable law or legal process, or to protect the rights, safety, or property of U Charge Up, our users, or the public.</li>
+                    <li><strong>Business transfers:</strong> if we are involved in a merger, acquisition, or asset sale, information may be transferred with reasonable protections.</li>
                   </ul>
-                  <p className="font-semibold">We do not share personal information for advertising networks or data brokers.</p>
+                  <p className="font-semibold">We do not share personal information with advertising networks or data brokers.</p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Cookies & Tracking Technologies</h2>
-                  <p className="mb-4">Our website may use cookies and similar technologies to:</p>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Cookies and tracking technologies</h2>
+                  <p>
+                    Our website may use cookies and similar technologies to maintain your session, analyze website performance, and improve user experience. Our mobile app uses analytics tools that collect anonymized usage data. We do not use cross-app tracking for advertising.
+                  </p>
+                </div>
+
+                <div className="border-t border-gray-200 pt-8 mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">5. Data retention</h2>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li>Maintain your session</li>
-                    <li>Analyze website performance</li>
-                    <li>Improve user experience</li>
+                    <li>Account information is kept while your account is active.</li>
+                    <li>Rental and payment records are kept as required for accounting, tax, and dispute-resolution purposes (up to 7 years), even after account deletion.</li>
+                    <li>Support conversations are retained for up to 2 years.</li>
+                    <li>When you delete your account in the App (Settings → Delete Account), your account is permanently deactivated, your saved payment methods are removed, and your account identifier is unlinked from the app. Rental and payment records associated with the account are retained only as described above.</li>
                   </ul>
-                  <p>Our mobile app uses analytics tools that collect anonymized usage data. We do not use cross-app tracking for advertising.</p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">5. Data Retention</h2>
-                  <p className="mb-4">We retain information only as long as necessary to:</p>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Data security</h2>
+                  <p>
+                    We protect your information with encryption in transit, access controls, and payment tokenization. No system is perfectly secure; if we learn of a breach affecting your personal information, we will notify you as required by law.
+                  </p>
+                </div>
+
+                <div className="border-t border-gray-200 pt-8 mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Your rights and choices</h2>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li>Operate your account</li>
-                    <li>Provide rental history</li>
-                    <li>Meet legal, tax, and operational requirements</li>
+                    <li>
+                      <strong>Access, correction, deletion:</strong> you can view and edit your profile in the App and delete your account in Settings → Delete Account, or contact us at{" "}
+                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                        support@uchargeup.com
+                      </a>
+                      .
+                    </li>
+                    <li><strong>Location:</strong> you can turn off location permission in your device settings; the map and nearby-kiosk features will not work without it.</li>
+                    <li><strong>Push notifications:</strong> you can disable them in your device settings.</li>
+                    <li><strong>Marketing:</strong> we send marketing messages only where permitted, and you can opt out at any time.</li>
                   </ul>
-                  <p>When data is no longer needed, we securely delete or anonymize it.</p>
-                </div>
-
-                <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Data Security</h2>
                   <p className="mb-4">
-                    We take reasonable technical and organizational measures to protect your information, including encryption, secure payment processing, and restricted access.
+                    <strong>United States residents:</strong> depending on your state, you may have additional rights under state privacy laws (such as access, deletion, and portability). Contact us to exercise them; we will not discriminate against you for doing so.
                   </p>
-                  <p>While we work hard to safeguard your data, no method of transmission is 100% secure.</p>
-                </div>
-
-                <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Your Choices</h2>
-                  <p className="mb-4">You may:</p>
-                  <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li>Disable location access</li>
-                    <li>Request deletion of your account</li>
-                    <li>Update your contact information</li>
-                    <li>Opt out of marketing communications (if applicable)</li>
-                  </ul>
-                  <p>To request changes, contact us at <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">support@uchargeup.com</a>.</p>
-                </div>
-
-                <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">8. Children's Privacy</h2>
                   <p>
-                    Our Services are not intended for children under 13. We do not knowingly collect data from children under 13. If we learn that such data was collected, we will delete it promptly.
+                    <strong>Colombia residents:</strong> we process personal data in accordance with Ley 1581 de 2012 and its implementing decrees (habeas data). You have the right to know, update, rectify, and delete your personal data, and to revoke consent, by writing to{" "}
+                    <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      support@uchargeup.com
+                    </a>
+                    . Requests are handled within the terms established by Colombian law.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">9. International Users</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">8. Children's privacy</h2>
                   <p>
-                    The Services are operated in the United States. If you access the app from outside the U.S., you consent to the transfer of your information to the United States.
+                    The Services are not directed to children under 13 (or the minimum age in your jurisdiction), and we do not knowingly collect their information. If you believe a child has provided us information, contact us and we will delete it.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Changes to This Privacy Policy</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">9. International users</h2>
                   <p>
-                    We may update this Privacy Policy from time to time. The updated version will be posted on our website with the "Last Updated" date.
+                    We are based in the United States and process data on servers located in the United States. If you use the Services from another country (including Colombia), your information will be transferred to and processed in the United States under protections consistent with this Policy.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Contact Us</h2>
-                  <p className="mb-4">If you have questions or requests regarding this Privacy Policy, please contact us:</p>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Changes to this Privacy Policy</h2>
+                  <p>
+                    We may update this Policy from time to time. Material changes will be announced in the App or by email before they take effect. The current version is always available in the App and at{" "}
+                    <a href="https://uchargeup.com/privacy-policy" className="text-brand-blue hover:underline">
+                      uchargeup.com/privacy-policy
+                    </a>
+                    .
+                  </p>
+                </div>
+
+                <div className="border-t border-gray-200 pt-8 mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Contact us</h2>
                   <div className="bg-gray-50 rounded-lg p-6">
                     <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
                     <p className="mb-1">
@@ -162,7 +181,7 @@ export default function PrivacyPolicyPage() {
                     <p>
                       <strong>Website:</strong>{" "}
                       <a href="https://www.uchargeup.com" className="text-brand-blue hover:underline">
-                        https://www.uchargeup.com
+                        uchargeup.com
                       </a>
                     </p>
                   </div>
