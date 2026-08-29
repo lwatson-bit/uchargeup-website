@@ -21,16 +21,28 @@ const transporter =
       })
     : null;
 
-// Self-contained mirror of contactSchema in shared/schema.ts — a relative
-// import here crashes at runtime (ESM extensionless-import limitation in
-// Vercel's function packaging). Keep the two in sync.
+// Self-contained mirror of contactSubmitSchema in shared/schema.ts — a
+// relative import here crashes at runtime (ESM extensionless-import
+// limitation in Vercel's function packaging). Keep the two in sync.
 const contactSchema = z.object({
-  name: z.string(),
-  email: z.string(),
+  name: z.string().trim().min(1, "Name is required").max(100, "Name is too long"),
+  email: z.string().trim().email("Enter a valid email address"),
   company: z.string().nullable().optional(),
-  subject: z.string(),
-  message: z.string(),
+  subject: z.string().trim().min(1, "Subject is required"),
+  message: z
+    .string()
+    .trim()
+    .min(10, "Message must be at least 10 characters")
+    .max(5000, "Message is too long"),
+  // Anti-spam signals, stripped before saving/emailing: `website` is a
+  // honeypot left blank by humans but often auto-filled by bots; `startedAt`
+  // (client render time, ms) catches submissions that arrive too fast for a
+  // human to have actually filled the form out.
+  website: z.string().optional(),
+  startedAt: z.number(),
 });
+
+const MIN_FILL_TIME_MS = 2000;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
@@ -39,7 +51,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const contact = contactSchema.parse(req.body);
+    const submission = contactSchema.parse(req.body);
+    const { website, startedAt, ...contact } = submission;
+
+    // Bots either fill the honeypot or submit faster than a human can type.
+    // Report success without saving/emailing so the bot has no signal to
+    // adapt on.
+    const isBot = !!website || Date.now() - startedAt < MIN_FILL_TIME_MS;
+    if (isBot) {
+      console.log("Contact form submission flagged as spam, discarding:", JSON.stringify(contact));
+      return res.json({
+        success: true,
+        message: "Thank you for your message! We'll get back to you soon.",
+      });
+    }
 
     // The notification email is the only durable record of a submission,
     // so log the full payload for recovery from Vercel function logs.

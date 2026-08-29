@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { contactSchema, type ContactForm } from "@shared/schema";
+import { contactSubmitSchema, type ContactSubmit } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 
 // apiRequest throws Error("<status>: <raw body>"). Show the API's own wording
@@ -34,21 +35,26 @@ function friendlyError(error: unknown): string {
 
 export default function Contact() {
   const { toast } = useToast();
+  // Captured once on mount so the server can reject submissions that arrive
+  // faster than a human could plausibly fill the form out.
+  const [startedAt] = useState(() => Date.now());
 
-  const form = useForm<ContactForm>({
-    resolver: zodResolver(contactSchema),
+  const form = useForm<ContactSubmit>({
+    resolver: zodResolver(contactSubmitSchema),
     defaultValues: {
       name: "",
       email: "",
       company: "",
       message: "",
-      subject: ""
+      subject: "",
+      website: "",
+      startedAt
     }
   });
 
   const contactMutation = useMutation({
-    mutationFn: async (data: ContactForm) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+    mutationFn: async (data: ContactSubmit) => {
+      const response = await apiRequest("POST", "/api/contact", { ...data, startedAt });
       return response.json();
     },
     onSuccess: () => {
@@ -70,7 +76,7 @@ export default function Contact() {
   // mutate() rather than mutateAsync(): a rejected mutateAsync promise escapes
   // as an unhandled rejection and skips any state reset placed after the await,
   // which is what used to leave the button stuck on "Sending..." forever.
-  const onSubmit = (data: ContactForm) => {
+  const onSubmit = (data: ContactSubmit) => {
     contactMutation.mutate(data);
   };
 
@@ -141,6 +147,19 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              {/* Honeypot: off-screen (not display:none, which some bots
+                  detect and skip) so real visitors never see or fill it. */}
+              <div style={{ position: "absolute", left: "-9999px", top: "-9999px" }} aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  {...form.register("website")}
+                />
+              </div>
+
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input
