@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Mail, Instagram, Twitter, MessageCircle } from "lucide-react";
+import { Mail, Instagram, MessageCircle } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import ChatMascot from "@/components/chat/ChatMascot";
 import { openChat } from "@/components/chat/api";
@@ -100,7 +101,7 @@ export default function Contact() {
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Twitter className="text-brand-blue w-5 h-5 mr-3" />
+                  <FaXTwitter className="text-brand-blue w-5 h-5 mr-3" aria-hidden="true" />
                   <a href="https://x.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
                     @uchargeup
                   </a>
