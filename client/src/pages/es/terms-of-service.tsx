@@ -21,7 +21,7 @@ export default function TermsOfServicePageEs() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                 Términos de Servicio
               </h1>
-              <p className="text-gray-500 mb-2">Fecha de vigencia: 27 de agosto de 2026</p>
+              <p className="text-gray-500 mb-2">Fecha de vigencia: 7 de octubre de 2026</p>
               <p className="text-gray-500 mb-12">
                 <a href="/terms-of-service" className="text-brand-blue hover:underline">
                   English
@@ -74,7 +74,7 @@ export default function TermsOfServicePageEs() {
                     <strong>3.4 Devolución.</strong> Devuelva la batería portátil empujándola firmemente en una ranura vacía de cualquier estación de U Charge Up hasta que la estación la acepte. El tiempo de alquiler se detiene únicamente cuando la estación registra la devolución. Si una estación está llena o no está disponible, use la App para encontrar la estación alternativa más cercana.
                   </p>
                   <p className="mb-4">
-                    <strong>3.5 Devoluciones tardías, no devoluciones y baterías portátiles perdidas.</strong> Si una batería portátil no se devuelve dentro de <strong>30 días</strong>, o si usted la reporta como perdida o robada, el alquiler se tratará como una compra de la batería portátil y le cobraremos la tarifa de reemplazo indicada en la App —actualmente <strong className="text-gray-900">US $129</strong>— más las tarifas de alquiler acumuladas hasta el límite aplicable, usando el método de pago registrado en su cuenta. Una vez cobrada la tarifa de reemplazo, la batería portátil pasa a ser suya y no se acumularán más tarifas de alquiler.
+                    <strong>3.5 Devoluciones tardías, no devoluciones y baterías portátiles perdidas.</strong> Si una batería portátil no se devuelve dentro de <strong>3 días</strong>, o si usted la reporta como perdida o robada, el alquiler se tratará como una compra de la batería portátil y le cobraremos la tarifa de reemplazo indicada en la App —actualmente <strong className="text-gray-900">US $129</strong>— más las tarifas de alquiler acumuladas hasta el límite aplicable, usando el método de pago registrado en su cuenta. Una vez cobrada la tarifa de reemplazo, la batería portátil pasa a ser suya y no se acumularán más tarifas de alquiler.
                   </p>
                   <p>
                     <strong>3.6 Equipo dañado.</strong> Usted es responsable de los daños a una batería portátil que excedan el desgaste normal mientras esté alquilada a su nombre (por ejemplo, daño por agua o un cable cortado). Podemos cobrar hasta la tarifa de reemplazo indicada en la Sección 3.5 por una batería portátil devuelta con daños que excedan un uso razonable.
