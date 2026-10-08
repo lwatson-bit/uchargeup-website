@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Smartphone, MapPin, Clock } from "lucide-react";
 import { handleAppDownload } from "@/utils/appDownload";
-import { Link } from "wouter";
+import { openChat } from "@/components/chat/api";
 
 export default function CallToAction() {
   const scrollToSection = (sectionId: string) => {
@@ -37,16 +37,15 @@ export default function CallToAction() {
             >
               Download Our App
             </Button>
-            <Link href="/contact" className="w-full sm:w-auto">
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent"
-                data-testid="become-partner-button"
-              >
-                Become a Partner
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent"
+              data-testid="become-partner-button"
+              onClick={() => openChat("partner")}
+            >
+              Become a Partner
+            </Button>
           </div>
           
           {/* Features */}

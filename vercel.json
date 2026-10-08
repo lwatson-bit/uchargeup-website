@@ -3,6 +3,10 @@
   "buildCommand": "vite build",
   "outputDirectory": "dist/public",
   "framework": null,
+  "functions": {
+    "api/chat-ask.ts": { "maxDuration": 30 },
+    "api/chat-handoff.ts": { "maxDuration": 15 }
+  },
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]

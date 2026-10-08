@@ -8,3 +8,7 @@ vite.config.ts.*
 
 # local env files (API keys live in Vercel project settings, not in git)
 .env*
+
+# agent scratch config, never committed
+.claude/
+.codex/

@@ -25,7 +25,7 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 - **Database**: PostgreSQL (using Neon serverless database)
 - **ORM**: Drizzle ORM for type-safe database operations
 - **Session Management**: Built-in session handling with PostgreSQL storage
-- **API Design**: RESTful API endpoints for contact management
+- **API Design**: Vercel serverless functions under `api/` for the site chat (`/api/chat-ask`, `/api/chat-handoff`)
 
 ### Development Environment
 - **Runtime**: Node.js with ESM modules
@@ -57,9 +57,9 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
    - Error handling and success feedback
 
 ### Backend Components
-1. **API Endpoints**:
-   - `POST /api/contact` - Contact form submission
-   - `GET /api/contacts` - Retrieve all contacts (admin)
+1. **API Endpoints** (Vercel serverless functions in `api/`, self-contained, no relative imports):
+   - `POST /api/chat-ask` - Answers a typed question in the site chat (Juice) with Claude (`claude-sonnet-5-5`) from an inline fact sheet; returns `{ enabled, reply, action }` where `action` names the button the widget offers. Reports `enabled: false` when `ANTHROPIC_API_KEY` is unset. Per-IP and per-instance rate limits.
+   - `POST /api/chat-handoff` - Takes the visitor's details plus the chat transcript and emails them to support@uchargeup.com over Gmail SMTP (nodemailer, `GMAIL_USER` + `GMAIL_APP_PASSWORD`); returns `{ success, reference }`. Card numbers in the transcript or notes are masked before rendering or logging. Honeypot and too-fast bot checks.
 
 2. **Database Schema**:
    - Users table (id, username, password)
@@ -79,13 +79,12 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
    - Uses consistent brand blue color scheme
    - Clean, professional layout highlighting advertising opportunities
 
-2. **Contact Form Submission (Updated July 10, 2025)**:
-   - User fills out contact form
-   - Client-side validation with Zod schema
-   - Form data sent to `/api/contact` endpoint
-   - Server validates and stores in database
-   - Email notification sent via SendGrid to support@uchargeup.com
-   - Success/error feedback to user
+2. **Chat and Handoff (Updated October 2026)**:
+   - The site chat (Juice) runs scripted button flows in the client; typed questions go to `/api/chat-ask`
+   - The reply steers anything about a specific charge, refund, lost battery or broken rental to the handoff form
+   - The handoff form posts details and transcript to `/api/chat-handoff`, validated with Zod on both sides
+   - Email sent via Gmail SMTP (nodemailer) to support@uchargeup.com; without Gmail credentials the function logs the payload and returns an error in production (success only under `NODE_ENV=development`)
+   - Success/error feedback to the visitor with a `UCU-` reference
 
 3. **Smart App Download (Updated July 10, 2025)**:
    - Download buttons automatically detect user's device OS

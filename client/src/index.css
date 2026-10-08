@@ -128,3 +128,106 @@
     box-shadow: none !important;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Juice, the chat mascot. Moods are set with data-mood on the <svg>.   */
+/* Every part animates around a fixed point in viewBox units.          */
+/* ------------------------------------------------------------------ */
+.ucu-mascot { overflow: visible; }
+.ucu-mascot .ucu-body { transform-origin: 50px 60px; animation: ucu-bob 3.2s ease-in-out infinite; transition: transform 0.35s ease; }
+.ucu-mascot .ucu-arm-left { transform-origin: 7px 42px; transition: transform 0.35s ease; }
+.ucu-mascot .ucu-arm-right { transform-origin: 93px 42px; transition: transform 0.35s ease; }
+.ucu-mascot .ucu-leg-left { transform-origin: 31px 90px; }
+.ucu-mascot .ucu-leg-right { transform-origin: 69px 90px; }
+.ucu-mascot .ucu-eyes { transform-origin: 50px 4px; animation: ucu-blink 4.4s ease-in-out infinite; }
+.ucu-mascot .ucu-pupils { transition: transform 0.3s ease; animation: ucu-glance 9s ease-in-out infinite; }
+.ucu-mascot .ucu-brow-left { transform-origin: 39px -6px; transition: transform 0.3s ease; }
+.ucu-mascot .ucu-brow-right { transform-origin: 61px -6px; transition: transform 0.3s ease; }
+.ucu-mascot .ucu-mouth { transition: d 0.3s ease; }
+.ucu-mascot .ucu-blush { transition: opacity 0.3s ease; }
+.ucu-mascot .ucu-bar { transition: fill 0.4s ease, opacity 0.3s ease; }
+.ucu-mascot .ucu-spark { transform-origin: 50px -6px; opacity: 0; transform: scale(0.4); transition: opacity 0.2s ease, transform 0.2s ease; }
+
+/* idle: occasional wave, foot tap, eyes wander */
+.ucu-mascot[data-mood="idle"] .ucu-arm-right { animation: ucu-wave 7s ease-in-out infinite; }
+.ucu-mascot[data-mood="idle"] .ucu-leg-left { animation: ucu-tap 2.4s ease-in-out infinite; }
+
+/* listening: lean toward the input, hand to ear, eyes down, brows up */
+.ucu-mascot[data-mood="listening"] .ucu-body { transform: rotate(7deg) translateY(2px); animation: none; }
+.ucu-mascot[data-mood="listening"] .ucu-arm-right { transform: translate(-3px, -8px) rotate(-170deg); }
+.ucu-mascot[data-mood="listening"] .ucu-pupils { transform: translate(0.6px, 2px); animation: none; }
+.ucu-mascot[data-mood="listening"] .ucu-brow-left,
+.ucu-mascot[data-mood="listening"] .ucu-brow-right { transform: translateY(-1.5px); }
+
+/* thinking: bars charge up from the bottom, hand to chin, eyes up, one brow raised */
+.ucu-mascot[data-mood="thinking"] .ucu-body { animation: ucu-sway 1.6s ease-in-out infinite; }
+.ucu-mascot[data-mood="thinking"] .ucu-bar { animation: ucu-charge 1.4s ease-in-out infinite; }
+.ucu-mascot[data-mood="thinking"] .ucu-bar-4 { animation-delay: -1.4s; }
+.ucu-mascot[data-mood="thinking"] .ucu-bar-3 { animation-delay: -1.2s; }
+.ucu-mascot[data-mood="thinking"] .ucu-bar-2 { animation-delay: -1s; }
+.ucu-mascot[data-mood="thinking"] .ucu-bar-1 { animation-delay: -0.8s; }
+.ucu-mascot[data-mood="thinking"] .ucu-arm-left { transform: translate(4px, -6px) rotate(-179deg); }
+.ucu-mascot[data-mood="thinking"] .ucu-pupils { transform: translate(1.6px, -2.2px); animation: none; }
+.ucu-mascot[data-mood="thinking"] .ucu-brow-left { transform: translateY(-2.5px) rotate(-6deg); }
+.ucu-mascot[data-mood="thinking"] .ucu-brow-right { transform: translateY(0.5px) rotate(6deg); }
+
+/* talking: quick bounce and gestures */
+.ucu-mascot[data-mood="talking"] .ucu-body { animation: ucu-talk 0.55s ease-in-out infinite; }
+.ucu-mascot[data-mood="talking"] .ucu-arm-left { animation: ucu-gesture 0.9s ease-in-out infinite; }
+.ucu-mascot[data-mood="talking"] .ucu-arm-right { animation: ucu-gesture-r 0.9s ease-in-out infinite; }
+.ucu-mascot[data-mood="talking"] .ucu-brow-left,
+.ucu-mascot[data-mood="talking"] .ucu-brow-right { transform: translateY(-1px); }
+
+/* celebrate: jump, arms up, legs kick, every bar green, big grin, spark */
+.ucu-mascot[data-mood="celebrate"] .ucu-body { animation: ucu-jump 0.7s ease-in-out infinite; }
+.ucu-mascot[data-mood="celebrate"] .ucu-arm-left { transform: rotate(104deg); animation: ucu-cheer 0.7s ease-in-out infinite; }
+.ucu-mascot[data-mood="celebrate"] .ucu-arm-right { transform: rotate(-104deg); animation: ucu-cheer-r 0.7s ease-in-out infinite; }
+.ucu-mascot[data-mood="celebrate"] .ucu-leg-left { animation: ucu-kick 0.7s ease-in-out infinite; }
+.ucu-mascot[data-mood="celebrate"] .ucu-leg-right { animation: ucu-kick-r 0.7s ease-in-out infinite; }
+.ucu-mascot[data-mood="celebrate"] .ucu-bar { fill: #7ED957; animation: ucu-flash 0.7s ease-in-out infinite; }
+.ucu-mascot[data-mood="celebrate"] .ucu-mouth { d: path("M 43 11 Q 50 19 57 11"); }
+.ucu-mascot[data-mood="celebrate"] .ucu-brow-left,
+.ucu-mascot[data-mood="celebrate"] .ucu-brow-right { transform: translateY(-3px); }
+.ucu-mascot[data-mood="celebrate"] .ucu-blush { opacity: 0.8; }
+.ucu-mascot[data-mood="celebrate"] .ucu-pupils { animation: none; }
+.ucu-mascot[data-mood="celebrate"] .ucu-spark { opacity: 1; transform: scale(1); animation: ucu-spark 0.7s ease-in-out infinite; }
+
+@keyframes ucu-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+@keyframes ucu-blink { 0%, 90%, 100% { transform: scaleY(1); } 94% { transform: scaleY(0.08); } }
+@keyframes ucu-glance { 0%, 55%, 100% { transform: translate(0, 0); } 62%, 72% { transform: translate(1.8px, 0.4px); } 80%, 90% { transform: translate(-1.6px, 0.2px); } }
+@keyframes ucu-wave { 0%, 70%, 100% { transform: rotate(0); } 78% { transform: rotate(-110deg); } 84% { transform: rotate(-85deg); } 90% { transform: rotate(-110deg); } }
+@keyframes ucu-tap { 0%, 60%, 100% { transform: rotate(0); } 75% { transform: rotate(-14deg); } }
+@keyframes ucu-sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes ucu-charge { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+@keyframes ucu-talk { 0%, 100% { transform: translateY(0) scaleY(1); } 50% { transform: translateY(-3px) scaleY(1.03); } }
+@keyframes ucu-gesture { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(-45deg); } }
+@keyframes ucu-gesture-r { 0%, 100% { transform: rotate(10deg); } 50% { transform: rotate(45deg); } }
+@keyframes ucu-jump { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-14px); } 60% { transform: translateY(-14px); } }
+@keyframes ucu-cheer { 0%, 100% { transform: rotate(96deg); } 50% { transform: rotate(118deg); } }
+@keyframes ucu-cheer-r { 0%, 100% { transform: rotate(-96deg); } 50% { transform: rotate(-118deg); } }
+@keyframes ucu-kick { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-28deg); } }
+@keyframes ucu-kick-r { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(28deg); } }
+@keyframes ucu-flash { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+@keyframes ucu-spark { 0%, 100% { transform: scale(1) rotate(-8deg); } 50% { transform: scale(1.25) rotate(8deg); } }
+
+/* The widget needs its focus rings and the launcher's ring back: the global
+   "button, input, select, textarea { box-shadow: none !important }" reset
+   above strips every Tailwind ring and shadow, so re-compose them here. */
+.ucu-chat button, .ucu-chat input, .ucu-chat textarea {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow, 0 0 #0000) !important;
+}
+.ucu-chat :is(button, a, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #317AA4;
+  outline-offset: 2px;
+}
+.ucu-chat textarea:focus, .ucu-chat input:focus { border-color: #317AA4; }
+
+/* the little typing dots */
+@keyframes ucu-dots { 0%, 80%, 100% { opacity: 0.25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+.ucu-dot { animation: ucu-dots 1.2s ease-in-out infinite; }
+.ucu-dot:nth-child(2) { animation-delay: 0.15s; }
+.ucu-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ucu-mascot *, .ucu-dot { animation: none !important; transition: none !important; }
+}
