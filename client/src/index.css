@@ -145,7 +145,8 @@
 .ucu-mascot .ucu-brow-right { transform-origin: 61px -6px; transition: transform 0.3s ease; }
 .ucu-mascot .ucu-mouth { transition: d 0.3s ease; }
 .ucu-mascot .ucu-blush { transition: opacity 0.3s ease; }
-.ucu-mascot .ucu-bar { transition: fill 0.4s ease, opacity 0.3s ease; }
+/* The four bars are the trademarked U Charge Up logo: always green, light
+   green, light red, red at full strength. No mood recolors, fades or flashes them. */
 .ucu-mascot .ucu-spark { transform-origin: 50px -6px; opacity: 0; transform: scale(0.4); transition: opacity 0.2s ease, transform 0.2s ease; }
 
 /* idle: occasional wave, foot tap, eyes wander */
@@ -159,13 +160,8 @@
 .ucu-mascot[data-mood="listening"] .ucu-brow-left,
 .ucu-mascot[data-mood="listening"] .ucu-brow-right { transform: translateY(-1.5px); }
 
-/* thinking: bars charge up from the bottom, hand to chin, eyes up, one brow raised */
+/* thinking: slight sway, hand to chin, eyes up, one brow raised */
 .ucu-mascot[data-mood="thinking"] .ucu-body { animation: ucu-sway 1.6s ease-in-out infinite; }
-.ucu-mascot[data-mood="thinking"] .ucu-bar { animation: ucu-charge 1.4s ease-in-out infinite; }
-.ucu-mascot[data-mood="thinking"] .ucu-bar-4 { animation-delay: -1.4s; }
-.ucu-mascot[data-mood="thinking"] .ucu-bar-3 { animation-delay: -1.2s; }
-.ucu-mascot[data-mood="thinking"] .ucu-bar-2 { animation-delay: -1s; }
-.ucu-mascot[data-mood="thinking"] .ucu-bar-1 { animation-delay: -0.8s; }
 .ucu-mascot[data-mood="thinking"] .ucu-arm-left { transform: translate(4px, -6px) rotate(-179deg); }
 .ucu-mascot[data-mood="thinking"] .ucu-pupils { transform: translate(1.6px, -2.2px); animation: none; }
 .ucu-mascot[data-mood="thinking"] .ucu-brow-left { transform: translateY(-2.5px) rotate(-6deg); }
@@ -178,13 +174,12 @@
 .ucu-mascot[data-mood="talking"] .ucu-brow-left,
 .ucu-mascot[data-mood="talking"] .ucu-brow-right { transform: translateY(-1px); }
 
-/* celebrate: jump, arms up, legs kick, every bar green, big grin, spark */
+/* celebrate: jump, arms up, legs kick, big grin, spark */
 .ucu-mascot[data-mood="celebrate"] .ucu-body { animation: ucu-jump 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-arm-left { transform: rotate(104deg); animation: ucu-cheer 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-arm-right { transform: rotate(-104deg); animation: ucu-cheer-r 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-leg-left { animation: ucu-kick 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-leg-right { animation: ucu-kick-r 0.7s ease-in-out infinite; }
-.ucu-mascot[data-mood="celebrate"] .ucu-bar { fill: #7ED957; animation: ucu-flash 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-mouth { d: path("M 43 11 Q 50 19 57 11"); }
 .ucu-mascot[data-mood="celebrate"] .ucu-brow-left,
 .ucu-mascot[data-mood="celebrate"] .ucu-brow-right { transform: translateY(-3px); }
@@ -198,7 +193,6 @@
 @keyframes ucu-wave { 0%, 70%, 100% { transform: rotate(0); } 78% { transform: rotate(-110deg); } 84% { transform: rotate(-85deg); } 90% { transform: rotate(-110deg); } }
 @keyframes ucu-tap { 0%, 60%, 100% { transform: rotate(0); } 75% { transform: rotate(-14deg); } }
 @keyframes ucu-sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
-@keyframes ucu-charge { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
 @keyframes ucu-talk { 0%, 100% { transform: translateY(0) scaleY(1); } 50% { transform: translateY(-3px) scaleY(1.03); } }
 @keyframes ucu-gesture { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(-45deg); } }
 @keyframes ucu-gesture-r { 0%, 100% { transform: rotate(10deg); } 50% { transform: rotate(45deg); } }
@@ -207,7 +201,6 @@
 @keyframes ucu-cheer-r { 0%, 100% { transform: rotate(-96deg); } 50% { transform: rotate(-118deg); } }
 @keyframes ucu-kick { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-28deg); } }
 @keyframes ucu-kick-r { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(28deg); } }
-@keyframes ucu-flash { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
 @keyframes ucu-spark { 0%, 100% { transform: scale(1) rotate(-8deg); } 50% { transform: scale(1.25) rotate(8deg); } }
 
 /* The widget needs its focus rings and the launcher's ring back: the global
