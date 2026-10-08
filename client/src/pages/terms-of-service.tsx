@@ -21,7 +21,7 @@ export default function TermsOfServicePage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                 Terms of Service
               </h1>
-              <p className="text-gray-500 mb-2">Effective Date: October 7, 2026</p>
+              <p className="text-gray-500 mb-2">Effective Date: October 8, 2026</p>
               <p className="text-gray-500 mb-12">
                 <a href="/es/terms-of-service" className="text-brand-blue hover:underline">
                   Español
@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
                     <strong>3.4 Returning.</strong> Return the power bank by pushing it firmly into an empty slot at any U Charge Up kiosk until the kiosk accepts it. The rental clock stops only when the kiosk registers the return. If a kiosk is full or unavailable, use the App to find the nearest alternative kiosk.
                   </p>
                   <p className="mb-4">
-                    <strong>3.5 Late returns, non-returns, and lost power banks.</strong> If a power bank is not returned within <strong>3 days</strong>, or if you report it lost or stolen, the rental is treated as a purchase of the power bank and we will charge the replacement fee shown in the App — currently <strong className="text-gray-900">US $129</strong> — plus accrued rental fees up to the applicable cap, using your payment method on file. After the replacement fee is charged, the power bank is yours and no further rental fees accrue.
+                    <strong>3.5 Late returns, non-returns, and lost power banks.</strong> If a power bank is not returned within <strong>3 days</strong>, or if you report it lost or stolen, the rental is treated as a purchase of the power bank and the replacement fee shown in the App, which is our lost or stolen fee, applies — currently <strong className="text-gray-900">US $129</strong> — charged to your payment method on file. Rental fees already charged for that rental count toward this amount; the replacement fee is not added on top of them. After the replacement fee is charged, the power bank is yours and no further rental fees accrue.
                   </p>
                   <p>
                     <strong>3.6 Damaged equipment.</strong> You are responsible for damage to a power bank beyond normal wear while it is rented to you (for example, water damage or a cut cable). We may charge up to the replacement fee in Section 3.5 for a power bank returned damaged beyond reasonable use.
