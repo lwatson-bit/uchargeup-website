@@ -21,10 +21,8 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 - **Build Tool**: Vite for fast development and optimized builds
 
 ### Backend Architecture
-- **Framework**: Express.js with TypeScript
-- **Database**: PostgreSQL (using Neon serverless database)
-- **ORM**: Drizzle ORM for type-safe database operations
-- **Session Management**: Built-in session handling with PostgreSQL storage
+- **Framework**: Express.js with TypeScript (local dev only; it serves the Vite app and runs the same `api/` handlers)
+- **Database**: none. The site stores nothing; chat handoffs are emailed to support@ (the old contact form, its Postgres/Drizzle storage and the auth/session packages were removed 2026-10-08)
 - **API Design**: Vercel serverless functions under `api/` for the site chat (`/api/chat-ask`, `/api/chat-handoff`)
 
 ### Development Environment
@@ -41,9 +39,8 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
    - How It Works (3-step process)
    - Kiosk Solutions showcase
    - Partners/Locations display
-   - Image gallery with modal view
    - Statistics display
-   - Contact form with validation
+   - Contact section that opens the site chat (Juice)
 
 2. **UI System**:
    - Comprehensive design system with 40+ reusable components
@@ -51,24 +48,13 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
    - Responsive design with mobile-first approach
    - Accessibility features built-in
 
-3. **Forms & Validation**:
-   - Contact form with React Hook Form
-   - Zod schema validation
-   - Error handling and success feedback
+3. **Site chat (Juice)**: `client/src/components/chat/` (scripted flows, typed questions answered by `/api/chat-ask`, handoff by `/api/chat-handoff`); zod validates on the server
 
 ### Backend Components
 1. **API Endpoints** (Vercel serverless functions in `api/`, self-contained, no relative imports):
    - `POST /api/chat-ask` - Answers a typed question in the site chat (Juice) with Claude (`claude-sonnet-5-5`) from an inline fact sheet; returns `{ enabled, reply, action }` where `action` names the button the widget offers. Reports `enabled: false` when `ANTHROPIC_API_KEY` is unset. Per-IP and per-instance rate limits.
    - `POST /api/chat-handoff` - Takes the visitor's details plus the chat transcript and emails them to support@uchargeup.com over Gmail SMTP (nodemailer, `GMAIL_USER` + `GMAIL_APP_PASSWORD`); returns `{ success, reference }`. Card numbers in the transcript or notes are masked before rendering or logging. Honeypot and too-fast bot checks.
 
-2. **Database Schema**:
-   - Users table (id, username, password)
-   - Contacts table (id, name, email, company, message, created_at)
-
-3. **Storage Layer**:
-   - Abstract storage interface for flexibility
-   - In-memory storage implementation for development
-   - Drizzle ORM integration for PostgreSQL
 
 ## Data Flow
 
@@ -100,16 +86,13 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 
 4. **Development Flow**:
    - Vite dev server for frontend with HMR
-   - Express server for API endpoints
-   - Shared schema types between client and server
+   - Express server runs the `api/` handlers locally
 
 ## External Dependencies
 
 ### Core Dependencies
-- **Database**: Neon serverless PostgreSQL
 - **UI Framework**: Radix UI primitives
 - **Animation**: Framer Motion
-- **Form Handling**: React Hook Form with Zod validation
 - **HTTP Client**: Native fetch API with TanStack Query
 
 ### Development Dependencies
@@ -139,12 +122,12 @@ This is not an oversight that can currently be fixed: the org repo is private, a
 ### Environment Configuration
 - **Development**: `NODE_ENV=development` with hot reloading
 - **Production**: `NODE_ENV=production` with optimized builds
-- **Database**: PostgreSQL connection via `DATABASE_URL` environment variable
+- **Chat**: `ANTHROPIC_API_KEY` (typed answers), `GMAIL_USER` + `GMAIL_APP_PASSWORD` (handoff email), all in Vercel env only
 
 ### Deployment Commands
 - `npm run dev` - Development server with hot reloading
 - `npm run build` - Production build
 - `npm run start` - Production server
-- `npm run db:push` - Database schema deployment
+- `npm run chat:smoke` - Live check of the chat assistant (`BASE_URL=https://uchargeup.com npm run chat:smoke`)
 
 The application follows a modern full-stack architecture with clear separation of concerns, type safety throughout, and optimized for both development experience and production performance.
