@@ -39,7 +39,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        {/* Sections that slide in from the side sit offset until scrolled
+            into view; clip that so phones don't widen the page (which also
+            oversized the full-screen chat). clip, not hidden: no scroll box. */}
+        <div className="overflow-x-clip">
+          <Router />
+        </div>
         <ChatWidget />
       </TooltipProvider>
     </QueryClientProvider>
