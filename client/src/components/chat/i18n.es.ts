@@ -132,14 +132,14 @@ export const ES: Record<string, string> = {
   "Easy. Three steps:": "Fácil. Tres pasos:",
   "1. At the kiosk, scan the QR code with your phone or tap your credit or debit card on the reader.\n2. Grab the battery that pops out and charge with the built-in cables, wherever you go.\n3. Done? Push it into an empty slot at any U Charge Up kiosk until it clicks in.":
     "1. En la estación, escanea el código QR con tu teléfono o acerca tu tarjeta de crédito o débito al lector.\n2. Toma la batería que sale y carga con los cables integrados, vayas donde vayas.\n3. ¿Terminaste? Empújala en una ranura vacía de cualquier estación de U Charge Up hasta que encaje.",
-  "A temporary $20 hold goes on your card when you start and drops off after you return the battery.":
-    "Al empezar se hace una retención temporal de $20 en tu tarjeta, que se libera después de devolver la batería.",
+  "A temporary hold, usually $20, goes on your card when you start and drops off after you return the battery.":
+    "Al empezar se hace una retención temporal en tu tarjeta, normalmente de $20, que se libera después de devolver la batería.",
   "✅ That's all I needed": "✅ Eso era todo",
   "I have another question": "Tengo otra pregunta",
 
   // ---- charge
   "Happy to help with that. Which one sounds right?": "Con gusto te ayudo. ¿Cuál se parece más a tu caso?",
-  "What's the $20 hold?": "¿Qué es la retención de $20?",
+  "What's the hold (usually $20)?": "¿Qué es la retención (normalmente $20)?",
   "Charged more than expected": "Me cobraron más de lo esperado",
   "I want a refund": "Quiero un reembolso",
   "Refund request": "Solicitud de reembolso",
@@ -150,8 +150,8 @@ export const ES: Record<string, string> = {
   "The app also shows the price before you rent.": "La app también te muestra el precio antes de alquilar.",
   "Question about a charge": "Pregunta sobre un cobro",
 
-  "When you start a rental we place a temporary $20 hold on your card to secure the battery. It's a hold, not a charge.":
-    "Cuando empiezas un alquiler hacemos una retención temporal de $20 en tu tarjeta para asegurar la batería. Es una retención, no un cobro.",
+  "When you start a rental we place a temporary hold on your card, usually $20, to secure the battery. It's a hold, not a charge.":
+    "Cuando empiezas un alquiler hacemos una retención temporal en tu tarjeta, normalmente de $20, para asegurar la batería. Es una retención, no un cobro.",
   "When you return the battery the hold is released and only your actual rental fee is charged. Your bank decides how fast the hold disappears, usually 1 to 10 business days.":
     "Cuando devuelves la batería se libera la retención y solo se cobra el valor real del alquiler. Tu banco decide qué tan rápido desaparece la retención, normalmente de 1 a 10 días hábiles.",
   "✅ That answers it": "✅ Eso responde mi duda",

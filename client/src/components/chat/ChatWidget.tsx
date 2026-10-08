@@ -483,31 +483,33 @@ function SummaryCard({
       <div className="w-full max-w-[92%] rounded-2xl rounded-bl-sm bg-white p-4 text-sm shadow-sm ring-1 ring-black/5" data-testid="chat-summary">
         <p className="mb-3 text-gray-800">{message.text}</p>
         <dl className="divide-y divide-gray-100">
+          {/* Label above value: the panel is phone-narrow, and a long email
+              or name must wrap inside the card rather than squeeze a column. */}
           {chat.issue && (
-            <div className="flex items-start justify-between gap-3 py-1.5">
-              <dt className="w-28 shrink-0 text-xs font-medium uppercase tracking-wide text-gray-600">{t("About")}</dt>
-              <dd className="flex-1 text-gray-800">{t(chat.issue)}</dd>
+            <div className="py-1.5">
+              <dt className="text-xs font-medium uppercase tracking-wide text-gray-600">{t("About")}</dt>
+              <dd className="mt-0.5 text-gray-800 [overflow-wrap:anywhere]">{t(chat.issue)}</dd>
             </div>
           )}
           {fields.map((field) => {
             const value = chat.collected[field];
             if (!value) return null;
             return (
-              <div key={field} className="flex items-start justify-between gap-3 py-1.5">
-                <dt className="w-28 shrink-0 text-xs font-medium uppercase tracking-wide text-gray-600">
-                  {t(FIELD_LABELS[field])}
+              <div key={field} className="py-1.5">
+                <dt className="flex min-h-[32px] items-center justify-between gap-3 text-xs font-medium uppercase tracking-wide text-gray-600">
+                  <span>{t(FIELD_LABELS[field])}</span>
+                  {editable && (
+                    <button
+                      type="button"
+                      onClick={() => chat.editField(field)}
+                      className="min-h-[32px] rounded px-2 text-xs font-semibold normal-case tracking-normal text-[#1f5f84] hover:bg-[#317AA4]/10"
+                      aria-label={`${t("Edit")} ${t(FIELD_LABELS[field])}`}
+                    >
+                      {t("Edit")}
+                    </button>
+                  )}
                 </dt>
-                <dd className="flex-1 break-words text-gray-800">{formatValue(field, value, lang)}</dd>
-                {editable && (
-                  <button
-                    type="button"
-                    onClick={() => chat.editField(field)}
-                    className="-my-1 min-h-[32px] rounded px-2 text-xs font-semibold text-[#1f5f84] hover:bg-[#317AA4]/10"
-                    aria-label={`${t("Edit")} ${t(FIELD_LABELS[field])}`}
-                  >
-                    {t("Edit")}
-                  </button>
-                )}
+                <dd className="text-gray-800 [overflow-wrap:anywhere]">{formatValue(field, value, lang)}</dd>
               </div>
             );
           })}

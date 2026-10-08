@@ -3,7 +3,7 @@
 // asked. Copy lives here so it can be tuned without touching the widget.
 //
 // House rules baked into the wording (from the support playbook):
-//  - never promise a refund, a dollar amount (other than the public $20 hold)
+//  - never promise a refund, a dollar amount (other than the usual $20 hold)
 //    or a reply time
 //  - never ask for a full card number, only the last four
 //  - never argue or ask a customer to prove anything
@@ -288,7 +288,7 @@ const nodes: FlowNode[] = [
     say: [
       "Easy. Three steps:",
       "1. At the kiosk, scan the QR code with your phone or tap your credit or debit card on the reader.\n2. Grab the battery that pops out and charge with the built-in cables, wherever you go.\n3. Done? Push it into an empty slot at any U Charge Up kiosk until it clicks in.",
-      "A temporary $20 hold goes on your card when you start and drops off after you return the battery.",
+      "A temporary hold, usually $20, goes on your card when you start and drops off after you return the battery.",
     ],
     links: APP_LINKS,
     chips: [
@@ -303,7 +303,7 @@ const nodes: FlowNode[] = [
     category: "transaction",
     say: ["Happy to help with that. Which one sounds right?"],
     chips: [
-      { label: "What's the $20 hold?", next: "c_hold" },
+      { label: "What's the hold (usually $20)?", next: "c_hold" },
       { label: "What does a rental cost?", next: "c_price" },
       { label: "Charged more than expected", next: "s_intro", issue: "Charged more than expected" },
       { label: "Lost or stolen fee ({lostFee})", next: "c_fee" },
@@ -315,7 +315,7 @@ const nodes: FlowNode[] = [
   {
     id: "c_hold",
     say: [
-      "When you start a rental we place a temporary $20 hold on your card to secure the battery. It's a hold, not a charge.",
+      "When you start a rental we place a temporary hold on your card, usually $20, to secure the battery. It's a hold, not a charge.",
       "When you return the battery the hold is released and only your actual rental fee is charged. Your bank decides how fast the hold disappears, usually 1 to 10 business days.",
     ],
     chips: [

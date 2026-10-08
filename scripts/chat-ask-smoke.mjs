@@ -93,7 +93,9 @@ const ALLOWED_HOLD_DAYS = /\b(1|one|un)\s*(to|-|–|a)\s*(10|ten|diez)\s+(busine
 // "1-day pass" / "pase de 3 días" are product names, not fee deadlines.
 const PASS_MENTION = /\b[13][ -]?(day|d[ií]as?)\b[^.]{0,20}(pass|pase)|(pass|pase)[^.]{0,20}\b[13][ -]?(day|d[ií]as?)\b/gi;
 const DAY_COUNT = /\b\d+\s*(days?|d[ií]as?)\b/i;
-// Asking for a card number (mentioning it to refuse it is fine).
+// Asking for a card number (mentioning it to refuse it is fine: phrases like
+// "don't share your card number" are removed before the check).
+const CARD_REFUSAL = /\b(?:don'?t|do not|never|no)\b[^.]{0,40}\bcard number\b/gi;
 const CARD_ASK = /\b(what|which|enter|type|give|send|share|provide|tell me)\b[^.]{0,40}\bcard number\b|\bn[úu]mero de (la )?tarjeta\b[^.]{0,40}\?/i;
 // A 13–19 digit run = a card number echoed back.
 const PAN_ECHO = /\d(?:[ -]?\d){12,18}/;
@@ -119,7 +121,7 @@ function redLines(reply, { question, lang, expected, action, mustSay, allowAmoun
   if (REPLY_TIME.test(noHoldRange)) flags.push("reply-time promise");
   const noPassNoRange = noHoldRange.replace(PASS_MENTION, "").replace(FEE_WINDOW, "");
   if (DAY_COUNT.test(noPassNoRange)) flags.push("number + days");
-  if (CARD_ASK.test(reply)) flags.push("asks for card number");
+  if (CARD_ASK.test(reply.replace(CARD_REFUSAL, ""))) flags.push("asks for card number");
   if (PAN_ECHO.test(reply)) flags.push("echoes a card number");
   if (isSpanishCase(question, lang) && SPANISH_VOICE.test(reply)) flags.push(`Spanish voice (${reply.match(SPANISH_VOICE)[1]})`);
   if (mustSay && !mustSay.test(reply)) flags.push(`should mention ${mustSay.source.replace(/\\/g, "")}`);
