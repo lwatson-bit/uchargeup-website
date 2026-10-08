@@ -11,7 +11,6 @@ export const JUICE_COLORS = {
   blueDark: "#245F80",
   bars: ["#7ED957", "#99ED75", "#FF6E6E", "#F80303"],
   blush: "#FF6E6E",
-  spark: "#FFC928",
 };
 
 interface Props {
@@ -23,7 +22,7 @@ interface Props {
 }
 
 export default function ChatMascot({ mood, size = 64, className, title = "Juice, the U Charge Up helper" }: Props) {
-  const { blue, blueDark, bars, blush, spark } = JUICE_COLORS;
+  const { blue, blueDark, bars, blush } = JUICE_COLORS;
   return (
     <svg
       className={["ucu-mascot", className].filter(Boolean).join(" ")}
@@ -38,11 +37,6 @@ export default function ChatMascot({ mood, size = 64, className, title = "Juice,
     >
       {/* Body group: bob, lean, jump */}
       <g className="ucu-body">
-        {/* Spark that pops when celebrating */}
-        <g className="ucu-spark">
-          <polygon points="52,-17 44,-4 50,-4 47,5 56,-8 50,-8" fill={spark} />
-        </g>
-
         {/* Legs with sneakers */}
         <g className="ucu-leg ucu-leg-left">
           <line x1="31" y1="90" x2="31" y2="102" stroke={blue} strokeWidth="6" strokeLinecap="round" />

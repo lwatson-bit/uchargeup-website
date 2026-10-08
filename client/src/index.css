@@ -147,7 +147,6 @@
 .ucu-mascot .ucu-blush { transition: opacity 0.3s ease; }
 /* The four bars are the trademarked U Charge Up logo: always green, light
    green, light red, red at full strength. No mood recolors, fades or flashes them. */
-.ucu-mascot .ucu-spark { transform-origin: 50px -6px; opacity: 0; transform: scale(0.4); transition: opacity 0.2s ease, transform 0.2s ease; }
 
 /* idle: occasional wave, foot tap, eyes wander */
 .ucu-mascot[data-mood="idle"] .ucu-arm-right { animation: ucu-wave 7s ease-in-out infinite; }
@@ -174,7 +173,7 @@
 .ucu-mascot[data-mood="talking"] .ucu-brow-left,
 .ucu-mascot[data-mood="talking"] .ucu-brow-right { transform: translateY(-1px); }
 
-/* celebrate: jump, arms up, legs kick, big grin, spark */
+/* celebrate: jump, arms up, legs kick, big grin */
 .ucu-mascot[data-mood="celebrate"] .ucu-body { animation: ucu-jump 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-arm-left { transform: rotate(104deg); animation: ucu-cheer 0.7s ease-in-out infinite; }
 .ucu-mascot[data-mood="celebrate"] .ucu-arm-right { transform: rotate(-104deg); animation: ucu-cheer-r 0.7s ease-in-out infinite; }
@@ -185,7 +184,6 @@
 .ucu-mascot[data-mood="celebrate"] .ucu-brow-right { transform: translateY(-3px); }
 .ucu-mascot[data-mood="celebrate"] .ucu-blush { opacity: 0.8; }
 .ucu-mascot[data-mood="celebrate"] .ucu-pupils { animation: none; }
-.ucu-mascot[data-mood="celebrate"] .ucu-spark { opacity: 1; transform: scale(1); animation: ucu-spark 0.7s ease-in-out infinite; }
 
 @keyframes ucu-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
 @keyframes ucu-blink { 0%, 90%, 100% { transform: scaleY(1); } 94% { transform: scaleY(0.08); } }
@@ -201,7 +199,6 @@
 @keyframes ucu-cheer-r { 0%, 100% { transform: rotate(-96deg); } 50% { transform: rotate(-118deg); } }
 @keyframes ucu-kick { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-28deg); } }
 @keyframes ucu-kick-r { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(28deg); } }
-@keyframes ucu-spark { 0%, 100% { transform: scale(1) rotate(-8deg); } 50% { transform: scale(1.25) rotate(8deg); } }
 
 /* The widget needs its focus rings and the launcher's ring back: the global
    "button, input, select, textarea { box-shadow: none !important }" reset
