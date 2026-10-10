@@ -10,6 +10,6 @@ export const POLICY = {
   holdQualifier: "typically",
 } as const;
 
-// Flip to false to take the "What it costs" tiles off the site without
-// touching the sections.
-export const SHOW_PRICING = true;
+// Larry's call 2026-10-10: no prices, holds or fees on the public site, because
+// they differ by venue and country. The tiles stay in code, off.
+export const SHOW_PRICING = false;

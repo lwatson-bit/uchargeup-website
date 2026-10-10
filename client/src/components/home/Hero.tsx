@@ -6,7 +6,6 @@ import { Eyebrow } from "@/components/kit/Eyebrow";
 import { FactChip } from "@/components/kit/FactChip";
 import { ProductStage } from "@/components/kit/ProductStage";
 import { AppDownloadButton } from "@/components/kit/AppDownloadButton";
-import { POLICY } from "@/lib/policy";
 import kiosk24 from "@assets/web/kiosk-24.webp";
 
 export default function Hero() {
@@ -34,8 +33,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-4 max-w-[60ch] text-sm leading-relaxed text-slate-600">
-            No app needed to rent. The rate shows before you start, and a temporary hold (
-            {POLICY.holdQualifier} {POLICY.holdAmount}) is released when you return.
+            No app needed to rent. You see the rate before you start.
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-2">

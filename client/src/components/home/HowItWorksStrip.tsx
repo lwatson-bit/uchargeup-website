@@ -29,8 +29,8 @@ export default function HowItWorksStrip() {
           outlet, no waiting.
         </Step>
         <Step number="03" icon={RotateCcw} title="Return to any kiosk">
-          Done? Slide the battery into any open slot at any U Charge Up kiosk until it clicks. The
-          rental ends and the hold drops off.
+          Done? Slide the battery into any open slot at any U Charge Up kiosk until it clicks. That
+          ends the rental.
         </Step>
       </FadeUp>
 
