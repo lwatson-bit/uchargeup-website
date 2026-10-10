@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users } from "lucide-react";
 import { Link } from "wouter";
-import eventImage1 from "@assets/IMG_1128_1757034121090.jpeg";
-import eventImage2 from "@assets/DC5363E4-2F69-42A5-9C85-D87A3C070281_1757034151691.jpeg";
-import eventImage3 from "@assets/IMG_0268_1757034173508.jpeg";
-import eventImage4 from "@assets/IMG_0205_1757034192238.jpeg";
-import eventImage5 from "@assets/IMG_1735_1757034259783.jpeg";
+import eventImage1 from "@assets/web/event-1128.webp";
+import eventImage2 from "@assets/web/event-dc53.webp";
+import eventImage3 from "@assets/web/event-0268.webp";
+import eventImage4 from "@assets/web/event-0205.webp";
+import eventImage5 from "@assets/web/event-1735.webp";
 
 export default function Events() {
   const scrollToSection = (sectionId: string) => {
@@ -114,7 +114,7 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Calendar className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Music Festivals</h3>
@@ -130,7 +130,7 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Corporate Events</h3>
@@ -146,7 +146,7 @@ export default function Events() {
             viewport={{ once: true }}
             className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <MapPin className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-900">Outdoor Venues</h3>
@@ -173,7 +173,7 @@ export default function Events() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
                   <div>
@@ -182,7 +182,7 @@ export default function Events() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
                   <div>
@@ -191,7 +191,7 @@ export default function Events() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
                   <div>
@@ -229,7 +229,7 @@ export default function Events() {
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
                 data-testid="book-event-button"
               >
                 Book Your Event Today

@@ -23,7 +23,7 @@ export default function TermsOfServicePageEs() {
               </h1>
               <p className="text-gray-500 mb-2">Fecha de vigencia: 8 de octubre de 2026</p>
               <p className="text-gray-500 mb-12">
-                <a href="/terms-of-service" className="text-brand-blue hover:underline">
+                <a href="/terms-of-service" className="text-brand-600 hover:underline">
                   English
                 </a>
               </p>
@@ -50,7 +50,7 @@ export default function TermsOfServicePageEs() {
                     <li>Usted debe proporcionar información de contacto precisa y mantenerla actualizada. Su cuenta es personal; no comparta sus credenciales de acceso ni permita que otras personas alquilen usando su cuenta.</li>
                     <li>
                       Usted es responsable de toda la actividad en su cuenta. Comuníquese con nosotros de inmediato a{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>{" "}
                       si cree que su cuenta ha sido comprometida.
@@ -111,7 +111,7 @@ export default function TermsOfServicePageEs() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Reembolsos y problemas del servicio</h2>
                   <p>
                     Si una estación no logra entregar una batería portátil, entrega una defectuosa (por ejemplo, que no carga su teléfono), o no logra registrar una devolución sin que sea culpa suya, comuníquese con nosotros a{" "}
-                    <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                    <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                       support@uchargeup.com
                     </a>
                     . Corregiremos el cargo —incluyendo el reembolso de tarifas de alquiler o la liberación de retenciones de depósito— cuando nuestro Servicio no haya funcionado según lo descrito. Los reembolsos se emiten al método de pago original.
@@ -172,7 +172,7 @@ export default function TermsOfServicePageEs() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Cambios</h2>
                   <p>
                     Podemos actualizar estos Términos de vez en cuando. Si realizamos cambios sustanciales, se lo notificaremos en la App o por correo electrónico antes de que entren en vigencia. El uso continuado del Servicio después de la fecha de vigencia constituye aceptación. La versión vigente siempre está disponible en la App y en{" "}
-                    <a href="https://uchargeup.com/terms-of-service" className="text-brand-blue hover:underline">
+                    <a href="https://uchargeup.com/terms-of-service" className="text-brand-600 hover:underline">
                       uchargeup.com/terms-of-service
                     </a>
                     .
@@ -185,13 +185,13 @@ export default function TermsOfServicePageEs() {
                     <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
                     <p className="mb-1">
                       <strong>Correo electrónico:</strong>{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>
                     </p>
                     <p>
                       <strong>Sitio web:</strong>{" "}
-                      <a href="https://www.uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="https://www.uchargeup.com" className="text-brand-600 hover:underline">
                         uchargeup.com
                       </a>
                     </p>

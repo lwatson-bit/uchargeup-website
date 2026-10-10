@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import eightUnitImage from "@assets/8 Unit UCU_1752157185780.png";
+import eightUnitImage from "@assets/web/kiosk-8.webp";
 
 export default function About() {
   return (

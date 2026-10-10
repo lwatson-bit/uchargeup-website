@@ -30,32 +30,32 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-gray-700 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Home
               </span>
             </Link>
             <Link href="/how-it-works">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-gray-700 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 How It Works
               </span>
             </Link>
             <Link href="/kiosks">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-gray-700 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Our Kiosks
               </span>
             </Link>
             <Link href="/locations">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-gray-700 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Locations
               </span>
             </Link>
             <Link href="/events">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-gray-700 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Events
               </span>
             </Link>
             <Link href="/contact">
-              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-gray-700 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Contact
               </span>
             </Link>

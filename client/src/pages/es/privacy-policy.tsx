@@ -23,7 +23,7 @@ export default function PrivacyPolicyPageEs() {
               </h1>
               <p className="text-gray-500 mb-2">Última actualización: 27 de agosto de 2026</p>
               <p className="text-gray-500 mb-12">
-                <a href="/privacy-policy" className="text-brand-blue hover:underline">
+                <a href="/privacy-policy" className="text-brand-600 hover:underline">
                   English
                 </a>
               </p>
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPageEs() {
                     <li>mejorar el rendimiento de la app, el funcionamiento de las estaciones y la experiencia del usuario;</li>
                     <li>cumplir con obligaciones legales.</li>
                   </ul>
-                  <p className="font-semibold text-brand-blue">No vendemos sus datos personales, y no usamos su información para publicidad de terceros.</p>
+                  <p className="font-semibold text-brand-600">No vendemos sus datos personales, y no usamos su información para publicidad de terceros.</p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
@@ -122,7 +122,7 @@ export default function PrivacyPolicyPageEs() {
                   <ul className="list-disc pl-6 mb-6 space-y-2">
                     <li>
                       <strong>Acceso, corrección, eliminación:</strong> usted puede ver y editar su perfil en la App y eliminar su cuenta en Configuración → Eliminar cuenta, o contactarnos a{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>
                       .
@@ -136,7 +136,7 @@ export default function PrivacyPolicyPageEs() {
                   </p>
                   <p>
                     <strong>Residentes de Colombia:</strong> tratamos los datos personales de conformidad con la Ley 1581 de 2012 y sus decretos reglamentarios (habeas data). Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales, y a revocar el consentimiento, escribiendo a{" "}
-                    <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                    <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                       support@uchargeup.com
                     </a>
                     . Las solicitudes se atienden dentro de los términos establecidos por la ley colombiana.
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPageEs() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Cambios a esta Política de Privacidad</h2>
                   <p>
                     Podemos actualizar esta Política de vez en cuando. Los cambios sustanciales se anunciarán en la App o por correo electrónico antes de que entren en vigencia. La versión vigente siempre está disponible en la App y en{" "}
-                    <a href="https://uchargeup.com/privacy-policy" className="text-brand-blue hover:underline">
+                    <a href="https://uchargeup.com/privacy-policy" className="text-brand-600 hover:underline">
                       uchargeup.com/privacy-policy
                     </a>
                     .
@@ -174,13 +174,13 @@ export default function PrivacyPolicyPageEs() {
                     <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
                     <p className="mb-1">
                       <strong>Correo electrónico:</strong>{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>
                     </p>
                     <p>
                       <strong>Sitio web:</strong>{" "}
-                      <a href="https://www.uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="https://www.uchargeup.com" className="text-brand-600 hover:underline">
                         uchargeup.com
                       </a>
                     </p>

@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
               </h1>
               <p className="text-gray-500 mb-2">Last Updated: August 27, 2026</p>
               <p className="text-gray-500 mb-12">
-                <a href="/es/privacy-policy" className="text-brand-blue hover:underline">
+                <a href="/es/privacy-policy" className="text-brand-600 hover:underline">
                   Español
                 </a>
               </p>
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
                     <li>improve app performance, kiosk functionality, and user experience;</li>
                     <li>comply with legal obligations.</li>
                   </ul>
-                  <p className="font-semibold text-brand-blue">We do not sell your personal data, and we do not use your information for third-party advertising.</p>
+                  <p className="font-semibold text-brand-600">We do not sell your personal data, and we do not use your information for third-party advertising.</p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 mb-8">
@@ -122,7 +122,7 @@ export default function PrivacyPolicyPage() {
                   <ul className="list-disc pl-6 mb-6 space-y-2">
                     <li>
                       <strong>Access, correction, deletion:</strong> you can view and edit your profile in the App and delete your account in Settings → Delete Account, or contact us at{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>
                       .
@@ -136,7 +136,7 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <p>
                     <strong>Colombia residents:</strong> we process personal data in accordance with Ley 1581 de 2012 and its implementing decrees (habeas data). You have the right to know, update, rectify, and delete your personal data, and to revoke consent, by writing to{" "}
-                    <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                    <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                       support@uchargeup.com
                     </a>
                     . Requests are handled within the terms established by Colombian law.
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Changes to this Privacy Policy</h2>
                   <p>
                     We may update this Policy from time to time. Material changes will be announced in the App or by email before they take effect. The current version is always available in the App and at{" "}
-                    <a href="https://uchargeup.com/privacy-policy" className="text-brand-blue hover:underline">
+                    <a href="https://uchargeup.com/privacy-policy" className="text-brand-600 hover:underline">
                       uchargeup.com/privacy-policy
                     </a>
                     .
@@ -174,13 +174,13 @@ export default function PrivacyPolicyPage() {
                     <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
                     <p className="mb-1">
                       <strong>Email:</strong>{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>
                     </p>
                     <p>
                       <strong>Website:</strong>{" "}
-                      <a href="https://www.uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="https://www.uchargeup.com" className="text-brand-600 hover:underline">
                         uchargeup.com
                       </a>
                     </p>

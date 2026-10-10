@@ -13,7 +13,7 @@ export default function CallToAction() {
   };
 
   return (
-    <section className="py-20 bg-brand-blue text-white">
+    <section className="py-20 bg-brand-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export default function CallToAction() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent shadow-none"
+              className="border-2 border-white text-white hover:bg-white hover:text-brand-600 font-semibold bg-transparent shadow-none"
               onClick={handleAppDownload}
             >
               Download Our App
@@ -40,7 +40,7 @@ export default function CallToAction() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold bg-transparent"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-brand-600 font-semibold bg-transparent"
               data-testid="become-partner-button"
               onClick={() => openChat("partner")}
             >

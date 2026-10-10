@@ -52,7 +52,7 @@ export default function HowItWorks() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="bg-brand-blue rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <div className="bg-brand-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-xl font-bold">{step.number}</span>
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-900">{step.title}</h3>

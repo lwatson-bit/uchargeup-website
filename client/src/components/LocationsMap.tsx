@@ -204,7 +204,7 @@ export default function LocationsMap() {
         </p>
         <Button
           variant="outline"
-          className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold self-start sm:self-auto"
+          className="border-brand-500 text-brand-600 hover:bg-brand-600 hover:text-white font-semibold self-start sm:self-auto"
           onClick={locateMe}
           disabled={locating}
           data-testid="near-me-button"
@@ -259,7 +259,7 @@ export default function LocationsMap() {
               </p>
               <Button
                 variant="outline"
-                className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold"
+                className="border-brand-500 text-brand-600 hover:bg-brand-600 hover:text-white font-semibold"
                 onClick={() => setReloadKey((k) => k + 1)}
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
@@ -290,7 +290,7 @@ export default function LocationsMap() {
               }}
               className={`rounded-xl border p-4 cursor-pointer transition-colors duration-150 ${
                 selectedId === s.id
-                  ? "border-brand-blue bg-blue-50/60"
+                  ? "border-brand-500 bg-blue-50/60"
                   : "border-gray-200 hover:border-gray-300 bg-white"
               }`}
               data-testid={`station-card-${s.id}`}
@@ -325,7 +325,7 @@ export default function LocationsMap() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="inline-flex items-center text-brand-blue hover:underline font-medium"
+                  className="inline-flex items-center text-brand-600 hover:underline font-medium"
                 >
                   <Navigation className="w-4 h-4 mr-1" />
                   Directions

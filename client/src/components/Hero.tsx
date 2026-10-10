@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Battery, Zap, MapPin, Leaf, Award } from "lucide-react";
 import { Link } from "wouter";
-import kioskImage from "@assets/IMG_3172_1775147417498.jpeg";
+import kioskImage from "@assets/web/auto-show-kiosk.webp";
 import { handleAppDownload } from "@/utils/appDownload";
-import bbbLogo from "@assets/BBB-LOGO_1752165222960.jpg";
-import fordFieldLogo from "@assets/Ford_field_stadium_logo_1752165222960.png";
-import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
-import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
-import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
-import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757032474149.webp";
+import bbbLogo from "@assets/web/logo-basement-burger-bar.webp";
+import fordFieldLogo from "@assets/web/logo-ford-field.webp";
+import fourWindsLogo from "@assets/web/logo-four-winds.webp";
+import rocketClassicLogo from "@assets/web/logo-rocket-classic.webp";
+import fixinsLogo from "@assets/web/logo-fixins.webp";
+import afroFutureLogo from "@assets/web/logo-afro-future.webp";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -53,7 +53,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button
                 size="lg"
-                className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
+                className="bg-brand-600 hover:bg-brand-700 text-white font-semibold"
                 onClick={handleAppDownload}
               >
                 Download App
@@ -62,7 +62,7 @@ export default function Hero() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold"
+                  className="w-full border-2 border-brand-500 text-brand-600 hover:bg-brand-600 hover:text-white font-semibold"
                   data-testid="how-it-works-button"
                 >
                   How It Works
@@ -72,7 +72,7 @@ export default function Hero() {
 
             <p className="text-xs text-gray-400 -mt-4 mb-6">
               By using U Charge Up, you agree to our{" "}
-              <Link href="/terms-of-service" className="underline hover:text-brand-blue transition-colors duration-200">
+              <Link href="/terms-of-service" className="underline hover:text-brand-600 transition-colors duration-200">
                 Terms of Service
               </Link>.
             </p>
@@ -80,19 +80,19 @@ export default function Hero() {
             {/* Features */}
             <div className="flex flex-wrap gap-6 text-sm text-gray-600">
               <div className="flex items-center">
-                <Zap className="w-4 h-4 mr-2 text-brand-blue" />
+                <Zap className="w-4 h-4 mr-2 text-brand-600" />
                 Fast charging
               </div>
               <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2 text-brand-blue" />
+                <MapPin className="w-4 h-4 mr-2 text-brand-600" />
                 Multiple locations
               </div>
               <div className="flex items-center">
-                <Leaf className="w-4 h-4 mr-2 text-brand-blue" />
+                <Leaf className="w-4 h-4 mr-2 text-brand-600" />
                 Eco-friendly
               </div>
               <div className="flex items-center">
-                <Award className="w-4 h-4 mr-2 text-brand-blue" />
+                <Award className="w-4 h-4 mr-2 text-brand-600" />
                 MBE Certified
               </div>
             </div>

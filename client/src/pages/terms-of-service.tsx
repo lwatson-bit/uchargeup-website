@@ -23,7 +23,7 @@ export default function TermsOfServicePage() {
               </h1>
               <p className="text-gray-500 mb-2">Effective Date: October 8, 2026</p>
               <p className="text-gray-500 mb-12">
-                <a href="/es/terms-of-service" className="text-brand-blue hover:underline">
+                <a href="/es/terms-of-service" className="text-brand-600 hover:underline">
                   Español
                 </a>
               </p>
@@ -50,7 +50,7 @@ export default function TermsOfServicePage() {
                     <li>You must provide accurate contact information and keep it current. Your account is personal to you; do not share your login or let others rent on your account.</li>
                     <li>
                       You are responsible for all activity on your account. Tell us immediately at{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>{" "}
                       if you believe your account has been compromised.
@@ -111,7 +111,7 @@ export default function TermsOfServicePage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Refunds and service problems</h2>
                   <p>
                     If a kiosk fails to dispense a power bank, dispenses a defective one (for example, it will not charge your phone), or fails to register a return through no fault of yours, contact us at{" "}
-                    <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                    <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                       support@uchargeup.com
                     </a>
                     . We will correct the charge — including refunding rental fees or releasing deposit holds — where our Service did not work as described. Refunds are issued to the original payment method.
@@ -172,7 +172,7 @@ export default function TermsOfServicePage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Changes</h2>
                   <p>
                     We may update these Terms from time to time. If we make material changes we will notify you in the App or by email before they take effect. Continued use of the Service after the effective date constitutes acceptance. The current version is always available in the App and at{" "}
-                    <a href="https://uchargeup.com/terms-of-service" className="text-brand-blue hover:underline">
+                    <a href="https://uchargeup.com/terms-of-service" className="text-brand-600 hover:underline">
                       uchargeup.com/terms-of-service
                     </a>
                     .
@@ -185,13 +185,13 @@ export default function TermsOfServicePage() {
                     <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
                     <p className="mb-1">
                       <strong>Email:</strong>{" "}
-                      <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:underline">
                         support@uchargeup.com
                       </a>
                     </p>
                     <p>
                       <strong>Website:</strong>{" "}
-                      <a href="https://www.uchargeup.com" className="text-brand-blue hover:underline">
+                      <a href="https://www.uchargeup.com" className="text-brand-600 hover:underline">
                         uchargeup.com
                       </a>
                     </p>

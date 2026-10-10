@@ -2,61 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Site tokens for the shadcn components. Every blue comes from the logo file
+   (#317AA4 is the wordmark); tailwind.config.ts carries the same palette as
+   brand-50/100/500/600/700, ink, surface-0/1 and line. */
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(210, 40%, 8%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 16%, 47%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(210, 40%, 8%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(210, 40%, 8%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --primary: hsl(205, 85%, 45%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(210, 40%, 8%);
-  --accent: hsl(210, 40%, 96%);
-  --accent-foreground: hsl(210, 40%, 8%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(205, 85%, 45%);
-  --radius: 0.5rem;
-  --brand-blue: hsl(205, 85%, 45%);
-  --brand-dark-blue: hsl(205, 85%, 35%);
-  --brand-light: hsl(210, 40%, 97%);
-  --brand-text: hsl(210, 40%, 8%);
-  --brand-success: hsl(142, 76%, 36%);
-  --brand-error: hsl(0, 84%, 60%);
-}
-
-.dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(205, 85%, 45%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(205, 85%, 35%);
-  --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
-  --brand-blue: hsl(205, 85%, 45%);
-  --brand-dark-blue: hsl(205, 85%, 35%);
-  --brand-light: hsl(210, 40%, 97%);
-  --brand-text: hsl(26, 83%, 4%);
-  --brand-success: hsl(142, 76%, 36%);
-  --brand-error: hsl(0, 84%, 60%);
+  --background: #ffffff;
+  --foreground: #0f1b2a;
+  --muted: #f6f8fa;
+  --muted-foreground: #64748b;
+  --popover: #ffffff;
+  --popover-foreground: #0f1b2a;
+  --card: #ffffff;
+  --card-foreground: #0f1b2a;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --primary: #28678b;
+  --primary-foreground: #ffffff;
+  --secondary: #eef4f8;
+  --secondary-foreground: #28678b;
+  --accent: #eef4f8;
+  --accent-foreground: #0f1b2a;
+  --destructive: #dc2626;
+  --destructive-foreground: #fafafa;
+  --ring: #28678b;
+  --radius: 0.75rem;
 }
 
 @layer base {
@@ -67,49 +36,24 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+
+  /* One visible focus style for every link and control on the site. */
+  :focus-visible {
+    outline: 2px solid #317aa4;
+    outline-offset: 2px;
+  }
+
+  /* Anchored sections land below the sticky header. */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
 }
 
 @layer utilities {
-  .brand-blue {
-    color: var(--brand-blue);
-  }
-  
-  .bg-brand-blue {
-    background-color: var(--brand-blue);
-  }
-  
-  .border-brand-blue {
-    border-color: var(--brand-blue);
-  }
-  
-  .brand-dark-blue {
-    color: var(--brand-dark-blue);
-  }
-  
-  .bg-brand-dark-blue {
-    background-color: var(--brand-dark-blue);
-  }
-  
-  .bg-brand-light {
-    background-color: var(--brand-light);
-  }
-  
-  .text-brand-text {
-    color: var(--brand-text);
-  }
-  
-  .bg-brand-success {
-    background-color: var(--brand-success);
-  }
-  
-  .bg-brand-error {
-    background-color: var(--brand-error);
-  }
-  
   .animate-scroll {
     animation: scroll 18s linear infinite;
   }
-  
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -117,15 +61,6 @@
     100% {
       transform: translateX(-50%);
     }
-  }
-  
-  /* Remove any default shadows/borders that might create white boxes */
-  .shadow-none {
-    box-shadow: none !important;
-  }
-  
-  button, input, select, textarea {
-    box-shadow: none !important;
   }
 }
 

@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import bbbLogo from "@assets/BBB-LOGO_1752165222960.jpg";
-import fordFieldLogo from "@assets/Ford_field_stadium_logo_1752165222960.png";
-import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
-import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
-import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
-import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757032474149.webp";
-import virginHotelsLogo from "@assets/Virgin-logo_1772042074981.png";
+import bbbLogo from "@assets/web/logo-basement-burger-bar.webp";
+import fordFieldLogo from "@assets/web/logo-ford-field.webp";
+import fourWindsLogo from "@assets/web/logo-four-winds.webp";
+import rocketClassicLogo from "@assets/web/logo-rocket-classic.webp";
+import fixinsLogo from "@assets/web/logo-fixins.webp";
+import afroFutureLogo from "@assets/web/logo-afro-future.webp";
+import virginHotelsLogo from "@assets/web/logo-virgin-hotels.webp";
 
 export default function Partners() {
   // Partner companies with actual uploaded logos
@@ -79,7 +79,7 @@ export default function Partners() {
                     <div className="text-sm font-medium text-gray-700 mb-1">
                       {partner.name}
                     </div>
-                    <div className="w-8 h-1 bg-brand-blue rounded-full mx-auto opacity-60"></div>
+                    <div className="w-8 h-1 bg-brand-600 rounded-full mx-auto opacity-60"></div>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function Partners() {
                     <div className="text-sm font-medium text-gray-700 mb-1">
                       {partner.name}
                     </div>
-                    <div className="w-8 h-1 bg-brand-blue rounded-full mx-auto opacity-60"></div>
+                    <div className="w-8 h-1 bg-brand-600 rounded-full mx-auto opacity-60"></div>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Monitor, Grid3X3, Zap } from "lucide-react";
-import twentyFourUnitImage from "@assets/24 Unit UCU_1752157185779.png";
+import twentyFourUnitImage from "@assets/web/kiosk-24.webp";
 
 export default function KioskSolutions() {
   const features = [
@@ -68,7 +68,7 @@ export default function KioskSolutions() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="bg-brand-blue rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <div className="bg-brand-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <feature.icon className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>

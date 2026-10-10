@@ -47,7 +47,7 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button
                 size="lg"
-                className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold shadow-none border-0"
+                className="bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-none border-0"
                 onClick={() => openChat("support")}
                 data-testid="contact-chat-button"
               >
@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
             <p className="text-sm text-gray-500 mt-6">
               Prefer email?{" "}
-              <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:text-brand-dark-blue underline">
+              <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:text-brand-700 underline">
                 support@uchargeup.com
               </a>
             </p>
@@ -83,8 +83,8 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-semibold mb-6 text-gray-900">Email</h3>
               <div className="flex items-center">
-                <Mail className="text-brand-blue w-5 h-5 mr-3" />
-                <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                <Mail className="text-brand-600 w-5 h-5 mr-3" />
+                <a href="mailto:support@uchargeup.com" className="text-brand-600 hover:text-brand-700 transition-colors duration-200">
                   support@uchargeup.com
                 </a>
               </div>
@@ -95,14 +95,14 @@ export default function Contact() {
               <h3 className="text-xl font-semibold mb-6 text-gray-900">Follow Us</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Instagram className="text-brand-blue w-5 h-5 mr-3" />
-                  <a href="https://instagram.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                  <Instagram className="text-brand-600 w-5 h-5 mr-3" />
+                  <a href="https://instagram.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700 transition-colors duration-200">
                     @uchargeup
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <FaXTwitter className="text-brand-blue w-5 h-5 mr-3" aria-hidden="true" />
-                  <a href="https://x.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-dark-blue transition-colors duration-200">
+                  <FaXTwitter className="text-brand-600 w-5 h-5 mr-3" aria-hidden="true" />
+                  <a href="https://x.com/uchargeup" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700 transition-colors duration-200">
                     @uchargeup
                   </a>
                 </div>

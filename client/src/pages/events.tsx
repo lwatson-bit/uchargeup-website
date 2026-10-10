@@ -4,11 +4,11 @@ import { Calendar, MapPin, Users, Phone, Mail } from "lucide-react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import eventImage1 from "@assets/IMG_1128_1757034121090.jpeg";
-import eventImage2 from "@assets/DC5363E4-2F69-42A5-9C85-D87A3C070281_1757034151691.jpeg";
-import eventImage3 from "@assets/IMG_0268_1757034173508.jpeg";
-import eventImage4 from "@assets/IMG_0205_1757034192238.jpeg";
-import eventImage5 from "@assets/IMG_1735_1757034259783.jpeg";
+import eventImage1 from "@assets/web/event-1128.webp";
+import eventImage2 from "@assets/web/event-dc53.webp";
+import eventImage3 from "@assets/web/event-0268.webp";
+import eventImage4 from "@assets/web/event-0205.webp";
+import eventImage5 from "@assets/web/event-1735.webp";
 
 export default function Events() {
 
@@ -32,7 +32,7 @@ export default function Events() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
               Portable Charging Stations
               <br />
-              <span className="text-3xl md:text-5xl text-brand-blue">Events & Festivals</span>
+              <span className="text-3xl md:text-5xl text-brand-600">Events & Festivals</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-600">
               U Charge Up is the nation's leading provider of innovative, self-service charging 
@@ -45,7 +45,7 @@ export default function Events() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-brand-blue hover:bg-brand-dark-blue text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                  className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
                 >
                   BOOK YOUR NEXT EVENT
                 </Button>
@@ -54,7 +54,7 @@ export default function Events() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
+                  className="border-2 border-brand-500 text-brand-600 hover:bg-brand-600 hover:text-white px-8 py-4 text-lg font-semibold transition-colors duration-200"
                 >
                   CONTACT US
                 </Button>
@@ -90,7 +90,7 @@ export default function Events() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Music Festivals</h3>
@@ -106,7 +106,7 @@ export default function Events() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Corporate Events</h3>
@@ -122,7 +122,7 @@ export default function Events() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Outdoor Venues</h3>
@@ -279,7 +279,7 @@ export default function Events() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+              <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 1
               </div>
               <h3 className="text-xl font-semibold mb-3">Book Your Event</h3>
@@ -295,7 +295,7 @@ export default function Events() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+              <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 2
               </div>
               <h3 className="text-xl font-semibold mb-3">We Setup & Deliver</h3>
@@ -311,7 +311,7 @@ export default function Events() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+              <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 3
               </div>
               <h3 className="text-xl font-semibold mb-3">Guests Enjoy</h3>
@@ -344,7 +344,7 @@ export default function Events() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-brand-blue text-white hover:bg-brand-dark-blue px-8 py-4 text-lg font-semibold"
+                  className="bg-brand-600 text-white hover:bg-brand-700 px-8 py-4 text-lg font-semibold"
                 >
                   GET STARTED TODAY
                 </Button>

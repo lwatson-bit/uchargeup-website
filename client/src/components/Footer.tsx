@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import mbeLogo from "@assets/mbe_1752170626183.webp";
-import nvidiaInceptionBadge from "@assets/nvidia-inception-program-badge.png";
+import mbeLogo from "@assets/web/badge-mbe.webp";
+import nvidiaInceptionBadge from "@assets/web/badge-nvidia-inception.webp";
 
 export default function Footer() {
   return (
@@ -38,7 +38,7 @@ export default function Footer() {
                 className="h-12 w-auto object-contain bg-white rounded px-2 py-1"
               />
               <div className="text-left">
-                <div className="text-sm font-semibold text-white group-hover:text-brand-blue transition-colors duration-200">NVIDIA Inception</div>
+                <div className="text-sm font-semibold text-white group-hover:text-brand-600 transition-colors duration-200">NVIDIA Inception</div>
                 <div className="text-xs text-gray-400">Program Member</div>
               </div>
             </a>
@@ -49,12 +49,12 @@ export default function Footer() {
           </p>
           <div className="mt-4 flex justify-center gap-6">
             <Link href="/privacy-policy">
-              <span className="text-sm text-gray-400 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-sm text-gray-400 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Privacy Policy
               </span>
             </Link>
             <Link href="/terms-of-service">
-              <span className="text-sm text-gray-400 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+              <span className="text-sm text-gray-400 hover:text-brand-600 transition-colors duration-200 cursor-pointer">
                 Terms of Service
               </span>
             </Link>

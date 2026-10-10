@@ -39,7 +39,7 @@ export default function LocationsPage() {
               </p>
               <Button
                 size="lg"
-                className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
+                className="bg-brand-600 hover:bg-brand-700 text-white font-semibold"
                 onClick={handleAppDownload}
                 data-testid="locations-download-app"
               >
