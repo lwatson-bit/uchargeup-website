@@ -12,7 +12,7 @@ import kiosk24 from "@assets/web/kiosk-24.webp";
 export default function Hero() {
   return (
     <Section className="pb-12 pt-10 md:pb-16 md:pt-16 lg:pt-20">
-      <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-6">
           <Eyebrow>Phone charging kiosks · Detroit</Eyebrow>
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink md:text-5xl lg:text-6xl">

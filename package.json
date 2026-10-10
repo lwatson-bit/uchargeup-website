@@ -10,7 +10,7 @@
     "check": "tsc",
     "chat:smoke": "node scripts/chat-ask-smoke.mjs",
     "check:assets": "node scripts/check-assets.mjs",
-    "images": "node scripts/images.mjs"
+    "images": "python3 scripts/cutout.py && node scripts/images.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.132.0",

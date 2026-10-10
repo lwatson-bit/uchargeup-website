@@ -11,7 +11,7 @@ import nvidiaBadge from "@assets/web/badge-nvidia-inception.webp";
 export default function BuiltInDetroit() {
   return (
     <Section id="about">
-      <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <FadeUp className="lg:col-span-5">
           <img
             src={autoShowPhoto}

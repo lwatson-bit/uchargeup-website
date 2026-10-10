@@ -12,7 +12,7 @@ const VENUE_TYPES = ["Stadiums", "Casinos", "Hospitals", "Restaurants", "Festiva
 export default function FindAKiosk() {
   return (
     <Section id="locations">
-      <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <FadeUp className="lg:col-span-5">
           <SectionHeader
             eyebrow="Locations"

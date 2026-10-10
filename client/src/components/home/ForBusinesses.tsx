@@ -36,7 +36,7 @@ export default function ForBusinesses() {
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         <FadeUp>
           <Card className="flex h-full flex-col">
-            <div className="flex h-56 items-center justify-center rounded-xl bg-brand-50 p-6">
+            <div className="flex h-64 items-center justify-center rounded-xl bg-brand-50 p-4">
               <img
                 src={kiosk8}
                 alt="U Charge Up tabletop kiosk holding 8 portable chargers"

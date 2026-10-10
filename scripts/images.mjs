@@ -10,9 +10,9 @@ const SRC = "attached_assets";
 const OUT = path.join(SRC, "web");
 
 const jobs = [
-  // Kiosk renders: trim the transparent padding, keep alpha.
-  { in: "24 Unit UCU_1752157185779.png", out: "kiosk-24.webp", width: 900, trim: true, quality: 85 },
-  { in: "8 Unit UCU_1752157185780.png", out: "kiosk-8.webp", width: 900, trim: true, quality: 85 },
+  // Kiosk renders (background removed by scripts/cutout.py): trim the padding, keep alpha.
+  { in: "web/cutout/kiosk-24.png", out: "kiosk-24.webp", width: 900, trim: true, quality: 85 },
+  { in: "web/cutout/kiosk-8.png", out: "kiosk-8.webp", width: 900, trim: true, quality: 85 },
   // Photos.
   { in: "IMG_3172_1775147417498.jpeg", out: "auto-show-kiosk.webp", width: 900, quality: 80 },
   { in: "IMG_1128_1757034121090.jpeg", out: "event-1128.webp", width: 1200, quality: 74 },
