@@ -1,9 +1,11 @@
 import { Switch, Route } from "wouter";
+import { MotionConfig } from "framer-motion";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ChatWidget from "@/components/chat/ChatWidget";
+import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/home";
 import HowItWorksPage from "@/pages/how-it-works";
 import KiosksPage from "@/pages/kiosks";
@@ -39,12 +41,17 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        {/* Sections that slide in from the side sit offset until scrolled
-            into view; clip that so phones don't widen the page (which also
-            oversized the full-screen chat). clip, not hidden: no scroll box. */}
-        <div className="overflow-x-clip">
-          <Router />
-        </div>
+        {/* reducedMotion="user" turns the site's entrances off for people who
+            asked their device for less motion. The chat handles its own. */}
+        <MotionConfig reducedMotion="user">
+          <ScrollToTop />
+          {/* Sections that slide in from the side sit offset until scrolled
+              into view; clip that so phones don't widen the page (which also
+              oversized the full-screen chat). clip, not hidden: no scroll box. */}
+          <div className="overflow-x-clip">
+            <Router />
+          </div>
+        </MotionConfig>
         <ChatWidget />
       </TooltipProvider>
     </QueryClientProvider>

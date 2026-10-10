@@ -28,6 +28,8 @@ const jobs = [
   { in: "Fixins Logo_1752165204990.png", out: "logo-fixins.webp", width: 320, quality: 88 },
   { in: "afrobeats-festival-downtown-detroit.png_1757034151691.webp".replace("1757034151691", "1757032474149"), out: "logo-afro-future.webp", width: 320, quality: 88 },
   { in: "Virgin-logo_1772042074981.png", out: "logo-virgin-hotels.webp", width: 320, quality: 88 },
+  // The logo itself: a lossless crop of the PNG's transparent padding, never recolored.
+  { in: "NEW  UCU LOGO_1752157158761.png", out: "logo.png", width: 800, trim: true, png: true },
   // Credentials.
   { in: "mbe_1752170626183.webp", out: "badge-mbe.webp", width: 160, quality: 88 },
   { in: "nvidia-inception-program-badge.png", out: "badge-nvidia-inception.webp", width: 360, quality: 90 },
@@ -41,7 +43,8 @@ for (const job of jobs) {
   let img = sharp(input).rotate(); // applies EXIF orientation, then EXIF is dropped
   if (job.trim) img = img.trim();
   img = img.resize({ width: job.width, withoutEnlargement: true });
-  await img.webp({ quality: job.quality, alphaQuality: 95, effort: 6 }).toFile(output);
+  if (job.png) await img.png({ compressionLevel: 9 }).toFile(output);
+  else await img.webp({ quality: job.quality, alphaQuality: 95, effort: 6 }).toFile(output);
   const before = (await stat(input)).size;
   const after = (await stat(output)).size;
   total += after;

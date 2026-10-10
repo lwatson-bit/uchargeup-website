@@ -11,7 +11,7 @@ export default function TermsOfServicePage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="pt-24 pb-16">
+        <section className="pt-8 pb-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

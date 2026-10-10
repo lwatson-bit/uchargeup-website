@@ -14,7 +14,7 @@ export default function LocationsPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <section className="pt-16 bg-gradient-to-br from-gray-50 to-white">
+        <section className="bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center mb-10">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
