@@ -232,13 +232,13 @@ export const ES: Record<string, string> = {
     "Uy, hay muchas solicitudes desde esta conexión. Espera unos minutos e inténtalo de nuevo.",
   "That's a bit long for this box. Could you shorten it?":
     "Es un poco largo para este cuadro. ¿Podrías acortarlo?",
-  "Sorry to hear that. If a battery isn't returned after {lostDays} days, a {lostFee} replacement fee applies. That's our lost or stolen fee, and the battery is yours to keep.":
-    "Lo siento. Si una batería no se devuelve después de {lostDays} días, se aplica una tarifa de reposición de {lostFee}. Es nuestro cargo por pérdida o robo, y la batería pasa a ser tuya.",
+  "Sorry to hear that. If a battery isn't returned after {lostDays} days, depending on the location, a {lostFee} replacement fee applies. That's our lost or stolen fee, and the battery is yours to keep.":
+    "Lo siento. Si una batería no se devuelve después de {lostDays} días, según la ubicación, se aplica una tarifa de reposición de {lostFee}. Es nuestro cargo por pérdida o robo, y la batería pasa a ser tuya.",
   "Have a question about your charge? Send us the details and a person on our team will take a look.":
     "¿Tienes una pregunta sobre tu cobro? Envíanos los detalles y una persona de nuestro equipo lo revisará.",
   "Lost or stolen fee ({lostFee})": "Cargo por pérdida o robo ({lostFee})",
-  "That's our lost or stolen fee. If a battery isn't returned after {lostDays} days, a {lostFee} replacement fee applies, and the battery is yours to keep.":
-    "Ese es nuestro cargo por pérdida o robo. Si una batería no se devuelve después de {lostDays} días, se aplica una tarifa de reposición de {lostFee}, y la batería pasa a ser tuya.",
+  "That's our lost or stolen fee. If a battery isn't returned after {lostDays} days, depending on the location, a {lostFee} replacement fee applies, and the battery is yours to keep.":
+    "Ese es nuestro cargo por pérdida o robo. Si una batería no se devuelve después de {lostDays} días, según la ubicación, se aplica una tarifa de reposición de {lostFee}, y la batería pasa a ser tuya.",
   "If you think it shouldn't apply to your rental, send us the details and a person will take a look.":
     "Si crees que no aplica a tu alquiler, envíanos los detalles y una persona lo revisará.",
   "Lost or stolen fee question": "Pregunta sobre el cargo por pérdida o robo",

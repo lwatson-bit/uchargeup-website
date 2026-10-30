@@ -15,6 +15,9 @@ export type Category = "rental" | "transaction" | "partner" | "other";
 /**
  * Lost / stolen policy as Juice quotes it, in the owner's words: "after 3
  * days, a $129 replacement fee, which is the lost or stolen fee, applies".
+ * Since 30 Oct the window is set per venue (Ford Field and Henry Ford 2 days,
+ * others 3), so the general copy says "2 to 3 days, depending on the location"
+ * (Larry); the AI answer confirms a named venue's own number from the lookup.
  * Daily maximums vary by venue, so copy never explains how charges add up.
  * (For reference: $129 is the all-in total, e.g. $40 + $40 + $40 + $9 at a
  * $40 venue; it is never added on top of the rental charges.) Copy uses {lostFee} and
@@ -22,7 +25,7 @@ export type Category = "rental" | "transaction" | "partner" | "other";
  * changes, change it here, in the FACTS block of api/chat-ask.ts, and in
  * Terms of Service section 3.5 (English and Spanish pages).
  */
-export const POLICY = { lostFee: "$129", lostDays: "3" };
+export const POLICY = { lostFee: "$129", lostDays: { en: "2 to 3", es: "2 a 3" } };
 
 export type Field =
   | "name"
@@ -261,7 +264,7 @@ const nodes: FlowNode[] = [
   {
     id: "r_lost",
     say: [
-      "Sorry to hear that. If a battery isn't returned after {lostDays} days, a {lostFee} replacement fee applies. That's our lost or stolen fee, and the battery is yours to keep.",
+      "Sorry to hear that. If a battery isn't returned after {lostDays} days, depending on the location, a {lostFee} replacement fee applies. That's our lost or stolen fee, and the battery is yours to keep.",
       "Have a question about your charge? Send us the details and a person on our team will take a look.",
     ],
     chips: [
@@ -339,7 +342,7 @@ const nodes: FlowNode[] = [
   {
     id: "c_fee",
     say: [
-      "That's our lost or stolen fee. If a battery isn't returned after {lostDays} days, a {lostFee} replacement fee applies, and the battery is yours to keep.",
+      "That's our lost or stolen fee. If a battery isn't returned after {lostDays} days, depending on the location, a {lostFee} replacement fee applies, and the battery is yours to keep.",
       "If you think it shouldn't apply to your rental, send us the details and a person will take a look.",
     ],
     chips: [

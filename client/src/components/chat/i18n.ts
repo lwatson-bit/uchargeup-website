@@ -39,7 +39,7 @@ export function saveLang(lang: Lang) {
  */
 export function tr(lang: Lang, text: string): string {
   const out = lang === "en" ? text : ES[text] ?? text;
-  return out.replace(/\{lostFee\}/g, POLICY.lostFee).replace(/\{lostDays\}/g, POLICY.lostDays);
+  return out.replace(/\{lostFee\}/g, POLICY.lostFee).replace(/\{lostDays\}/g, POLICY.lostDays[lang === "es" ? "es" : "en"]);
 }
 
 /** Locale tag for date formatting. */
