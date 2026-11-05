@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg leading-relaxed mb-12">
-                  These Terms of Service ("Terms") are a binding agreement between you and U Charge Up, Inc. ("U Charge Up," "we," "us"). They govern your use of the U Charge Up mobile application (the "App"), our charging kiosks, and our portable power bank rental service (together, the "Service"). By creating an account or renting a power bank, you agree to these Terms and to our Privacy Policy.
+                  These Terms of Service ("Terms") are a binding agreement between you and UCHARGEUP LLC ("U Charge Up," "we," "us"). They govern your use of the U Charge Up mobile application (the "App"), our charging kiosks, and our portable power bank rental service (together, the "Service"). By creating an account or renting a power bank, you agree to these Terms and to our Privacy Policy.
                 </p>
                 <p className="text-lg leading-relaxed mb-12">
                   If you do not agree, do not use the Service.
@@ -182,7 +182,7 @@ export default function TermsOfServicePage() {
                 <div className="border-t border-gray-200 pt-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">14. Contact</h2>
                   <div className="bg-gray-50 rounded-lg p-6">
-                    <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
+                    <p className="font-semibold text-gray-900 mb-2">UCHARGEUP LLC</p>
                     <p className="mb-1">
                       <strong>Email:</strong>{" "}
                       <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">

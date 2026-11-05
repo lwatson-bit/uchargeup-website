@@ -30,7 +30,7 @@ export default function TermsOfServicePageEs() {
 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg leading-relaxed mb-12">
-                  Estos Términos de Servicio ("Términos") constituyen un acuerdo vinculante entre usted y U Charge Up, Inc. ("U Charge Up," "nosotros"). Rigen su uso de la aplicación móvil de U Charge Up (la "App"), nuestras estaciones de carga y nuestro servicio de alquiler de baterías portátiles (power bank) (en conjunto, el "Servicio"). Al crear una cuenta o alquilar una batería portátil, usted acepta estos Términos y nuestra Política de Privacidad.
+                  Estos Términos de Servicio ("Términos") constituyen un acuerdo vinculante entre usted y UCHARGEUP LLC ("U Charge Up," "nosotros"). Rigen su uso de la aplicación móvil de U Charge Up (la "App"), nuestras estaciones de carga y nuestro servicio de alquiler de baterías portátiles (power bank) (en conjunto, el "Servicio"). Al crear una cuenta o alquilar una batería portátil, usted acepta estos Términos y nuestra Política de Privacidad.
                 </p>
                 <p className="text-lg leading-relaxed mb-12">
                   Si no está de acuerdo, no utilice el Servicio.
@@ -182,7 +182,7 @@ export default function TermsOfServicePageEs() {
                 <div className="border-t border-gray-200 pt-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">14. Contacto</h2>
                   <div className="bg-gray-50 rounded-lg p-6">
-                    <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
+                    <p className="font-semibold text-gray-900 mb-2">UCHARGEUP LLC</p>
                     <p className="mb-1">
                       <strong>Correo electrónico:</strong>{" "}
                       <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
