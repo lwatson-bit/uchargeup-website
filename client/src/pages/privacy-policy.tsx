@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg leading-relaxed mb-8">
-                  U Charge Up, Inc. ("U Charge Up," "we," "our," or "us") provides mobile applications and charging kiosk services that allow users to rent portable power banks and manage their rentals. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile app, website, and kiosks (collectively, the "Services").
+                  UCHARGEUP LLC ("U Charge Up," "we," "our," or "us") provides mobile applications and charging kiosk services that allow users to rent portable power banks and manage their rentals. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile app, website, and kiosks (collectively, the "Services").
                 </p>
                 <p className="text-lg leading-relaxed mb-12">
                   By using the Services, you agree to the practices described in this Privacy Policy.
@@ -171,7 +171,7 @@ export default function PrivacyPolicyPage() {
                 <div className="border-t border-gray-200 pt-8 mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Contact us</h2>
                   <div className="bg-gray-50 rounded-lg p-6">
-                    <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
+                    <p className="font-semibold text-gray-900 mb-2">UCHARGEUP LLC</p>
                     <p className="mb-1">
                       <strong>Email:</strong>{" "}
                       <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">

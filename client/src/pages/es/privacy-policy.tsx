@@ -30,7 +30,7 @@ export default function PrivacyPolicyPageEs() {
 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg leading-relaxed mb-8">
-                  U Charge Up, Inc. ("U Charge Up," "nosotros") ofrece aplicaciones móviles y servicios de estaciones de carga que permiten a los usuarios alquilar baterías portátiles (power bank) y gestionar sus alquileres. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando utiliza nuestra aplicación móvil, sitio web y estaciones (en conjunto, los "Servicios").
+                  UCHARGEUP LLC ("U Charge Up," "nosotros") ofrece aplicaciones móviles y servicios de estaciones de carga que permiten a los usuarios alquilar baterías portátiles (power bank) y gestionar sus alquileres. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando utiliza nuestra aplicación móvil, sitio web y estaciones (en conjunto, los "Servicios").
                 </p>
                 <p className="text-lg leading-relaxed mb-12">
                   Al utilizar los Servicios, usted acepta las prácticas descritas en esta Política de Privacidad.
@@ -171,7 +171,7 @@ export default function PrivacyPolicyPageEs() {
                 <div className="border-t border-gray-200 pt-8 mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Contáctenos</h2>
                   <div className="bg-gray-50 rounded-lg p-6">
-                    <p className="font-semibold text-gray-900 mb-2">U Charge Up, Inc.</p>
+                    <p className="font-semibold text-gray-900 mb-2">UCHARGEUP LLC</p>
                     <p className="mb-1">
                       <strong>Correo electrónico:</strong>{" "}
                       <a href="mailto:support@uchargeup.com" className="text-brand-blue hover:underline">
