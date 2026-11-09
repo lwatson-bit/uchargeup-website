@@ -10,6 +10,7 @@ import fourWindsLogo from "@assets/Four-winds_1752165222960.png";
 import rocketClassicLogo from "@assets/Logo-2025RocketClassic-PresentingSponsorLogo-CMYK-8639137248_Horz-Color (7)_1752165222960.png";
 import fixinsLogo from "@assets/Fixins Logo_1752165204990.png";
 import afroFutureLogo from "@assets/afrobeats-festival-downtown-detroit.png_1757032474149.webp";
+import henryFordHealthLogo from "@assets/henry-ford-health-logo.webp";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -25,6 +26,8 @@ export default function Hero() {
     { name: "Ford Field", alt: "Ford Field", logoPath: fordFieldLogo },
     { name: "Four Winds Casinos", alt: "Four Winds Casinos", logoPath: fourWindsLogo },
     { name: "Rocket Classic", alt: "Rocket Classic", logoPath: rocketClassicLogo },
+    // Kept away from Ford Field so the two Ford logos never sit side by side
+    { name: "Henry Ford Health", alt: "Henry Ford Health", logoPath: henryFordHealthLogo },
     { name: "Fixins", alt: "Fixins", logoPath: fixinsLogo },
     { name: "Afro Future Detroit", alt: "Afro Future Detroit", logoPath: afroFutureLogo }
   ];
