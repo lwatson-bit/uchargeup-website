@@ -160,11 +160,18 @@ export default function Events() {
               viewport={{ once: true }}
               className="relative group cursor-pointer"
             >
-              <div className="aspect-[4/3] rounded-xl overflow-hidden">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                {/* Tall photo: show the whole machine, fill the sides with a soft blur of the same shot */}
+                <img
+                  src={eventImage1}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl brightness-90"
+                />
                 <img 
                   src={eventImage1} 
                   alt="U Charge Up® charging stations at event" 
-                  className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="relative w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl"></div>
@@ -229,7 +236,7 @@ export default function Events() {
                 <img 
                   src={eventImage4} 
                   alt="Professional charging station setup" 
-                  className="w-full h-80 object-center object-cover"
+                  className="w-full aspect-[4/3] object-center object-cover"
                 />
               </div>
             </motion.div>
@@ -245,7 +252,7 @@ export default function Events() {
                 <img 
                   src={eventImage5} 
                   alt="Event charging solutions" 
-                  className="w-full h-80 object-center object-cover"
+                  className="w-full aspect-[4/3] object-[50%_30%] object-cover"
                 />
               </div>
             </motion.div>
