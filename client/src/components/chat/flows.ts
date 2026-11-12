@@ -163,7 +163,6 @@ const nodes: FlowNode[] = [
     say: ["Let's get you charged up. What's going on?"],
     chips: [
       { label: "Battery didn't come out", next: "r_noeject" },
-      { label: "Charging too slow", next: "r_slow" },
       { label: "Battery won't charge my phone", next: "r_dead" },
       { label: "How do I return it?", next: "r_return" },
       { label: "Returned it, still shows active", next: "r_active" },
@@ -192,25 +191,6 @@ const nodes: FlowNode[] = [
         label: "❌ Still nothing",
         next: "s_intro_rental",
         issue: "Battery didn't come out",
-        category: "rental",
-      },
-      MORE_CHIP,
-    ],
-  },
-  {
-    id: "r_slow",
-    say: [
-      "Let's speed that up. A few quick fixes:",
-      "1. Push the cable all the way into your phone. A loose fit charges slowly.\n2. Dim the screen, close video, games and maps, and turn on Low Power Mode or Battery Saver.\n3. Keep the phone out of the sun and out of a tight pocket. Heat makes phones charge slower.",
-      "Still crawling? Return it to any kiosk and grab a fresh one, the swap only takes a second.",
-    ],
-    links: APP_LINKS,
-    chips: [
-      HAPPY_CHIP,
-      {
-        label: "❌ Still slow",
-        next: "s_intro_rental",
-        issue: "Battery charging too slowly",
         category: "rental",
       },
       MORE_CHIP,

@@ -98,14 +98,6 @@ export const ES: Record<string, string> = {
     "Qué molesto. Primero, asegúrate de que el cable esté bien metido en tu teléfono.",
   "Still nothing? Return it to any kiosk and grab a fresh one, the swap only takes a second.":
     "¿Sigue sin cargar? Devuélvela en cualquier estación y toma una nueva; el cambio toma solo un segundo.",
-  "Charging too slow": "Carga muy lento",
-  "Let's speed that up. A few quick fixes:": "Vamos a acelerarlo. Prueba esto:",
-  "1. Push the cable all the way into your phone. A loose fit charges slowly.\n2. Dim the screen, close video, games and maps, and turn on Low Power Mode or Battery Saver.\n3. Keep the phone out of the sun and out of a tight pocket. Heat makes phones charge slower.":
-    "1. Mete el cable hasta el fondo en tu teléfono. Si queda flojo, carga lento.\n2. Baja el brillo, cierra videos, juegos y mapas, y activa el modo de bajo consumo o ahorro de batería.\n3. Mantén el teléfono fuera del sol y de un bolsillo apretado. El calor hace que cargue más lento.",
-  "Still crawling? Return it to any kiosk and grab a fresh one, the swap only takes a second.":
-    "¿Sigue lento? Devuélvela en cualquier estación y toma una nueva; el cambio toma solo un segundo.",
-  "❌ Still slow": "❌ Sigue lento",
-  "Battery charging too slowly": "La batería carga muy lento",
   "If the dead one cost you rental time, send us the details and we'll take a look.":
     "Si la descargada te quitó tiempo de alquiler, envíanos los detalles y lo revisamos.",
   "✅ All set": "✅ Todo listo",
