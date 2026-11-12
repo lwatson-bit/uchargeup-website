@@ -52,7 +52,7 @@ Brand colors: Primary blue from the U Charge Up logo (#00A8CC - bright cyan), re
 
 ### Backend Components
 1. **API Endpoints** (Vercel serverless functions in `api/`, self-contained, no relative imports):
-   - `POST /api/chat-ask` - Answers a typed question in the site chat (Juice) with Claude (`claude-sonnet-5-5`) from an inline fact sheet; returns `{ enabled, reply, action }` where `action` names the button the widget offers. Reports `enabled: false` when `ANTHROPIC_API_KEY` is unset. Per-IP and per-instance rate limits.
+   - `POST /api/chat-ask` - Answers a typed question in the site chat (Juice) with Claude (`claude-sonnet-5-5`) from an inline fact sheet (including quick fixes for slow charging, dead batteries and unhappy visitors, offered before any handoff); returns `{ enabled, reply, action }` where `action` names the button the widget offers. Reports `enabled: false` when `ANTHROPIC_API_KEY` is unset. Per-IP and per-instance rate limits.
    - `POST /api/chat-handoff` - Takes the visitor's details plus the chat transcript and emails them to support@uchargeup.com over Gmail SMTP (nodemailer, `GMAIL_USER` + `GMAIL_APP_PASSWORD`); returns `{ success, reference }`. Card numbers in the transcript or notes are masked before rendering or logging. Honeypot and too-fast bot checks.
 
 
