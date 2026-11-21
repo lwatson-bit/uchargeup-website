@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  /* Light only: opts out of browser forced dark mode (see index.html). */
+  color-scheme: only light;
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(210, 40%, 8%);
   --muted: hsl(210, 40%, 96%);
