@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Smartphone, MapPin, Clock } from "lucide-react";
+import { Smartphone, MapPin, RotateCcw } from "lucide-react";
 import { handleAppDownload } from "@/utils/appDownload";
 import { openChat } from "@/components/chat/api";
 
@@ -59,8 +59,8 @@ export default function CallToAction() {
               Coast to coast
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              24/7 availability
+              <RotateCcw className="w-4 h-4 mr-2" />
+              Return anywhere
             </div>
           </div>
         </motion.div>
