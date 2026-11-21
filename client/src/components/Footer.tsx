@@ -33,8 +33,8 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] text-left pb-10 mb-10 border-b border-white/15">
-          <div>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-10 lg:grid-cols-[2fr_1fr_1fr_1fr] text-left pb-8 mb-8 sm:pb-10 sm:mb-10 border-b border-white/15">
+          <div className="col-span-2 lg:col-span-1">
             <div className="text-lg font-bold text-white">U Charge Up®</div>
             <p className="mt-3 text-sm leading-relaxed text-gray-300 max-w-xs">
               Portable battery rental for stadiums, hospitals, hotels,

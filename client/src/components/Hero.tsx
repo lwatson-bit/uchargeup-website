@@ -41,7 +41,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="pt-16 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -111,38 +111,18 @@ export default function Hero() {
               <img 
                 src={kioskImage} 
                 alt="U Charge Up kiosk at the Detroit Auto Show" 
-                className="w-full max-w-md rounded-xl shadow-lg object-cover"
+                className="w-full max-w-md h-80 sm:h-[460px] lg:h-auto rounded-xl shadow-lg object-cover object-[center_15%]"
               />
             </div>
           </motion.div>
         </div>
         
-        {/* General proof points. No station, state or country counts on purpose. */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-14 bg-white rounded-2xl border border-gray-200 shadow-sm py-5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200"
-          data-testid="home-proof-strip"
-        >
-          {[
-            { value: "Coast to coast", label: "Stations across the U.S." },
-            { value: "International", label: "U.S. and abroad" },
-            { value: "200+", label: "Events powered every year" },
-          ].map((item) => (
-            <div key={item.label} className="px-6 py-3 text-center">
-              <div className="text-2xl font-bold text-gray-900">{item.value}</div>
-              <div className="mt-1 text-sm font-medium text-gray-600">{item.label}</div>
-            </div>
-          ))}
-        </motion.div>
-
         {/* Partner logos - scrolling carousel in hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 pt-8 border-t border-gray-200"
+          className="mt-10 md:mt-16 pt-8 border-t border-gray-200"
         >
           <div className="text-center mb-8">
             <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Trusted by</span>

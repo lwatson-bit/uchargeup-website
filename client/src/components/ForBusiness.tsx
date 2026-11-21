@@ -28,14 +28,14 @@ const CARDS = [
 /** Homepage section that points businesses at the For Venues and Events pages. */
 export default function ForBusiness() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-14 md:py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-2xl mb-9"
+          className="max-w-2xl mb-7 md:mb-9"
         >
           <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)] mb-3.5">
             For business
@@ -58,13 +58,13 @@ export default function ForBusiness() {
               <img
                 src={card.image}
                 alt={card.alt}
-                className="w-full h-64 object-cover"
+                className="w-full h-44 md:h-64 object-cover"
               />
-              <div className="p-7 flex flex-col items-start gap-3">
+              <div className="p-5 md:p-7 flex flex-col items-start gap-2.5 md:gap-3">
                 <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)]">
                   {card.eyebrow}
                 </p>
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">
                   {card.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">{card.text}</p>

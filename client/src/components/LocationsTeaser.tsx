@@ -37,7 +37,7 @@ export default function LocationsTeaser() {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 flex flex-col gap-8">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col gap-6 md:gap-8">
         <div className="flex flex-wrap items-end justify-between gap-5">
           <div className="flex-1 min-w-[260px] flex flex-col gap-3.5">
             <p className="text-sm font-bold tracking-widest uppercase text-sky-100">
@@ -66,13 +66,13 @@ export default function LocationsTeaser() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl px-6 py-5 border border-white/30 backdrop-blur-sm"
+              className="rounded-2xl px-5 py-3.5 sm:px-6 sm:py-5 border border-white/30 backdrop-blur-sm flex sm:block items-baseline justify-between gap-4"
               style={{ background: "rgba(7,29,51,0.42)" }}
             >
-              <div className="text-3xl lg:text-[38px] font-bold leading-tight tracking-tight text-white">
+              <div className="text-2xl sm:text-3xl lg:text-[38px] font-bold leading-tight tracking-tight text-white">
                 {stat.value}
               </div>
-              <div className="mt-1.5 text-base font-semibold text-white">
+              <div className="sm:mt-1.5 text-sm sm:text-base font-semibold text-white text-right sm:text-left">
                 {stat.label}
               </div>
             </div>
