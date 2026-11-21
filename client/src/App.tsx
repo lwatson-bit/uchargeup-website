@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import HowItWorksPage from "@/pages/how-it-works";
 import KiosksPage from "@/pages/kiosks";
 import LocationsPage from "@/pages/locations";
+import ForVenuesPage from "@/pages/for-venues";
 import Events from "@/pages/events";
 import ContactPage from "@/pages/contact";
 import PrivacyPolicyPage from "@/pages/privacy-policy";
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/how-it-works" component={HowItWorksPage} />
       <Route path="/kiosks" component={KiosksPage} />
       <Route path="/locations" component={LocationsPage} />
+      <Route path="/for-venues" component={ForVenuesPage} />
       <Route path="/events" component={Events} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />

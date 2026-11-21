@@ -28,7 +28,7 @@ export default function Header() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex md:space-x-5 lg:space-x-8 text-sm lg:text-base whitespace-nowrap">
             <Link href="/">
               <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
                 Home
@@ -47,6 +47,11 @@ export default function Header() {
             <Link href="/locations">
               <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
                 Locations
+              </span>
+            </Link>
+            <Link href="/for-venues">
+              <span className="text-gray-700 hover:text-brand-blue transition-colors duration-200 cursor-pointer">
+                For Venues
               </span>
             </Link>
             <Link href="/events">
@@ -112,6 +117,14 @@ export default function Header() {
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
               >
                 Locations
+              </span>
+            </Link>
+            <Link href="/for-venues">
+              <span
+                onClick={closeMenu}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200 cursor-pointer"
+              >
+                For Venues
               </span>
             </Link>
             <Link href="/events">
