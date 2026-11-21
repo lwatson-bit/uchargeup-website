@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import HowItWorks from "@/components/HowItWorks";
-import KioskSolutions from "@/components/KioskSolutions";
 import Partners from "@/components/Partners";
 import Events from "@/components/Events";
 import Advertising from "@/components/Advertising";

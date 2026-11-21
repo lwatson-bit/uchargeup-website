@@ -71,7 +71,7 @@ Finish every reply with exactly one tag on its own line that tells the website w
 If money is involved at all (charged, hold, fee, refund, lost battery), use transaction even if the kiosk also misbehaved.`;
 
 // ------------------------------------------------------------ venue prices
-// The same anonymous feed the site's map reads (client/src/lib/stations.ts):
+// The app's anonymous station feed (the website itself no longer reads it):
 // zoomLevel 1 returns the whole network whatever the center, and showPrice
 // adds each venue's pricing strategy (minutes per block, daily max, hold,
 // lost or stolen fee). Read-only. Cached per warm instance; a stale copy is
