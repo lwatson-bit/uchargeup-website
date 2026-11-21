@@ -293,7 +293,7 @@ export default function ForVenuesPage() {
               </p>
               <blockquote className="max-w-4xl text-2xl md:text-3xl font-semibold leading-snug text-white">
                 “Nobody wants to leave in the middle of the game because their
-                phone is at five percent. With U Charge Up at the host stand,
+                phone is dying. With U Charge Up at the host stand,
                 our guests grab a battery, stay in their seats and order
                 another round.”
               </blockquote>
