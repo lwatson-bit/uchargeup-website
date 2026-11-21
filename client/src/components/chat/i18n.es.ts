@@ -208,6 +208,24 @@ export const ES: Record<string, string> = {
   "Event space": "Espacio para eventos",
   "Other": "Otro",
   "Best email to reach you?": "¿Cuál es el mejor correo para contactarte?",
+
+  // ---- event
+  "Wants charging stations at an event": "Quiere estaciones de carga en un evento",
+  "Happy to help with your event! Let me grab a few details so the right person can reach out.":
+    "¡Con gusto te ayudamos con tu evento! Déjame tomar unos datos para que la persona indicada se comunique contigo.",
+  "Nice to meet you, {firstName}. What company or organization is hosting?":
+    "Mucho gusto, {firstName}. ¿Qué empresa u organización lo organiza?",
+  "What company or organization is hosting?": "¿Qué empresa u organización lo organiza?",
+  "Company or organization": "Empresa u organización",
+  "What kind of event is it?": "¿Qué tipo de evento es?",
+  "Festival / concert": "Festival / concierto",
+  "Tournament / game day": "Torneo / día de partido",
+  "Convention / trade show": "Convención / feria comercial",
+  "Corporate / private": "Corporativo / privado",
+  "Where and when is it?": "¿Dónde y cuándo es?",
+  "City, venue and dates": "Ciudad, lugar y fechas",
+  "Anything else you'd like us to know? A rough crowd size helps.":
+    "¿Algo más que quieras contarnos? Un estimado de asistentes ayuda.",
   "And a phone number, if you'd rather talk?": "¿Y un número de teléfono, si prefieres hablar?",
   "Anything else you'd like us to know?": "¿Algo más que quieras contarnos?",
   "Here's what I'll pass along:": "Esto es lo que le pasaré al equipo:",

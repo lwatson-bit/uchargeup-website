@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { Instagram } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import mbeLogo from "@assets/mbe_1752170626183.webp";
 import nvidiaInceptionBadge from "@assets/nvidia-inception-program-badge.png";
 
@@ -46,6 +48,26 @@ export default function Footer() {
             >
               support@uchargeup.com
             </a>
+            <div className="mt-4 flex items-center gap-4">
+              <a
+                href="https://instagram.com/uchargeup"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="U Charge Up on Instagram"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://x.com/uchargeup"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="U Charge Up on X"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <FaXTwitter className="w-5 h-5" aria-hidden="true" />
+              </a>
+            </div>
           </div>
           {FOOTER_LINKS.map((group) => (
             <nav key={group.title} aria-label={group.title}>

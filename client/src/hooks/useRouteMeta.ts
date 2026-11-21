@@ -10,6 +10,12 @@ function setMeta(selector: string, content: string) {
 export function useRouteMeta() {
   const [location] = useLocation();
 
+  // A new page should open at its top. Without this the browser keeps the old
+  // scroll position, so a button low on one page opened the next page at its footer.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   useEffect(() => {
     const meta = metaFor(location);
     document.title = meta.title;

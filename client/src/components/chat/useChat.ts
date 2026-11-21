@@ -577,13 +577,15 @@ export function useChat(lang: Lang) {
     editField,
     restart,
     /** Jump straight into a flow (from the Contact page or a partner button). */
-    startFlow: (flow: "support" | "partner") => {
-      if (flow !== "partner" || nodeId.startsWith("p_")) return;
+    startFlow: (flow: "support" | "partner" | "event") => {
+      if (flow === "support") return;
+      const prefix = flow === "event" ? "e_" : "p_";
+      if (nodeId.startsWith(prefix)) return;
       clearTimers();
       setBotTyping(false);
       returnToRef.current = null;
       setReturnTo(null);
-      enterNode("p_intro");
+      enterNode(`${prefix}intro`);
     },
   };
 }

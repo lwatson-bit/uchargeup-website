@@ -10,7 +10,7 @@
 //  - lost / replacement-fee questions go straight to a person, with no fee
 //    rule or timeline stated
 
-export type Category = "rental" | "transaction" | "partner" | "other";
+export type Category = "rental" | "transaction" | "partner" | "event" | "other";
 
 /**
  * Lost / stolen policy as Juice quotes it, in the owner's words: "after 3
@@ -539,6 +539,95 @@ const nodes: FlowNode[] = [
     chips: [NEW_CHAT_CHIP],
   },
 
+  // ----------------------------------------------------------------- event
+  // Reached from "Book an Event" on the Events and Contact pages.
+  {
+    id: "e_intro",
+    category: "event",
+    issue: "Wants charging stations at an event",
+    say: ["Happy to help with your event! Let me grab a few details so the right person can reach out."],
+    next: "e_name",
+  },
+  {
+    id: "e_name",
+    say: ["What's your name?"],
+    input: { kind: "text", field: "name", placeholder: "Your name", next: "e_business" },
+    skipIf: "name",
+    next: "e_business",
+  },
+  {
+    id: "e_business",
+    say: ["Nice to meet you, {firstName}. What company or organization is hosting?"],
+    altSay: ["What company or organization is hosting?"],
+    input: {
+      kind: "text",
+      field: "business",
+      placeholder: "Company or organization",
+      next: "e_type",
+    },
+  },
+  {
+    id: "e_type",
+    say: ["What kind of event is it?"],
+    chips: [
+      { label: "Festival / concert", next: "e_where", set: { venueType: "Festival / concert" } },
+      { label: "Tournament / game day", next: "e_where", set: { venueType: "Tournament / game day" } },
+      { label: "Convention / trade show", next: "e_where", set: { venueType: "Convention / trade show" } },
+      { label: "Corporate / private", next: "e_where", set: { venueType: "Corporate / private" } },
+      { label: "Other", next: "e_where", set: { venueType: "Other" } },
+    ],
+  },
+  {
+    id: "e_where",
+    say: ["Where and when is it?"],
+    input: { kind: "text", field: "venue", placeholder: "City, venue and dates", next: "e_email" },
+  },
+  {
+    id: "e_email",
+    say: ["Best email to reach you?"],
+    input: { kind: "email", field: "email", placeholder: "you@example.com", next: "e_phone" },
+  },
+  {
+    id: "e_phone",
+    say: ["And a phone number, if you'd rather talk?"],
+    input: {
+      kind: "text",
+      field: "phone",
+      placeholder: "Optional",
+      optional: true,
+      skipLabel: "Skip",
+      next: "e_more",
+    },
+  },
+  {
+    id: "e_more",
+    say: ["Anything else you'd like us to know? A rough crowd size helps."],
+    input: {
+      kind: "textarea",
+      field: "message",
+      placeholder: "Optional",
+      optional: true,
+      skipLabel: "Skip",
+      next: "e_summary",
+    },
+  },
+  {
+    id: "e_summary",
+    kind: "summary",
+    say: ["Here's what I'll pass along:"],
+    chips: [
+      { label: "Send it", next: "e_send" },
+      { label: "Start over", next: "__restart" },
+    ],
+  },
+  { id: "e_send", kind: "send", say: [], next: "e_sent" },
+  {
+    id: "e_sent",
+    kind: "sent",
+    say: ["Thanks, {firstName}! We'll be in touch soon.", "Your reference is {reference}, in case you need it."],
+    chips: [NEW_CHAT_CHIP],
+  },
+
   // ----------------------------------------------------------------- other
   {
     id: "o_intro",
@@ -594,6 +683,7 @@ export const SUMMARY_FIELDS: Record<Category, Field[]> = {
   rental: ["name", "venue", "rentalDate", "rentalTime", "cardLast4", "email", "message"],
   transaction: ["name", "venue", "rentalDate", "rentalTime", "cardLast4", "email", "message"],
   partner: ["name", "business", "venueType", "email", "phone", "message"],
+  event: ["name", "business", "venueType", "venue", "email", "phone", "message"],
   other: ["name", "email", "message"],
 };
 
@@ -624,6 +714,15 @@ export const EDIT_NODES: Record<Category, Partial<Record<Field, string>>> = {
     email: "p_email",
     phone: "p_phone",
     message: "p_more",
+  },
+  event: {
+    name: "e_name",
+    business: "e_business",
+    venueType: "e_type",
+    venue: "e_where",
+    email: "e_email",
+    phone: "e_phone",
+    message: "e_more",
   },
   other: { name: "o_intro", email: "o_email", message: "o_message" },
 };

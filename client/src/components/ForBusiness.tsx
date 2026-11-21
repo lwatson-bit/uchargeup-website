@@ -37,7 +37,7 @@ export default function ForBusiness() {
           viewport={{ once: true }}
           className="max-w-2xl mb-7 md:mb-9"
         >
-          <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)] mb-3.5">
+          <p className="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3.5">
             For business
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -61,7 +61,7 @@ export default function ForBusiness() {
                 className="w-full h-44 md:h-64 object-cover"
               />
               <div className="p-5 md:p-7 flex flex-col items-start gap-2.5 md:gap-3">
-                <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)]">
+                <p className="text-sm font-bold tracking-widest uppercase text-brand-blue">
                   {card.eyebrow}
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900">
@@ -72,7 +72,7 @@ export default function ForBusiness() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="mt-1.5 border-2 border-[hsl(205,85%,35%)] text-[hsl(205,85%,35%)] hover:bg-gray-50 font-semibold"
+                    className="mt-1.5 border-2 border-brand-blue text-brand-blue hover:bg-gray-50 font-semibold"
                   >
                     {card.button}
                   </Button>

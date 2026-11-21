@@ -45,7 +45,7 @@ export default function LocationsBand() {
       className="relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(115deg, #0a4d85 0%, #0d66a5 34%, #1183d4 70%, #2a9df0 100%)",
+          "linear-gradient(115deg, #25628a 0%, #3078a2 55%, #4a97c4 100%)",
       }}
       data-testid="locations-band"
     >
@@ -62,7 +62,7 @@ export default function LocationsBand() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(10,77,133,0.96) 0%, rgba(10,77,133,0.82) 24%, rgba(10,77,133,0) 52%)",
+            "linear-gradient(90deg, rgba(37,98,138,0.96) 0%, rgba(37,98,138,0.82) 24%, rgba(37,98,138,0) 52%)",
         }}
       />
 
@@ -97,7 +97,7 @@ export default function LocationsBand() {
                     "0 0 0 6px rgba(255,255,255,0.22), 0 6px 18px rgba(6,40,74,0.35)",
                 }}
               >
-                <Zap className="w-3.5 h-3.5 text-[hsl(205,85%,35%)]" fill="currentColor" />
+                <Zap className="w-3.5 h-3.5 text-brand-blue" fill="currentColor" />
               </div>
             </div>
           );
@@ -106,7 +106,7 @@ export default function LocationsBand() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-10 md:pb-12 flex flex-col gap-14 md:gap-32">
         <div className="max-w-xl flex flex-col items-start gap-5">
-          <p className="text-sm font-bold tracking-widest uppercase text-sky-100">
+          <p className="text-sm font-bold tracking-widest uppercase text-brand-pale">
             Where to find us
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight text-white">
@@ -119,7 +119,7 @@ export default function LocationsBand() {
           <div className="flex flex-wrap gap-3 mt-2">
             <Button
               size="lg"
-              className="h-[52px] px-7 bg-white hover:bg-gray-100 text-[#071d33] text-base font-bold"
+              className="h-[52px] px-7 bg-white hover:bg-gray-100 text-brand-dark-blue text-base font-bold"
               onClick={handleAppDownload}
               data-testid="locations-download-app"
             >
@@ -129,7 +129,7 @@ export default function LocationsBand() {
               <Button
                 size="lg"
                 variant="outline"
-                className="h-[52px] px-7 bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#071d33] text-base font-bold"
+                className="h-[52px] px-7 bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark-blue text-base font-bold"
                 data-testid="locations-become-partner"
               >
                 Become a Partner
@@ -143,7 +143,7 @@ export default function LocationsBand() {
             <div
               key={stat.label}
               className="rounded-2xl px-6 py-5 border border-white/30 backdrop-blur-sm"
-              style={{ background: "rgba(7,29,51,0.42)" }}
+              style={{ background: "rgba(22,61,87,0.5)" }}
             >
               <div className="text-3xl lg:text-[40px] font-bold leading-tight tracking-tight text-white">
                 {stat.value}

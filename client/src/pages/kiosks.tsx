@@ -86,7 +86,7 @@ const fadeUp = {
 
 function Eyebrow({ children }: { children: string }) {
   return (
-    <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)]">
+    <p className="text-sm font-bold tracking-widest uppercase text-brand-blue">
       {children}
     </p>
   );
@@ -116,7 +116,7 @@ export default function KiosksPage() {
               <div className="flex flex-wrap gap-3 mt-1">
                 <Button
                   size="lg"
-                  className="bg-brand-dark-blue hover:bg-brand-blue text-white font-semibold"
+                  className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
                   onClick={() => openChat("partner")}
                   data-testid="kiosks-become-partner"
                 >
@@ -126,7 +126,7 @@ export default function KiosksPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-[hsl(205,85%,35%)] text-[hsl(205,85%,35%)] hover:bg-gray-50 font-semibold"
+                    className="border-2 border-brand-blue text-brand-blue hover:bg-gray-50 font-semibold"
                   >
                     How It Works
                   </Button>
@@ -201,8 +201,8 @@ export default function KiosksPage() {
                   {...fadeUp}
                   className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 md:p-6 flex gap-4 items-start"
                 >
-                  <span className="w-11 h-11 rounded-xl bg-sky-50 flex items-center justify-center flex-none">
-                    <Icon className="w-[22px] h-[22px] text-[hsl(205,85%,35%)]" />
+                  <span className="w-11 h-11 rounded-xl bg-brand-tint flex items-center justify-center flex-none">
+                    <Icon className="w-[22px] h-[22px] text-brand-blue" />
                   </span>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">
@@ -239,7 +239,7 @@ export default function KiosksPage() {
               <ul className="space-y-2.5 mt-1">
                 {BATTERY_POINTS.map((point) => (
                   <li key={point} className="flex items-start gap-3">
-                    <Check className="w-[22px] h-[22px] flex-none mt-0.5 text-[hsl(205,85%,35%)]" />
+                    <Check className="w-[22px] h-[22px] flex-none mt-0.5 text-brand-blue" />
                     <span className="text-[17px] text-gray-700">{point}</span>
                   </li>
                 ))}
@@ -252,7 +252,7 @@ export default function KiosksPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
             <motion.div
               {...fadeUp}
-              className="bg-brand-dark-blue rounded-3xl p-7 md:p-14 flex flex-wrap items-center justify-between gap-6"
+              className="bg-brand-blue rounded-3xl p-7 md:p-14 flex flex-wrap items-center justify-between gap-6"
             >
               <div className="flex-1 min-w-[260px]">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2.5">
@@ -266,7 +266,7 @@ export default function KiosksPage() {
               <div className="flex flex-wrap gap-3">
                 <Button
                   size="lg"
-                  className="bg-white hover:bg-gray-100 text-[hsl(205,85%,35%)] font-semibold"
+                  className="bg-white hover:bg-gray-100 text-brand-blue font-semibold"
                   onClick={() => openChat("partner")}
                   data-testid="kiosks-become-partner-bottom"
                 >
@@ -276,7 +276,7 @@ export default function KiosksPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[hsl(205,85%,35%)] font-semibold"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold"
                   >
                     For Venues
                   </Button>

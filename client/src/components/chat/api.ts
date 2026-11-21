@@ -50,6 +50,6 @@ export async function askAssistant(
 }
 
 /** Fires the widget open from anywhere on the site (Contact page, partner CTA). */
-export function openChat(flow?: "support" | "partner") {
+export function openChat(flow?: "support" | "partner" | "event") {
   window.dispatchEvent(new CustomEvent("ucu-chat:open", { detail: { flow } }));
 }

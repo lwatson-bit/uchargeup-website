@@ -68,7 +68,7 @@ export default function ChatWidget() {
   // Open from anywhere on the site: openChat("partner") etc. Registered once.
   useEffect(() => {
     const onOpen = (e: Event) => {
-      const flow = (e as CustomEvent<{ flow?: "support" | "partner" }>).detail?.flow;
+      const flow = (e as CustomEvent<{ flow?: "support" | "partner" | "event" }>).detail?.flow;
       setOpen(true);
       setNudge(false);
       markSeen();

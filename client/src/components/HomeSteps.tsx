@@ -31,7 +31,7 @@ export default function HomeSteps() {
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-10"
         >
-          <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)] mb-3.5">
+          <p className="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3.5">
             How it works
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -49,8 +49,8 @@ export default function HomeSteps() {
               viewport={{ once: true }}
               className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 md:p-7 flex md:flex-col items-start gap-4 md:gap-3.5"
             >
-              <span className="w-12 h-12 md:w-[52px] md:h-[52px] rounded-2xl bg-sky-50 flex items-center justify-center flex-none">
-                <Icon className="w-6 h-6 md:w-[26px] md:h-[26px] text-[hsl(205,85%,35%)]" />
+              <span className="w-12 h-12 md:w-[52px] md:h-[52px] rounded-2xl bg-brand-tint flex items-center justify-center flex-none">
+                <Icon className="w-6 h-6 md:w-[26px] md:h-[26px] text-brand-blue" />
               </span>
               <div>
                 <p className="text-xs md:text-sm font-bold tracking-wider uppercase text-gray-600">

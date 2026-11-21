@@ -38,7 +38,7 @@ const fieldsSchema = z.object({
 });
 
 const handoffSchema = z.object({
-  category: z.enum(["rental", "transaction", "partner", "other"]),
+  category: z.enum(["rental", "transaction", "partner", "event", "other"]),
   issue: z.string().trim().max(200).default(""),
   fields: fieldsSchema,
   transcript: z
@@ -97,6 +97,7 @@ const CATEGORY_LABEL: Record<z.infer<typeof handoffSchema>["category"], string> 
   rental: "Rental trouble",
   transaction: "Transaction question",
   partner: "Partner inquiry",
+  event: "Event inquiry",
   other: "Message",
 };
 
@@ -188,7 +189,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     );
 
     const label = CATEGORY_LABEL[handoff.category];
-    const detail = handoff.category === "partner" ? f.business || f.name : f.venue || f.name;
+    const detail =
+      handoff.category === "partner" || handoff.category === "event" ? f.business || f.name : f.venue || f.name;
     const subject = `[Chat] ${label}${handoff.lang === "es" ? " (ES)" : ""} – ${detail} (${reference})`;
 
     const rows = (Object.keys(FIELD_LABEL) as (keyof typeof FIELD_LABEL)[])

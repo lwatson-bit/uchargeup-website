@@ -15,7 +15,7 @@
   --card-foreground: hsl(210, 40%, 8%);
   --border: hsl(214, 32%, 91%);
   --input: hsl(214, 32%, 91%);
-  --primary: hsl(205, 85%, 45%);
+  --primary: #3078a2;
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(210, 40%, 96%);
   --secondary-foreground: hsl(210, 40%, 8%);
@@ -23,10 +23,11 @@
   --accent-foreground: hsl(210, 40%, 8%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(205, 85%, 45%);
+  --ring: #3078a2;
   --radius: 0.5rem;
-  --brand-blue: hsl(205, 85%, 45%);
-  --brand-dark-blue: hsl(205, 85%, 35%);
+  /* Brand blue is the blue in the logo. Change it here and the whole site follows. */
+  --brand-blue: #3078a2;
+  --brand-dark-blue: #25628a;
   --brand-light: hsl(210, 40%, 97%);
   --brand-text: hsl(210, 40%, 8%);
   --brand-success: hsl(142, 76%, 36%);
@@ -44,17 +45,17 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(205, 85%, 45%);
+  --primary: #3078a2;
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(205, 85%, 35%);
+  --secondary: #25628a;
   --secondary-foreground: hsl(0, 0%, 100%);
   --accent: hsl(240, 3.7%, 15.9%);
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 0%, 98%);
   --ring: hsl(240, 4.9%, 83.9%);
-  --brand-blue: hsl(205, 85%, 45%);
-  --brand-dark-blue: hsl(205, 85%, 35%);
+  --brand-blue: #3078a2;
+  --brand-dark-blue: #25628a;
   --brand-light: hsl(210, 40%, 97%);
   --brand-text: hsl(26, 83%, 4%);
   --brand-success: hsl(142, 76%, 36%);

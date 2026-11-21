@@ -100,7 +100,7 @@ const fadeUp = {
 
 function Eyebrow({ children }: { children: string }) {
   return (
-    <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)]">
+    <p className="text-sm font-bold tracking-widest uppercase text-brand-blue">
       {children}
     </p>
   );
@@ -129,7 +129,7 @@ export default function HowItWorksPage() {
               <div className="flex flex-wrap gap-3 mt-1">
                 <Button
                   size="lg"
-                  className="bg-brand-dark-blue hover:bg-brand-blue text-white font-semibold"
+                  className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
                   onClick={handleAppDownload}
                   data-testid="how-download-app"
                 >
@@ -139,7 +139,7 @@ export default function HowItWorksPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-[hsl(205,85%,35%)] text-[hsl(205,85%,35%)] hover:bg-gray-50 font-semibold"
+                    className="border-2 border-brand-blue text-brand-blue hover:bg-gray-50 font-semibold"
                   >
                     Where to Find Us
                   </Button>
@@ -172,11 +172,11 @@ export default function HowItWorksPage() {
                   className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 md:p-7 flex flex-col items-start gap-3"
                 >
                   <div className="flex items-center gap-3.5">
-                    <span className="w-11 h-11 rounded-full bg-brand-dark-blue text-white flex items-center justify-center text-lg font-bold flex-none">
+                    <span className="w-11 h-11 rounded-full bg-brand-blue text-white flex items-center justify-center text-lg font-bold flex-none">
                       {index + 1}
                     </span>
-                    <span className="w-11 h-11 rounded-xl bg-sky-50 flex items-center justify-center flex-none">
-                      <Icon className="w-6 h-6 text-[hsl(205,85%,35%)]" />
+                    <span className="w-11 h-11 rounded-xl bg-brand-tint flex items-center justify-center flex-none">
+                      <Icon className="w-6 h-6 text-brand-blue" />
                     </span>
                   </div>
                   <h3 className="text-xl md:text-[22px] font-bold text-gray-900">
@@ -207,8 +207,8 @@ export default function HowItWorksPage() {
                   {...fadeUp}
                   className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 md:p-7 flex flex-col items-start gap-3"
                 >
-                  <span className="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-[hsl(205,85%,35%)]" />
+                  <span className="w-12 h-12 rounded-2xl bg-brand-tint flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-brand-blue" />
                   </span>
                   <Eyebrow>{tag}</Eyebrow>
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900">
@@ -218,7 +218,7 @@ export default function HowItWorksPage() {
                   <ul className="space-y-2">
                     {points.map((point) => (
                       <li key={point} className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 flex-none mt-0.5 text-[hsl(205,85%,35%)]" />
+                        <Check className="w-5 h-5 flex-none mt-0.5 text-brand-blue" />
                         <span className="text-gray-700">{point}</span>
                       </li>
                     ))}
@@ -254,7 +254,7 @@ export default function HowItWorksPage() {
                   email{" "}
                   <a
                     href="mailto:support@uchargeup.com"
-                    className="underline text-[hsl(205,85%,35%)] hover:text-gray-900"
+                    className="underline text-brand-blue hover:text-gray-900"
                   >
                     support@uchargeup.com
                   </a>
@@ -269,7 +269,7 @@ export default function HowItWorksPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
             <motion.div
               {...fadeUp}
-              className="bg-brand-dark-blue rounded-3xl p-7 md:p-14 flex flex-wrap items-center justify-between gap-6"
+              className="bg-brand-blue rounded-3xl p-7 md:p-14 flex flex-wrap items-center justify-between gap-6"
             >
               <div className="flex-1 min-w-[260px]">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2.5">
@@ -283,7 +283,7 @@ export default function HowItWorksPage() {
               <div className="flex flex-wrap gap-3">
                 <Button
                   size="lg"
-                  className="bg-white hover:bg-gray-100 text-[hsl(205,85%,35%)] font-semibold"
+                  className="bg-white hover:bg-gray-100 text-brand-blue font-semibold"
                   onClick={handleAppDownload}
                   data-testid="how-download-app-bottom"
                 >
@@ -293,7 +293,7 @@ export default function HowItWorksPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[hsl(205,85%,35%)] font-semibold"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold"
                   >
                     Where to Find Us
                   </Button>

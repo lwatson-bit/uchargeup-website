@@ -105,7 +105,7 @@ const fadeUp = {
 
 function Eyebrow({ children }: { children: string }) {
   return (
-    <p className="text-sm font-bold tracking-widest uppercase text-[hsl(205,85%,35%)]">
+    <p className="text-sm font-bold tracking-widest uppercase text-brand-blue">
       {children}
     </p>
   );
@@ -135,7 +135,7 @@ export default function ForVenuesPage() {
               <div className="flex flex-wrap gap-3 mt-1">
                 <Button
                   size="lg"
-                  className="bg-brand-dark-blue hover:bg-brand-blue text-white font-semibold"
+                  className="bg-brand-blue hover:bg-brand-dark-blue text-white font-semibold"
                   onClick={() => openChat("partner")}
                   data-testid="venues-become-partner"
                 >
@@ -145,7 +145,7 @@ export default function ForVenuesPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-[hsl(205,85%,35%)] text-[hsl(205,85%,35%)] hover:bg-gray-50 font-semibold"
+                    className="border-2 border-brand-blue text-brand-blue hover:bg-gray-50 font-semibold"
                   >
                     See Where We Are
                   </Button>
@@ -202,7 +202,7 @@ export default function ForVenuesPage() {
                   {...fadeUp}
                   className="bg-white rounded-2xl border border-gray-200 shadow-sm p-7 flex flex-col gap-3"
                 >
-                  <div className="text-5xl font-bold leading-none tracking-tight text-[hsl(205,85%,45%)]">
+                  <div className="text-5xl font-bold leading-none tracking-tight text-brand-blue">
                     {fact.value}
                   </div>
                   <p className="text-[17px] leading-relaxed font-semibold text-gray-900">
@@ -234,8 +234,8 @@ export default function ForVenuesPage() {
                   {...fadeUp}
                   className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex gap-4 items-start"
                 >
-                  <span className="w-11 h-11 rounded-xl bg-sky-50 flex items-center justify-center flex-none">
-                    <Icon className="w-[22px] h-[22px] text-[hsl(205,85%,35%)]" />
+                  <span className="w-11 h-11 rounded-xl bg-brand-tint flex items-center justify-center flex-none">
+                    <Icon className="w-[22px] h-[22px] text-brand-blue" />
                   </span>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1.5">
@@ -266,7 +266,7 @@ export default function ForVenuesPage() {
                   {...fadeUp}
                   className="flex flex-col items-start gap-2.5"
                 >
-                  <span className="w-10 h-10 rounded-full bg-brand-dark-blue text-white flex items-center justify-center text-[17px] font-bold">
+                  <span className="w-10 h-10 rounded-full bg-brand-blue text-white flex items-center justify-center text-[17px] font-bold">
                     {index + 1}
                   </span>
                   <h3 className="text-lg font-bold text-gray-900">
@@ -286,9 +286,9 @@ export default function ForVenuesPage() {
             <motion.figure
               {...fadeUp}
               className="rounded-3xl p-7 md:p-14 flex flex-col gap-5"
-              style={{ background: "#0b2d47" }}
+              style={{ background: "#1b4a69" }}
             >
-              <p className="text-sm font-bold tracking-widest uppercase text-sky-200">
+              <p className="text-sm font-bold tracking-widest uppercase text-brand-pale">
                 Venue spotlight: Parlay Detroit
               </p>
               <blockquote className="max-w-4xl text-2xl md:text-3xl font-semibold leading-snug text-white">
@@ -301,7 +301,7 @@ export default function ForVenuesPage() {
                 <div className="text-base font-bold text-white">
                   Parlay Detroit
                 </div>
-                <div className="text-[13px] text-sky-100 mt-1">
+                <div className="text-[13px] text-brand-pale mt-1">
                   Parlay Detroit's owner is also an owner in U Charge Up.
                 </div>
               </figcaption>
@@ -313,7 +313,7 @@ export default function ForVenuesPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 md:pb-24">
             <motion.div
               {...fadeUp}
-              className="bg-brand-dark-blue rounded-3xl p-7 md:p-14 flex flex-wrap items-center justify-between gap-6"
+              className="bg-brand-blue rounded-3xl p-7 md:p-14 flex flex-wrap items-center justify-between gap-6"
             >
               <div className="flex-1 min-w-[260px]">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2.5">
@@ -327,7 +327,7 @@ export default function ForVenuesPage() {
               <div className="flex flex-wrap gap-3">
                 <Button
                   size="lg"
-                  className="bg-white hover:bg-gray-100 text-[hsl(205,85%,35%)] font-semibold"
+                  className="bg-white hover:bg-gray-100 text-brand-blue font-semibold"
                   onClick={() => openChat("partner")}
                   data-testid="venues-become-partner-bottom"
                 >
@@ -337,7 +337,7 @@ export default function ForVenuesPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[hsl(205,85%,35%)] font-semibold"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold"
                   >
                     Events
                   </Button>
