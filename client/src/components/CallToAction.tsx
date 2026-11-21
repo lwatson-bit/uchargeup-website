@@ -25,7 +25,7 @@ export default function CallToAction() {
             Stay Connected, Stay In The Moment
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Join thousands of satisfied users who rely on U Charge Up for their portable charging needs. Download our app today to find the nearest rental location.
+            Join the people who count on U Charge Up to stay powered. Download the app to find the station closest to you.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -56,7 +56,7 @@ export default function CallToAction() {
             </div>
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-2" />
-              Multiple locations
+              Coast to coast
             </div>
             <div className="flex items-center">
               <Clock className="w-4 h-4 mr-2" />

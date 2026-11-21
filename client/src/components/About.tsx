@@ -62,7 +62,7 @@ export default function About() {
           >
             <h3 className="text-xl font-semibold mb-4 text-gray-900">Our Network</h3>
             <p className="text-gray-600">
-              With partner locations across the city, you're never far from a U Charge Up kiosk. Our network continues to grow every month, making power more accessible than ever.
+              From stadiums and hospitals to hotels and festivals, our stations run coast to coast, and the network keeps growing.
             </p>
           </motion.div>
           
@@ -75,7 +75,7 @@ export default function About() {
           >
             <h3 className="text-xl font-semibold mb-4 text-gray-900">Our Impact</h3>
             <p className="text-gray-600">
-              By sharing portable batteries instead of everyone owning their own, we've helped prevent thousands of batteries from ending up in landfills, reducing electronic waste and our environmental footprint.
+              One shared battery serves many people, which means fewer batteries bought, forgotten and thrown away, and less electronic waste.
             </p>
           </motion.div>
         </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Battery, Zap, MapPin, Leaf, Award } from "lucide-react";
+import { Battery, Zap, RotateCcw, Leaf, Award } from "lucide-react";
 import { Link } from "wouter";
 import kioskImage from "@assets/IMG_3172_1775147417498.jpeg";
 import { handleAppDownload } from "@/utils/appDownload";
@@ -87,8 +87,8 @@ export default function Hero() {
                 Fast charging
               </div>
               <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2 text-brand-blue" />
-                Multiple locations
+                <RotateCcw className="w-4 h-4 mr-2 text-brand-blue" />
+                Return anywhere
               </div>
               <div className="flex items-center">
                 <Leaf className="w-4 h-4 mr-2 text-brand-blue" />
@@ -117,12 +117,32 @@ export default function Hero() {
           </motion.div>
         </div>
         
+        {/* General proof points. No station, state or country counts on purpose. */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-14 bg-white rounded-2xl border border-gray-200 shadow-sm py-5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200"
+          data-testid="home-proof-strip"
+        >
+          {[
+            { value: "Coast to coast", label: "Stations across the U.S." },
+            { value: "International", label: "U.S. and abroad" },
+            { value: "200+", label: "Events powered every year" },
+          ].map((item) => (
+            <div key={item.label} className="px-6 py-3 text-center">
+              <div className="text-2xl font-bold text-gray-900">{item.value}</div>
+              <div className="mt-1 text-sm font-medium text-gray-600">{item.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
         {/* Partner logos - scrolling carousel in hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 pt-8 border-t border-gray-200"
+          className="mt-12 pt-8 border-t border-gray-200"
         >
           <div className="text-center mb-8">
             <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">Trusted by</span>

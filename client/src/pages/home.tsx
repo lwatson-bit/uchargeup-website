@@ -10,6 +10,9 @@ import Advertising from "@/components/Advertising";
 import Contact from "@/components/Contact";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import HomeSteps from "@/components/HomeSteps";
+import LocationsTeaser from "@/components/LocationsTeaser";
+import ForBusiness from "@/components/ForBusiness";
 
 export default function Home() {
   return (
@@ -21,6 +24,9 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <Hero />
+        <HomeSteps />
+        <LocationsTeaser />
+        <ForBusiness />
         <About />
         <CallToAction />
       </motion.main>
