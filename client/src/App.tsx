@@ -16,8 +16,10 @@ import TermsOfServicePage from "@/pages/terms-of-service";
 import PrivacyPolicyPageEs from "@/pages/es/privacy-policy";
 import TermsOfServicePageEs from "@/pages/es/terms-of-service";
 import NotFound from "@/pages/not-found";
+import { useRouteMeta } from "@/hooks/useRouteMeta";
 
 function Router() {
+  useRouteMeta();
   return (
     <Switch>
       <Route path="/" component={Home} />
