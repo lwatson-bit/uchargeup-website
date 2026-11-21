@@ -10,9 +10,8 @@ import Advertising from "@/components/Advertising";
 import Contact from "@/components/Contact";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
-import HomeSteps from "@/components/HomeSteps";
+import HomeDoors from "@/components/HomeDoors";
 import LocationsTeaser from "@/components/LocationsTeaser";
-import ForBusiness from "@/components/ForBusiness";
 
 export default function Home() {
   return (
@@ -23,10 +22,11 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
+        {/* A short front door: who we are, three ways in, proof of reach, one ask.
+            The detail lives on the menu pages, so nothing here repeats them in full. */}
         <Hero />
-        <HomeSteps />
+        <HomeDoors />
         <LocationsTeaser />
-        <ForBusiness />
         <About />
         <CallToAction />
       </motion.main>
